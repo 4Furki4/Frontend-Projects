@@ -1,6 +1,7 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: auto;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -13,20 +14,86 @@
 }
 
 body {
-  margin: 0;
+  min-height: 100dvh;
   padding: 0;
-  background-color: hsl(31, 72%, 92%);
+  background-color: hsl(26, 40%, 92%);
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
 }
 
 .card {
-  width: 375px;
+  width: 350px;
+  margin: auto 0;
   margin-inline: auto;
   background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
 }
 .card__image > img {
   max-width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 .card__content {
-  width: 95%;
+  width: 85%;
   margin-inline: auto;
+}
+.card__title h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  line-height: 1.05;
+}
+.card__title--paragraph {
+  font-size: 0.85rem;
+  letter-spacing: 0.25rem;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+}
+.card__body__info {
+  color: hsl(228, 12%, 48%);
+  opacity: 0.75;
+}
+.card__body__price {
+  font-size: 2rem;
+  font-family: "Fraunces", serif;
+  color: hsl(158, 36%, 37%);
+  margin: 1rem 0rem;
+  display: inline;
+}
+.card__body::after {
+  content: "$169.99";
+  font-size: 0.85rem;
+  opacity: 0.5;
+  margin-left: 1rem;
+  bottom: 5px;
+  display: inline;
+  position: relative;
+  text-decoration: line-through;
+}
+.card__button {
+  font-weight: 700;
+  margin: 1rem 0rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 0;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  width: 100%;
+  cursor: pointer;
+}
+.card__button:hover, .card__button :active {
+  background-color: hsl(158, 70%, 17%);
+}
+.card__button::before {
+  display: inline-block;
+  position: relative;
+  margin-right: 0.5rem;
+  top: 4px;
+  width: 15px;
+  height: 18px;
+  content: "";
+  background-image: url("../product-preview-card-component-main/images/icon-cart.svg");
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */
