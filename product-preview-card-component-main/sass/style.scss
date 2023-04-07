@@ -2,7 +2,7 @@
 .attribution {
     font-size: 11px;
     text-align: center;
-
+    margin-top: auto;
     & a {
         color: hsl(228, 45%, 44%);
     }
@@ -14,22 +14,99 @@
 }
 
 body {
-    margin: 0;
+    min-height: 100dvh;
     padding: 0;
     background-color: variables.$cream;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-around;
+    // font-family: 'Fraunces', serif;
+        font-family: 'Montserrat', sans-serif;
 }
 
 .card {
-    width: 375px;
+    width: 350px;
+    margin: auto 0;
     margin-inline: auto;
     background-color: variables.$white;
+    border-radius: 10px;
 
     &__image>img {
         max-width: 100%;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
     }
 
     &__content {
-        width: 95%;
+        width: 85%;
         margin-inline: auto;
     }
+    
+    &__title {
+
+        & h1 {
+            margin: 0;
+            padding: 0;
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            line-height: 1.05;
+        }
+        &--paragraph {
+            // margin: .5rem auto;
+            font-size: .85rem;
+            letter-spacing: .25rem;
+            color: variables.$dark-grayish-blue;
+            font-weight: 500;
+        }
+    }
+    &__body{
+        &__info{
+            color: variables.$dark-grayish-blue;
+            opacity: .75;
+        }
+        &__price{
+            font-size: 2rem;
+            font-family: 'Fraunces', serif;
+            color: variables.$dark-cyan;
+            margin: 1rem 0rem;
+            display: inline;
+        }
+        &::after{
+            content: '$169.99';
+            font-size: .85rem;
+            opacity: .5;
+            margin-left: 1rem;
+            bottom: 5px;
+            display: inline;
+            position: relative;
+            text-decoration: line-through;
+
+        }
+    }
+    &__button{
+        font-weight: 700;
+        margin: 1rem 0rem;
+        padding: 1rem;
+        border-radius: 10px;
+        border:0;
+        color: variables.$white;
+        background-color: variables.$dark-cyan;
+        width: 100%;
+        cursor: pointer;
+        &:hover, :active{
+            background-color: variables.$dark-cyan-hover;
+        }
+        &::before{
+            display: inline-block;
+            position: relative;
+            margin-right: .5rem;
+            top: 4px;
+            width: 15px;
+            height: 18px;
+            content: '';
+            background-image: url('../product-preview-card-component-main/images/icon-cart.svg');
+            background-repeat: no-repeat;
+        }
+    }
+
 }
