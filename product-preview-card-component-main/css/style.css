@@ -15,11 +15,13 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: hsl(31, 72%, 92%);
 }
 
 .card {
   width: 375px;
   margin-inline: auto;
+  background-color: hsl(0, 0%, 100%);
 }
 .card__image > img {
   max-width: 100%;
