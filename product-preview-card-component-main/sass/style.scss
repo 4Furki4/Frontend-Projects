@@ -1,0 +1,35 @@
+@use './partials/variables';
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
+    & a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: variables.$cream;
+}
+
+.card {
+    width: 375px;
+    margin-inline: auto;
+    background-color: variables.$white;
+
+    &__image>img {
+        max-width: 100%;
+    }
+
+    &__content {
+        width: 95%;
+        margin-inline: auto;
+    }
+}
