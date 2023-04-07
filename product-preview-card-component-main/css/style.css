@@ -4,4 +4,27 @@
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  width: 375px;
+  margin-inline: auto;
+}
+.card__image > img {
+  max-width: 100%;
+}
+.card__content {
+  width: 95%;
+  margin-inline: auto;
 }/*# sourceMappingURL=style.css.map */
