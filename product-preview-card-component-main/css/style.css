@@ -119,4 +119,32 @@ body {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
   }
+  .card__content--wrapper {
+    height: 100%;
+    width: 82%;
+    margin: 0rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card__title--paragraph {
+    font-size: 1rem;
+  }
+  .card__title h1 {
+    font-size: 3rem;
+  }
+  .card__body {
+    display: flex;
+    flex-direction: column;
+  }
+  .card__body__info {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+  .card__body__price {
+    font-size: 2.5rem;
+  }
+  .card__body__price::after {
+    font-size: 1.2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
