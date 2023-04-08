@@ -22,6 +22,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+#image-desktop {
+  display: none;
+}
+
 .card {
   width: 350px;
   margin: auto 0;
@@ -96,4 +100,23 @@ body {
   content: "";
   background-image: url("../product-preview-card-component-main/images/icon-cart.svg");
   background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  #image-mobile {
+    display: none;
+  }
+  #image-desktop {
+    display: block;
+  }
+  .card {
+    display: flex;
+    width: 720px;
+  }
+  .card__image > img {
+    max-width: 100%;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

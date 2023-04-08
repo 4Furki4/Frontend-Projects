@@ -23,7 +23,9 @@ body {
     // font-family: 'Fraunces', serif;
         font-family: 'Montserrat', sans-serif;
 }
-
+#image-desktop{
+    display: none;
+}
 .card {
     width: 350px;
     margin: auto 0;
@@ -109,4 +111,26 @@ body {
         }
     }
 
+}
+
+@media (min-width:768px ) {
+    #image{
+        &-mobile{
+            display: none;
+        }
+        &-desktop{
+            display: block;
+        }
+    }
+    .card{
+        display: flex;
+        width: 720px;
+        &__image > img {
+            max-width: 100%;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+    }
+    
 }
