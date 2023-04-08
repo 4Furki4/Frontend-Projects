@@ -72,17 +72,16 @@ body {
             color: variables.$dark-cyan;
             margin: 1rem 0rem;
             display: inline;
-        }
-        &::after{
-            content: '$169.99';
-            font-size: .85rem;
-            opacity: .5;
-            margin-left: 1rem;
-            bottom: 5px;
-            display: inline;
-            position: relative;
-            text-decoration: line-through;
-
+            &::after{
+                content: '$169.99';
+                font-size: .85rem;
+                opacity: .5;
+                margin-left: 1rem;
+                bottom: 5px;
+                display: inline;
+                position: relative;
+                text-decoration: line-through;
+            }
         }
     }
     &__button{
