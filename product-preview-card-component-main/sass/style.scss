@@ -23,7 +23,9 @@ body {
     // font-family: 'Fraunces', serif;
         font-family: 'Montserrat', sans-serif;
 }
-
+#image-desktop{
+    display: none;
+}
 .card {
     width: 350px;
     margin: auto 0;
@@ -70,17 +72,16 @@ body {
             color: variables.$dark-cyan;
             margin: 1rem 0rem;
             display: inline;
-        }
-        &::after{
-            content: '$169.99';
-            font-size: .85rem;
-            opacity: .5;
-            margin-left: 1rem;
-            bottom: 5px;
-            display: inline;
-            position: relative;
-            text-decoration: line-through;
-
+            &::after{
+                content: '$169.99';
+                font-size: .85rem;
+                opacity: .5;
+                margin-left: 1rem;
+                bottom: 5px;
+                display: inline;
+                position: relative;
+                text-decoration: line-through;
+            }
         }
     }
     &__button{
@@ -109,4 +110,56 @@ body {
         }
     }
 
+}
+
+@media (min-width:768px ) {
+    #image{
+        &-mobile{
+            display: none;
+        }
+        &-desktop{
+            display: block;
+        }
+    }
+    .card{
+        display: flex;
+        width: 720px;
+        &__image > img {
+            max-width: 100%;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        &__content--wrapper{
+            height: 100%;
+            width: 82%;
+            margin: 0rem auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__title{
+            &--paragraph{
+                font-size: 1rem;
+            }
+            & h1{
+                font-size: 3rem;
+            }
+        }
+        &__body{
+            display: flex;
+            flex-direction: column;
+            &__info{
+                font-size: 1.25rem;
+                line-height: 1.25;
+            }
+            &__price{
+                font-size: 2.5rem;
+                &::after{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    
 }
