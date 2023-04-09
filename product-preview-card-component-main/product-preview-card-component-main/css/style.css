@@ -98,7 +98,7 @@ body {
   width: 15px;
   height: 18px;
   content: "";
-  background-image: url("../product-preview-card-component-main/images/icon-cart.svg");
+  background-image: url("../images/icon-cart.svg");
   background-repeat: no-repeat;
 }
 
