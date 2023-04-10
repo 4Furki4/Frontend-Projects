@@ -1,0 +1,22 @@
+@use './components/card';
+
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    margin-top: auto; 
+    & a { color: hsl(228, 45%, 44%); }
+}
+    
+
+body{
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
