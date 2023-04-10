@@ -1,5 +1,26 @@
 @use '../abstracts/' as *;
 
 .card{
-    color: $White;
+    background-color: $Dark-Blue;
+    width: 380px;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1rem 0rem;
+    & > * {
+        width: 80%;
+        margin-inline: auto;
+    }
+    &__button{
+        width: 100%;
+    }
+
+    &__ratings{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__header--paragraph{
+        color: $Light-Grey;
+    }
 }

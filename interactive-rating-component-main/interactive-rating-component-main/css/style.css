@@ -1,5 +1,25 @@
 .card {
-  color: hsl(0, 0%, 100%);
+  background-color: hsl(213, 19%, 18%);
+  width: 380px;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1rem 0rem;
+}
+.card > * {
+  width: 80%;
+  margin-inline: auto;
+}
+.card__button {
+  width: 100%;
+}
+.card__ratings {
+  display: flex;
+  justify-content: space-between;
+}
+.card__header--paragraph {
+  color: hsl(217, 12%, 63%);
 }
 
 *, *::after, *::before {
@@ -16,6 +36,7 @@
 }
 
 body {
+  font-family: "Overpass", sans-serif;
   height: 100dvh;
   margin: 0;
   padding: 0;
@@ -23,4 +44,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: hsl(216, 12%, 8%);
+  color: hsl(0, 0%, 100%);
+}
+
+section {
+  margin-top: auto;
 }/*# sourceMappingURL=style.css.map */
