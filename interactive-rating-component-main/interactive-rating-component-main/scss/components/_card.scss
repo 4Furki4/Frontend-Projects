@@ -1,13 +1,14 @@
 @use '../abstracts/' as *;
 
 .card{
-    background-color: $Dark-Blue;
-    width: 380px;
-    border-radius: 1.25rem;
+    background: linear-gradient($Dark-Blue, $Very-Dark-Blue 90%);
+    max-width: 375px;
+    border-radius: 1.75rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    padding: 1rem 0rem;
+    gap: 1rem;
+    box-shadow: 0px 0px 5px 1px $Dark-Blue;
+    padding: 2rem 0rem;
     & > * {
         width: 80%;
         margin-inline: auto;
@@ -15,10 +16,17 @@
     &__button{
         width: 100%;
     }
-
+    
     &__ratings{
         display: flex;
         justify-content: space-between;
+        color: $Medium-Grey;
+    }
+    &__header--image {
+        max-width: 100%;
+        background-color: $Dark-Blue;   
+        border-radius: 50%;
+        padding: 1rem;
     }
     &__header--paragraph{
         color: $Light-Grey;
