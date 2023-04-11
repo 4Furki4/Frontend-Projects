@@ -15,27 +15,62 @@
   </style>
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
+  <div class="calculator">
+    <div class="calculator__header">
+      SPLITTER
+    </div>
+    <div class="calculator__body">
+      <div class="calculator__settings">
+        <div class="calculator__bill">
+          <label for="bill">Bill</label>
+          <input type="number" id="bill" placeholder="0">
+        </div>
+        <div class="calculator__tip-select">
+          <div class="calculator__tip-select__options">
+            5%
+          </div>
+          <div class="calculator__tip-select__options">
+            10%
+          </div>
+          <div class="calculator__tip-select__options">
+            15%
+          </div>
+          <div class="calculator__tip-select__options">
+            25%
+          </div>
+          <div class="calculator__tip-select__options">
+            50%
+          </div>
+          <input type="number" placeholder="Custom">
+        </div>
+        <div class="calculator__people-count">
+          <label for="people-count">Number of People</label>
+          <input type="number" id="people-count" placeholder="0">
+        </div>
+      </div>
+      <div class="calculator__output">
+        <div>
+          <div>
+            Tip Amount
+          </div>
+          <div class="output-digits">
+            0.00
+          </div>
+        </div>
+        <div class="calculator__output__total">
+          <div>
+            Total
+          </div>
+          <div class="output-digits">
+            0.00
+          </div>
+        </div>
+        <button class="calculator__output__button">
+          RESET
+        </button>
+      </div>
+    </div>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
