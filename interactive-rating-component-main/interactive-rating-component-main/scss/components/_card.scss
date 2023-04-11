@@ -1,17 +1,13 @@
 @use '../abstracts/' as *;
 
 .card{
-    background: linear-gradient($Dark-Blue, $Very-Dark-Blue 90%);
+    background-color: $card-bg-color;
     max-width: 375px;
     border-radius: 1.75rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    box-shadow: 0px 0px 5px 1px $Dark-Blue;
-    padding: 2rem 0rem;
+    padding: 1rem 0rem;
     & > * {
+        margin: 1rem auto;
         width: 80%;
-        margin-inline: auto;
     }
     &__button{
         width: 100%;
@@ -35,6 +31,16 @@
         display: flex;
         justify-content: space-between;
         color: $Medium-Grey;
+        user-select: none;
+    }
+    &__rating__points{
+        &:hover{
+            background-color: $Orange;
+            color: $White;
+        }
+        &:active, &:focus{
+            background-color: $Light-Grey;
+        }
     }
     &__header--image {
         max-width: 100%;
@@ -44,5 +50,6 @@
     }
     &__header--paragraph{
         color: $Light-Grey;
+        font-size: 14px;
     }
 }

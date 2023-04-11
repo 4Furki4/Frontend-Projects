@@ -1,16 +1,12 @@
 .card {
-  background: linear-gradient(hsl(213, 19%, 18%), hsl(216, 12%, 8%) 90%);
+  background-color: hsl(215, 27%, 12%);
   max-width: 375px;
   border-radius: 1.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  box-shadow: 0px 0px 5px 1px hsl(213, 19%, 18%);
-  padding: 2rem 0rem;
+  padding: 1rem 0rem;
 }
 .card > * {
+  margin: 1rem auto;
   width: 80%;
-  margin-inline: auto;
 }
 .card__button {
   width: 100%;
@@ -33,6 +29,16 @@
   display: flex;
   justify-content: space-between;
   color: hsl(216, 12%, 54%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.card__rating__points:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+.card__rating__points:active, .card__rating__points:focus {
+  background-color: hsl(217, 12%, 63%);
 }
 .card__header--image {
   max-width: 100%;
@@ -42,6 +48,7 @@
 }
 .card__header--paragraph {
   color: hsl(217, 12%, 63%);
+  font-size: 14px;
 }
 
 *, *::after, *::before {
@@ -75,7 +82,7 @@ section {
 }
 
 .dark-bg-circle {
-  background-color: hsl(213, 19%, 18%);
+  background-color: hsl(210, 19%, 18%);
   width: 50px;
   height: 50px;
   line-height: 50px;
