@@ -4,4 +4,14 @@
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=style.css.map */
