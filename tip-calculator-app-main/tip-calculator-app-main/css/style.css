@@ -18,8 +18,25 @@ body {
   font-family: "Space Mono", monospace;
   margin: 0;
   padding: 0;
+  background-color: hsl(185, 41%, 84%);
 }
 
 .calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   margin: auto 0;
+}
+.calculator__header {
+  text-align: center;
+}
+.calculator__body {
+  padding: 2rem 0;
+  background-color: hsl(0, 0%, 100%);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.calculator__body--wrapper {
+  width: 80%;
+  margin-inline: auto;
 }/*# sourceMappingURL=style.css.map */

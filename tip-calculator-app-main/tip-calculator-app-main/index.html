@@ -14,59 +14,61 @@
 <body>
   <div class="calculator">
     <div class="calculator__header">
-      SPLITTER
+      <h1><span>SPLI</span><br>TTER</h1>
     </div>
     <div class="calculator__body">
-      <div class="calculator__settings">
-        <div class="calculator__bill">
-          <label for="bill">Bill</label>
-          <input min="0" type="number" id="bill" placeholder="0">
+      <div class="calculator__body--wrapper">
+        <div class="calculator__settings">
+          <div class="calculator__bill">
+            <label for="bill">Bill</label>
+            <input min="0" type="number" id="bill" placeholder="0">
+          </div>
+          <div class="calculator__tip-select">
+            <button class="calculator__tip-select__options">
+              5%
+            </button>
+            <button class="calculator__tip-select__options">
+              10%
+            </button>
+            <button class="calculator__tip-select__options">
+              15%
+            </button>
+            <button class="calculator__tip-select__options">
+              25%
+            </button>
+            <button class="calculator__tip-select__options">
+              50%
+            </button>
+            <input min="0" class="calculator__tip-select__options--custom" type="number" placeholder="Custom">
+          </div>
+          <div class="calculator__people-count">
+            <label for="people-count">Number of People</label>
+            <input min="0" type="number" id="people-count" placeholder="0">
+          </div>
         </div>
-        <div class="calculator__tip-select">
-          <button class="calculator__tip-select__options">
-            5%
+        <div class="calculator__output">
+          <div>
+            <div>
+              Tip Amount
+            </div>
+            <div class="output-digits">
+              0.00
+            </div>
+          </div>
+          <div class="calculator__output__total">
+            <div>
+              Total
+            </div>
+            <div class="output-digits">
+              0.00
+            </div>
+          </div>
+          <button class="calculator__output__button">
+            RESET
           </button>
-          <button class="calculator__tip-select__options">
-            10%
-          </button>
-          <button class="calculator__tip-select__options">
-            15%
-          </button>
-          <button class="calculator__tip-select__options">
-            25%
-          </button>
-          <button class="calculator__tip-select__options">
-            50%
-          </button>
-          <input min="0" class="calculator__tip-select__options--custom" type="number" placeholder="Custom">
-        </div>
-        <div class="calculator__people-count">
-          <label for="people-count">Number of People</label>
-          <input min="0" type="number" id="people-count" placeholder="0">
         </div>
       </div>
-      <div class="calculator__output">
-        <div>
-          <div>
-            Tip Amount
-          </div>
-          <div class="output-digits">
-            0.00
-          </div>
-        </div>
-        <div class="calculator__output__total">
-          <div>
-            Total
-          </div>
-          <div class="output-digits">
-            0.00
-          </div>
-        </div>
-        <button class="calculator__output__button">
-          RESET
-        </button>
       </div>
-    </div>
   </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

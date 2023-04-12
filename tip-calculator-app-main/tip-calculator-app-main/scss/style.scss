@@ -1,3 +1,7 @@
+@use './asbtracts/' as *;
+// @use './asbtracts/variables' as *;
+// @use './asbtracts/mixings' as *;
+
 .attribution { 
     font-size: 11px; text-align: center;
     a { color: hsl(228, 45%, 44%); }
@@ -15,7 +19,24 @@ body{
     font-family: 'Space Mono', monospace;
     margin: 0;
     padding: 0;
+    background-color: $light-grayish-cyan;
 }
 .calculator{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     margin: auto 0;
+    
+    &__header{
+        text-align: center;
+    }
+    &__body{
+        padding: 2rem 0;
+        background-color: $white;
+        @include border-top(20px);
+        &--wrapper{
+            width: 80%;
+            margin-inline:auto;
+        }
+    }
 }
