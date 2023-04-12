@@ -6,8 +6,11 @@
   color: hsl(228, 45%, 44%);
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
+  font-family: "Space Mono", monospace;
 }
 
 body {
@@ -15,20 +18,47 @@ body {
   min-height: 100dvh;
   flex-direction: column;
   align-items: center;
-  font-family: "Space Mono", monospace;
   margin: 0;
   padding: 0;
   background-color: hsl(185, 41%, 84%);
 }
 
+label {
+  display: block;
+  color: hsl(186, 14%, 43%);
+}
+
+input {
+  text-align: right;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: hsl(183, 100%, 15%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: hsl(189, 41%, 97%);
+}
+input:not(.calculator__tip-select__options--custom) {
+  width: 100%;
+}
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .calculator {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   margin: auto 0;
 }
 .calculator__header {
   text-align: center;
+  color: hsl(186, 14%, 43%);
+  letter-spacing: 1rem;
 }
 .calculator__body {
   padding: 2rem 0;
@@ -39,4 +69,44 @@ body {
 .calculator__body--wrapper {
   width: 80%;
   margin-inline: auto;
+}
+.calculator__tip-select {
+  color: hsl(186, 14%, 43%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, minmax(50px, 1fr));
+  gap: 1rem;
+  grid-template-areas: "h2 h2" "opt-1 opt-2" "opt-3 opt-4" "opt-5 custom";
+}
+.calculator__tip-select__options:nth-child(1n+1) {
+  grid-area: opt-1;
+}
+.calculator__tip-select__options:nth-child(2n+1) {
+  grid-area: opt-2;
+}
+.calculator__tip-select__options:nth-child(3n+1) {
+  grid-area: opt-3;
+}
+.calculator__tip-select__options:nth-child(4n+1) {
+  grid-area: opt-4;
+}
+.calculator__tip-select__options:nth-child(5n+1) {
+  grid-area: opt-5;
+}
+.calculator__tip-select h3 {
+  grid-area: h2;
+  margin: 0;
+  padding: 0;
+  margin-top: auto;
+}
+.calculator__tip-select__options--custom {
+  grid-area: custom;
+  width: 100%;
+}
+.calculator__tip-select__options {
+  font-size: 2rem;
+  border: 0;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
 }/*# sourceMappingURL=style.css.map */
