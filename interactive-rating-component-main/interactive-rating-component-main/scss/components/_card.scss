@@ -1,5 +1,55 @@
 @use '../abstracts/' as *;
 
 .card{
-    color: $White;
+    background-color: $card-bg-color;
+    max-width: 375px;
+    border-radius: 1.75rem;
+    padding: 1rem 0rem;
+    & > * {
+        margin: 1rem auto;
+        width: 80%;
+    }
+    &__button{
+        width: 100%;
+        padding: .75rem;
+        border: 0;
+        color: $White;
+        letter-spacing: .1rem;
+        border-radius: 50px;
+        cursor: pointer;
+        background-color: $Orange;
+        &:hover, &:focus{
+            background-color: $White;
+            color: $Orange;
+        }
+        &:active{
+            opacity: .75;
+        }
+    }
+    
+    &__ratings{
+        display: flex;
+        justify-content: space-between;
+        color: $Medium-Grey;
+        user-select: none;
+    }
+    &__rating__points{
+        &:hover{
+            background-color: $Orange;
+            color: $White;
+        }
+        &:active, &:focus{
+            background-color: $Light-Grey;
+        }
+    }
+    &__header--image {
+        max-width: 100%;
+        background-color: $Dark-Blue;   
+        border-radius: 50%;
+        padding: 1rem;
+    }
+    &__header--paragraph{
+        color: $Light-Grey;
+        font-size: 14px;
+    }
 }

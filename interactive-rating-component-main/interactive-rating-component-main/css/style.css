@@ -1,5 +1,54 @@
 .card {
+  background-color: hsl(215, 27%, 12%);
+  max-width: 375px;
+  border-radius: 1.75rem;
+  padding: 1rem 0rem;
+}
+.card > * {
+  margin: 1rem auto;
+  width: 80%;
+}
+.card__button {
+  width: 100%;
+  padding: 0.75rem;
+  border: 0;
   color: hsl(0, 0%, 100%);
+  letter-spacing: 0.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: hsl(25, 97%, 53%);
+}
+.card__button:hover, .card__button:focus {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+.card__button:active {
+  opacity: 0.75;
+}
+.card__ratings {
+  display: flex;
+  justify-content: space-between;
+  color: hsl(216, 12%, 54%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.card__rating__points:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+.card__rating__points:active, .card__rating__points:focus {
+  background-color: hsl(217, 12%, 63%);
+}
+.card__header--image {
+  max-width: 100%;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 50%;
+  padding: 1rem;
+}
+.card__header--paragraph {
+  color: hsl(217, 12%, 63%);
+  font-size: 14px;
 }
 
 *, *::after, *::before {
@@ -16,6 +65,7 @@
 }
 
 body {
+  font-family: "Overpass", sans-serif;
   height: 100dvh;
   margin: 0;
   padding: 0;
@@ -23,4 +73,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: hsl(216, 12%, 8%);
+  color: hsl(0, 0%, 100%);
+}
+
+section {
+  margin-top: auto;
+}
+
+.dark-bg-circle {
+  background-color: hsl(210, 19%, 18%);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */
