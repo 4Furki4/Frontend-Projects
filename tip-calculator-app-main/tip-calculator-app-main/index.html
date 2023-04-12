@@ -17,29 +17,29 @@
       <div class="calculator__settings">
         <div class="calculator__bill">
           <label for="bill">Bill</label>
-          <input type="number" id="bill" placeholder="0">
+          <input min="0" type="number" id="bill" placeholder="0">
         </div>
         <div class="calculator__tip-select">
-          <div class="calculator__tip-select__options">
+          <button class="calculator__tip-select__options">
             5%
-          </div>
-          <div class="calculator__tip-select__options">
+          </button>
+          <button class="calculator__tip-select__options">
             10%
-          </div>
-          <div class="calculator__tip-select__options">
+          </button>
+          <button class="calculator__tip-select__options">
             15%
-          </div>
-          <div class="calculator__tip-select__options">
+          </button>
+          <button class="calculator__tip-select__options">
             25%
-          </div>
-          <div class="calculator__tip-select__options">
+          </button>
+          <button class="calculator__tip-select__options">
             50%
-          </div>
-          <input type="number" placeholder="Custom">
+          </button>
+          <input min="0" class="calculator__tip-select__options--custom" type="number" placeholder="Custom">
         </div>
         <div class="calculator__people-count">
           <label for="people-count">Number of People</label>
-          <input type="number" id="people-count" placeholder="0">
+          <input min="0" type="number" id="people-count" placeholder="0">
         </div>
       </div>
       <div class="calculator__output">
