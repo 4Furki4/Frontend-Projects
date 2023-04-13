@@ -77,6 +77,12 @@ label[for=bill] {
   width: 80%;
   margin-inline: auto;
 }
+.calculator__bill__input {
+  background-image: url("../images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: 1rem;
+  background-size: 0.8rem;
+}
 .calculator__tip-select {
   color: hsl(186, 14%, 43%);
   display: grid;
@@ -127,6 +133,12 @@ label[for=bill] {
   margin-left: auto;
   visibility: hidden;
   color: #b58170;
+}
+.calculator__people-count__input {
+  background-image: url("../images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: 1rem;
+  background-size: 0.8rem;
 }
 .calculator__output {
   background-color: hsl(183, 100%, 15%);

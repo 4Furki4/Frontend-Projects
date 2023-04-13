@@ -59,6 +59,13 @@ label[for="bill"] {
         margin-inline: auto;
     }
 
+    &__bill__input {
+        background-image: url('../images/icon-dollar.svg');
+        background-repeat: no-repeat;
+        background-position: 1rem;
+        background-size: .8rem;
+    }
+
     &__tip-select {
         color: $dark-grayish-cyan;
         display: grid;
@@ -109,6 +116,13 @@ label[for="bill"] {
             margin-left: auto;
             visibility: hidden;
             color: $invalid;
+        }
+
+        &__input {
+            background-image: url('../images/icon-person.svg');
+            background-repeat: no-repeat;
+            background-position: 1rem;
+            background-size: .8rem;
         }
     }
 

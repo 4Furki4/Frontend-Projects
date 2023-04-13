@@ -21,7 +21,8 @@
       <div class="calculator__settings">
         <form class="calculator__bill">
           <label for="bill">Bill</label>
-          <input min="0" required type="number" id="bill" placeholder="0">
+          <input class="calculator__bill__input" min="0" required type="number" inputmode="numeric" id="bill"
+            placeholder="0">
         </form>
         <div class="calculator__tip-select">
           <h3>Select Tip %</h3>
@@ -40,14 +41,16 @@
           <button class="calculator__tip-select__options">
             50%
           </button>
-          <input min="0" class="calculator__tip-select__options--custom" type="number" placeholder="Custom">
+          <input min="0" class="calculator__tip-select__options--custom" type="number" placeholder="Custom"
+            inputmode="numeric">
         </div>
         <div class="calculator__people-count">
           <div class="calculator__people-count__label">
             <label for="people-count">Number of People</label>
             <span class="calculator__people-count__validation">Can't be less than zero</span>
           </div>
-          <input min="0" type="number" id="people-count" placeholder="0">
+          <input class="calculator__people-count__input" min="0" type="number" id="people-count" placeholder="0"
+            inputmode="numeric">
         </div>
       </div>
       <div class="calculator__output">
@@ -56,7 +59,7 @@
             Tip Amount <br> <span class="person">/ person</span>
           </div>
           <div class="calculator__output-digits">
-            0.00
+            $0.00
           </div>
         </div>
         <div class="calculator__output__results">
@@ -64,7 +67,7 @@
             Total <br> <span class="person">/ person</span>
           </div>
           <div class="calculator__output-digits">
-            0.00
+            $0.00
           </div>
         </div>
         <div class="calculator__output__button--wrapper">
