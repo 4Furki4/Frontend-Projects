@@ -32,6 +32,7 @@ body {
 label {
     display: block;
     color: $dark-grayish-cyan;
+    margin: .5rem auto;
 }
 
 input {
@@ -42,7 +43,7 @@ input {
     text-align: right;
     border: 0;
     border-radius: .5rem;
-    padding: .75rem 1rem;
+    padding: .5rem 1rem;
     color: $very-dark-cyan;
     font-size: 1.5rem;
     font-weight: 700;
@@ -76,12 +77,12 @@ input {
     &__body {
         padding: 2rem 0;
         background-color: $white;
-        @include border-top(20px);
+        @include border-top(1.75rem);
+    }
 
-        &--wrapper {
-            width: 80%;
-            margin-inline: auto;
-        }
+    &__settings {
+        width: 80%;
+        margin-inline: auto;
     }
 
     &__tip-select {
@@ -118,11 +119,69 @@ input {
 
 
     &__tip-select__options {
-        font-size: 2rem;
-        border: 0;
         background-color: $very-dark-cyan;
         color: $white;
-        border-radius: .5rem;
+        @include button-basic-style(2rem, .5rem);
     }
 
+    &__people-count {
+        margin: 2rem auto;
+    }
+
+    &__output {
+        background-color: $very-dark-cyan;
+        padding-top: 2rem;
+        border-radius: 1rem;
+        width: 90%;
+        margin-inline: auto;
+
+        &>* {
+            width: 85%;
+            margin-inline: auto;
+            margin-bottom: 2rem;
+        }
+
+        &-digits {
+            font-size: 3rem;
+            color: $primary-strong-cyan;
+        }
+
+        &__results {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &>*:first-child {
+                color: $white;
+                font-size: 1.25rem;
+            }
+        }
+
+        &__button {
+            width: 100%;
+            background-color: $primary-strong-cyan;
+            color: $very-dark-cyan;
+            @include button-basic-style(1.5rem, .5rem);
+            padding: .5rem 0rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+.person {
+    color: $grayish-cyan;
+    font-size: 1rem;
+}
+
+@media (min-width: 728px) {
+    .calculator {
+
+        &__body {
+            padding-inline: 2rem;
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            border-radius: 1.5rem;
+        }
+    }
 }
