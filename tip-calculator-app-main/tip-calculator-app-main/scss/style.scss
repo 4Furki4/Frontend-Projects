@@ -81,6 +81,13 @@ label[for="bill"] {
         @for $i from 1 through 5 {
             &__options:nth-child(#{$i}n+1) {
                 grid-area: opt-#{$i};
+
+                &:hover,
+                &:focus {
+                    background-color: $primary-strong-cyan;
+                    color: $very-dark-cyan;
+                    cursor: pointer;
+                }
             }
         }
 
@@ -110,11 +117,13 @@ label[for="bill"] {
 
         &__label {
             display: flex;
+            color: $dark-grayish-cyan;
+            margin-bottom: .5rem;
         }
 
         &__validation {
             margin-left: auto;
-            visibility: hidden;
+            display: none;
             color: $invalid;
         }
 
@@ -140,7 +149,7 @@ label[for="bill"] {
         }
 
         &-digits {
-            font-size: 3rem;
+            font-size: clamp(2rem, 10vw, 3rem);
             color: $primary-strong-cyan;
         }
 
@@ -151,7 +160,7 @@ label[for="bill"] {
 
             &>*:first-child {
                 color: $white;
-                font-size: 1.25rem;
+                font-size: clamp(.5rem, 5vw, 1rem);
             }
         }
 
@@ -162,6 +171,11 @@ label[for="bill"] {
             @include button-basic-style(1.5rem, .5rem);
             padding: .5rem 0rem;
             margin-bottom: 1.5rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $light-grayish-cyan;
+            }
         }
     }
 }
@@ -188,6 +202,16 @@ label[for="bill"] {
 
             &__button--wrapper {
                 margin-top: auto;
+            }
+
+            &-digits {
+                font-size: 3rem;
+            }
+
+            &__results {
+                &>*:first-child {
+                    font-size: 1.25rem;
+                }
             }
         }
     }
