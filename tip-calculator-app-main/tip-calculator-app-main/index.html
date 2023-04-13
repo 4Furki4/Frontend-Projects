@@ -19,10 +19,10 @@
     </div>
     <div class="calculator__body">
       <div class="calculator__settings">
-        <div class="calculator__bill">
+        <form class="calculator__bill">
           <label for="bill">Bill</label>
-          <input min="0" type="number" id="bill" placeholder="0">
-        </div>
+          <input min="0" required type="number" id="bill" placeholder="0">
+        </form>
         <div class="calculator__tip-select">
           <h3>Select Tip %</h3>
           <button class="calculator__tip-select__options">
@@ -43,7 +43,10 @@
           <input min="0" class="calculator__tip-select__options--custom" type="number" placeholder="Custom">
         </div>
         <div class="calculator__people-count">
-          <label for="people-count">Number of People</label>
+          <div class="calculator__people-count__label">
+            <label for="people-count">Number of People</label>
+            <span class="calculator__people-count__validation">Can't be less than zero</span>
+          </div>
           <input min="0" type="number" id="people-count" placeholder="0">
         </div>
       </div>

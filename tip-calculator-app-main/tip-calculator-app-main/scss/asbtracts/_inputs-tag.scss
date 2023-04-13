@@ -1,0 +1,34 @@
+@use './variables' as *;
+
+input {
+    &:not(.calculator__tip-select__options--custom) {
+        width: 100%;
+    }
+
+    &:invalid {
+        outline: 3px solid $invalid;
+    }
+
+    &:focus:not(:invalid) {
+        outline: 3px solid $primary-strong-cyan;
+    }
+
+    text-align: right;
+    border: 0;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    color: $very-dark-cyan;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: $very-light-grayish-cyan;
+
+    &[type="number"]::-webkit-outer-spin-button,
+    &[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &[type="number"] {
+        -moz-appearance: textfield;
+    }
+}

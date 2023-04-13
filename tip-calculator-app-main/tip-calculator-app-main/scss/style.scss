@@ -29,37 +29,11 @@ body {
     background-color: $light-grayish-cyan;
 }
 
-label {
+label[for="bill"] {
     display: block;
     color: $dark-grayish-cyan;
     margin: .5rem auto;
 }
-
-input {
-    &:not(.calculator__tip-select__options--custom) {
-        width: 100%;
-    }
-
-    text-align: right;
-    border: 0;
-    border-radius: .5rem;
-    padding: .5rem 1rem;
-    color: $very-dark-cyan;
-    font-size: 1.5rem;
-    font-weight: 700;
-    background-color: $very-light-grayish-cyan;
-
-    &[type="number"]::-webkit-outer-spin-button,
-    &[type="number"]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    &[type="number"] {
-        -moz-appearance: textfield;
-    }
-}
-
 
 
 .calculator {
@@ -126,6 +100,16 @@ input {
 
     &__people-count {
         margin: 2rem auto;
+
+        &__label {
+            display: flex;
+        }
+
+        &__validation {
+            margin-left: auto;
+            visibility: hidden;
+            color: $invalid;
+        }
     }
 
     &__output {
