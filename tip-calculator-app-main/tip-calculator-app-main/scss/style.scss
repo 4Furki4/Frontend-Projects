@@ -29,36 +29,11 @@ body {
     background-color: $light-grayish-cyan;
 }
 
-label {
+label[for="bill"] {
     display: block;
     color: $dark-grayish-cyan;
+    margin: .5rem auto;
 }
-
-input {
-    &:not(.calculator__tip-select__options--custom) {
-        width: 100%;
-    }
-
-    text-align: right;
-    border: 0;
-    border-radius: .5rem;
-    padding: .75rem 1rem;
-    color: $very-dark-cyan;
-    font-size: 1.5rem;
-    font-weight: 700;
-    background-color: $very-light-grayish-cyan;
-
-    &[type="number"]::-webkit-outer-spin-button,
-    &[type="number"]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    &[type="number"] {
-        -moz-appearance: textfield;
-    }
-}
-
 
 
 .calculator {
@@ -76,12 +51,19 @@ input {
     &__body {
         padding: 2rem 0;
         background-color: $white;
-        @include border-top(20px);
+        @include border-top(1.75rem);
+    }
 
-        &--wrapper {
-            width: 80%;
-            margin-inline: auto;
-        }
+    &__settings {
+        width: 80%;
+        margin-inline: auto;
+    }
+
+    &__bill__input {
+        background-image: url('../images/icon-dollar.svg');
+        background-repeat: no-repeat;
+        background-position: 1rem;
+        background-size: .8rem;
     }
 
     &__tip-select {
@@ -99,6 +81,13 @@ input {
         @for $i from 1 through 5 {
             &__options:nth-child(#{$i}n+1) {
                 grid-area: opt-#{$i};
+
+                &:hover,
+                &:focus {
+                    background-color: $primary-strong-cyan;
+                    color: $very-dark-cyan;
+                    cursor: pointer;
+                }
             }
         }
 
@@ -118,11 +107,112 @@ input {
 
 
     &__tip-select__options {
-        font-size: 2rem;
-        border: 0;
         background-color: $very-dark-cyan;
         color: $white;
-        border-radius: .5rem;
+        @include button-basic-style(2rem, .5rem);
     }
 
+    &__people-count {
+        margin: 2rem auto;
+
+        &__label {
+            display: flex;
+            color: $dark-grayish-cyan;
+            margin-bottom: .5rem;
+        }
+
+        &__validation {
+            margin-left: auto;
+            display: none;
+            color: $invalid;
+        }
+
+        &__input {
+            background-image: url('../images/icon-person.svg');
+            background-repeat: no-repeat;
+            background-position: 1rem;
+            background-size: .8rem;
+        }
+    }
+
+    &__output {
+        background-color: $very-dark-cyan;
+        padding-top: 2rem;
+        border-radius: 1rem;
+        width: 90%;
+        margin-inline: auto;
+
+        &>* {
+            width: 85%;
+            margin-inline: auto;
+            margin-bottom: 2rem;
+        }
+
+        &-digits {
+            font-size: clamp(2rem, 10vw, 3rem);
+            color: $primary-strong-cyan;
+        }
+
+        &__results {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &>*:first-child {
+                color: $white;
+                font-size: clamp(.5rem, 5vw, 1rem);
+            }
+        }
+
+        &__button {
+            width: 100%;
+            background-color: $primary-strong-cyan;
+            color: $very-dark-cyan;
+            @include button-basic-style(1.5rem, .5rem);
+            padding: .5rem 0rem;
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $light-grayish-cyan;
+            }
+        }
+    }
+}
+
+.person {
+    color: $grayish-cyan;
+    font-size: 1rem;
+}
+
+@media (min-width: 728px) {
+    .calculator {
+
+        &__body {
+            padding-inline: 2rem;
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            border-radius: 1.5rem;
+        }
+
+        &__output {
+            display: flex;
+            flex-direction: column;
+
+            &__button--wrapper {
+                margin-top: auto;
+            }
+
+            &-digits {
+                font-size: 3rem;
+            }
+
+            &__results {
+                &>*:first-child {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
 }

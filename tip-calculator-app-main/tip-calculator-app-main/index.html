@@ -18,53 +18,59 @@
       <h1><span>SPLI</span><br>TTER</h1>
     </div>
     <div class="calculator__body">
-      <div class="calculator__body--wrapper">
-        <div class="calculator__settings">
-          <div class="calculator__bill">
-            <label for="bill">Bill</label>
-            <input min="0" type="number" id="bill" placeholder="0">
-          </div>
-          <div class="calculator__tip-select">
-            <h3>Select Tip %</h3>
-            <button class="calculator__tip-select__options">
-              5%
-            </button>
-            <button class="calculator__tip-select__options">
-              10%
-            </button>
-            <button class="calculator__tip-select__options">
-              15%
-            </button>
-            <button class="calculator__tip-select__options">
-              25%
-            </button>
-            <button class="calculator__tip-select__options">
-              50%
-            </button>
-            <input min="0" class="calculator__tip-select__options--custom" type="number" placeholder="Custom">
-          </div>
-          <div class="calculator__people-count">
+      <div class="calculator__settings">
+        <form class="calculator__bill">
+          <label for="bill">Bill</label>
+          <input class="calculator__bill__input" min="0" required type="number" inputmode="numeric" id="bill"
+            placeholder="0">
+        </form>
+        <div class="calculator__tip-select">
+          <h3>Select Tip %</h3>
+          <button class="calculator__tip-select__options">
+            5%
+          </button>
+          <button class="calculator__tip-select__options">
+            10%
+          </button>
+          <button class="calculator__tip-select__options">
+            15%
+          </button>
+          <button class="calculator__tip-select__options">
+            25%
+          </button>
+          <button class="calculator__tip-select__options">
+            50%
+          </button>
+          <input min="0" class="calculator__tip-select__options--custom" type="number" placeholder="Custom"
+            inputmode="numeric">
+        </div>
+        <div class="calculator__people-count">
+          <div class="calculator__people-count__label">
             <label for="people-count">Number of People</label>
-            <input min="0" type="number" id="people-count" placeholder="0">
+            <span class="calculator__people-count__validation">Can't be less than zero</span>
+          </div>
+          <input class="calculator__people-count__input" min="0" type="number" id="people-count" placeholder="0"
+            inputmode="numeric">
+        </div>
+      </div>
+      <div class="calculator__output">
+        <div class="calculator__output__results">
+          <div>
+            Tip Amount <br> <span class="person">/ person</span>
+          </div>
+          <div class="calculator__output-digits">
+            $0.00
           </div>
         </div>
-        <div class="calculator__output">
+        <div class="calculator__output__results">
           <div>
-            <div>
-              Tip Amount
-            </div>
-            <div class="output-digits">
-              0.00
-            </div>
+            Total <br> <span class="person">/ person</span>
           </div>
-          <div class="calculator__output__total">
-            <div>
-              Total
-            </div>
-            <div class="output-digits">
-              0.00
-            </div>
+          <div class="calculator__output-digits">
+            $0.00
           </div>
+        </div>
+        <div class="calculator__output__button--wrapper">
           <button class="calculator__output__button">
             RESET
           </button>

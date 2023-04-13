@@ -1,4 +1,10 @@
-@mixin border-top($size){
+@mixin border-top($size) {
     border-top-right-radius: $size;
     border-top-left-radius: $size;
+}
+
+@mixin button-basic-style($font, $border-radius) {
+    font-size: $font;
+    border-radius: $border-radius;
+    border: 0;
 }
