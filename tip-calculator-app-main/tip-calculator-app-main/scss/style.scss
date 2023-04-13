@@ -183,5 +183,14 @@ input {
             gap: 2rem;
             border-radius: 1.5rem;
         }
+
+        &__output {
+            display: flex;
+            flex-direction: column;
+
+            &__button--wrapper {
+                margin-top: auto;
+            }
+        }
     }
 }

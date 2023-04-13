@@ -2,6 +2,7 @@
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
@@ -39,13 +40,18 @@ input {
   font-weight: 700;
   background-color: hsl(189, 41%, 97%);
 }
+
 input:not(.calculator__tip-select__options--custom) {
   width: 100%;
 }
-input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+
+/* source: https://stackoverflow.com/a/51743648 */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 input[type=number] {
   -moz-appearance: textfield;
 }
@@ -56,21 +62,25 @@ input[type=number] {
   gap: 1rem;
   margin: auto 0;
 }
+
 .calculator__header {
   text-align: center;
   color: hsl(186, 14%, 43%);
   letter-spacing: 1rem;
 }
+
 .calculator__body {
   padding: 2rem 0;
   background-color: hsl(0, 0%, 100%);
   border-top-right-radius: 1.75rem;
   border-top-left-radius: 1.75rem;
 }
+
 .calculator__settings {
   width: 80%;
   margin-inline: auto;
 }
+
 .calculator__tip-select {
   color: hsl(186, 14%, 43%);
   display: grid;
@@ -79,31 +89,39 @@ input[type=number] {
   gap: 1rem;
   grid-template-areas: "h2 h2" "opt-1 opt-2" "opt-3 opt-4" "opt-5 custom";
 }
+
 .calculator__tip-select__options:nth-child(1n+1) {
   grid-area: opt-1;
 }
+
 .calculator__tip-select__options:nth-child(2n+1) {
   grid-area: opt-2;
 }
+
 .calculator__tip-select__options:nth-child(3n+1) {
   grid-area: opt-3;
 }
+
 .calculator__tip-select__options:nth-child(4n+1) {
   grid-area: opt-4;
 }
+
 .calculator__tip-select__options:nth-child(5n+1) {
   grid-area: opt-5;
 }
+
 .calculator__tip-select h3 {
   grid-area: h2;
   margin: 0;
   padding: 0;
   margin-top: auto;
 }
+
 .calculator__tip-select__options--custom {
   grid-area: custom;
   width: 100%;
 }
+
 .calculator__tip-select__options {
   background-color: hsl(183, 100%, 15%);
   color: hsl(0, 0%, 100%);
@@ -111,9 +129,11 @@ input[type=number] {
   border-radius: 0.5rem;
   border: 0;
 }
+
 .calculator__people-count {
   margin: 2rem auto;
 }
+
 .calculator__output {
   background-color: hsl(183, 100%, 15%);
   padding-top: 2rem;
@@ -121,24 +141,29 @@ input[type=number] {
   width: 90%;
   margin-inline: auto;
 }
-.calculator__output > * {
+
+.calculator__output>* {
   width: 85%;
   margin-inline: auto;
   margin-bottom: 2rem;
 }
+
 .calculator__output-digits {
   font-size: 3rem;
   color: hsl(172, 67%, 45%);
 }
+
 .calculator__output__results {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.calculator__output__results > *:first-child {
+
+.calculator__output__results>*:first-child {
   color: hsl(0, 0%, 100%);
   font-size: 1.25rem;
 }
+
 .calculator__output__button {
   width: 100%;
   background-color: hsl(172, 67%, 45%);
@@ -163,4 +188,15 @@ input[type=number] {
     gap: 2rem;
     border-radius: 1.5rem;
   }
-}/*# sourceMappingURL=style.css.map */
+
+  .calculator__output {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .calculator__output__button--wrapper {
+    margin-top: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
