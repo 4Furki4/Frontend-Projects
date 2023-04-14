@@ -8,3 +8,6 @@
 - What I Tried New:
   - I used scss in a project for the first time. It made project progress way much easier bc of nesting with & symbol.
 - __[Live Link](https://4furki4-product-preview-card.netlify.app/)__
+**Snapshot of the challenge**
+![Snapshot of product preview challenge](./snapshots/product-preview-ss.png)
+
