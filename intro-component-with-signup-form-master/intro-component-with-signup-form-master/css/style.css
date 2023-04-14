@@ -1,0 +1,148 @@
+.attribution {
+  margin-top: auto;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 100%, 74%);
+  background-image: url(../images/bg-intro-mobile.png);
+}
+
+section {
+  width: 90%;
+  margin: auto auto;
+}
+section .header {
+  padding: 4rem 0rem;
+}
+section .call-to-action__info {
+  background-color: hsl(248, 32%, 49%);
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0px 6px 0px hsl(2, 62%, 62%);
+  margin-bottom: 1.5rem;
+}
+section .call-to-action__info--bold {
+  font-weight: 700;
+}
+section .form {
+  padding: 1.5rem 0;
+}
+section .form .validationSpan {
+  display: block;
+  color: hsl(0, 100%, 74%);
+  text-align: right;
+  margin-right: 0.5rem;
+  font-style: italic;
+  font-weight: 500;
+  scale: 0;
+  transition: all 0.1s;
+}
+section .form .input-field {
+  margin-bottom: 1.5rem;
+  width: 90%;
+  margin-inline: auto;
+}
+section .form input {
+  width: 100%;
+  padding: 1rem 5%;
+  border: 1px solid hsl(246, 25%, 77%);
+  border-radius: 5px;
+  outline: none;
+  font-weight: 600;
+}
+section .form input::-moz-placeholder {
+  font-weight: 600;
+}
+section .form input::placeholder {
+  font-weight: 600;
+}
+section .form input:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: hsl(248, 32%, 49%);
+}
+section .form input.invalid {
+  border: 3px solid hsl(0, 100%, 74%);
+  background-image: url("../images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: 95%;
+  color: hsl(0, 100%, 74%);
+}
+section .form input.invalid:focus {
+  outline: none;
+}
+section .form--wrapper {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 7px 0px hsl(0, 61%, 63%);
+}
+section .form__button {
+  transition: all 0.2s;
+  font-weight: 500;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 90%;
+  padding: 1rem 0rem;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 4px 0px #31b980;
+  background-color: hsl(154, 59%, 51%);
+}
+section .form__button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+section .form__button:active {
+  opacity: 1;
+}
+section .form__info {
+  width: 80%;
+  margin-inline: auto;
+  color: hsl(246, 25%, 77%);
+  font-size: 0.75rem;
+}
+section #terms-and-services {
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  section {
+    display: flex;
+    gap: 3rem;
+    max-width: 1440px;
+  }
+  section .header {
+    flex-basis: 100%;
+    text-align: left;
+  }
+  section .header__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+  section .header__paragraph {
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
+  }
+  .call-to-action {
+    flex-basis: 80%;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+
+<body>
+  <section>
+    <div class="header">
+      <h1 class="header__title">
+        Learn to code by watching others
+      </h1>
+      <p class="header__paragraph">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.
+      </p>
+    </div>
+    <div class="call-to-action">
+      <div class="call-to-action__info">
+        <span class="call-to-action__info--bold">Try it free 7 days</span> then $20/mo. thereafter
+      </div>
+      <div class="form--wrapper">
+        <form class="form">
+          <div class="input-field">
+            <input type="text" id="firstName" placeholder="First Name">
+            <span class="validationSpan" id="firstNameValidation"></span>
+          </div>
+          <div class="input-field">
+            <input type="text" id="lastName" placeholder="Last Name">
+            <span class="validationSpan" id="lastNameValidation"></span>
+          </div>
+          <div class="input-field">
+            <input type="text" id="email" placeholder="Email Adress">
+            <span class="validationSpan" id="emailValidation"></span>
+          </div>
+          <div class="input-field">
+            <input type="password" id="password" placeholder="Password">
+            <span class="validationSpan" id="passwordValidation"></span>
+          </div>
+          <button type="submit" class="form__button">
+            Claim your free trial
+          </button>
+          <p class="form__info">By clicking the button, you are agreeing to our <span id="terms-and-services">Terms and
+              Services</span>
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+  <script src="./index.js"></script>
+</body>
+
+</html>
