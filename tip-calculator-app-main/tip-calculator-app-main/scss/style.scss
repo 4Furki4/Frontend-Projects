@@ -164,7 +164,7 @@ label[for="bill"] {
             }
         }
 
-        &__button {
+        &__reset-button {
             width: 100%;
             background-color: $primary-strong-cyan;
             color: $very-dark-cyan;
@@ -183,6 +183,10 @@ label[for="bill"] {
 .person {
     color: $grayish-cyan;
     font-size: 1rem;
+}
+
+.selected-btn {
+    background-color: $selected-btn;
 }
 
 @media (min-width: 728px) {

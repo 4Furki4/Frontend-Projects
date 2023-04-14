@@ -192,7 +192,7 @@ label[for=bill] {
   color: hsl(0, 0%, 100%);
   font-size: clamp(0.5rem, 5vw, 1rem);
 }
-.calculator__output__button {
+.calculator__output__reset-button {
   width: 100%;
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
@@ -203,13 +203,17 @@ label[for=bill] {
   margin-bottom: 1.5rem;
   cursor: pointer;
 }
-.calculator__output__button:hover {
+.calculator__output__reset-button:hover {
   background-color: hsl(185, 41%, 84%);
 }
 
 .person {
   color: hsl(184, 14%, 56%);
   font-size: 1rem;
+}
+
+.selected-btn {
+  background-color: hsl(173, 61%, 77%);
 }
 
 @media (min-width: 728px) {

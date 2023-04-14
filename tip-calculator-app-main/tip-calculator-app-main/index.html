@@ -26,19 +26,19 @@
         </form>
         <div class="calculator__tip-select">
           <h3>Select Tip %</h3>
-          <button class="calculator__tip-select__options">
+          <button data-tip-value="5" class="calculator__tip-select__options">
             5%
           </button>
-          <button class="calculator__tip-select__options">
+          <button data-tip-value="10" class="calculator__tip-select__options">
             10%
           </button>
-          <button class="calculator__tip-select__options">
+          <button data-tip-value="15" class="calculator__tip-select__options">
             15%
           </button>
-          <button class="calculator__tip-select__options">
+          <button data-tip-value="25" class="calculator__tip-select__options">
             25%
           </button>
-          <button class="calculator__tip-select__options">
+          <button data-tip-value="50" class="calculator__tip-select__options">
             50%
           </button>
           <input min="0" class="calculator__tip-select__options--custom" type="number" placeholder="Custom"
@@ -47,9 +47,9 @@
         <div class="calculator__people-count">
           <div class="calculator__people-count__label">
             <label for="people-count">Number of People</label>
-            <span class="calculator__people-count__validation">Can't be less than zero</span>
+            <span class="calculator__people-count__validation">Can't be zero</span>
           </div>
-          <input class="calculator__people-count__input" min="0" type="number" id="people-count" placeholder="0"
+          <input class="calculator__people-count__input" min="1" type="number" id="people-count" placeholder="0"
             inputmode="numeric">
         </div>
       </div>
@@ -58,7 +58,7 @@
           <div>
             Tip Amount <br> <span class="person">/ person</span>
           </div>
-          <div class="calculator__output-digits">
+          <div id="tip-amount" class="calculator__output-digits">
             $0.00
           </div>
         </div>
@@ -66,12 +66,12 @@
           <div>
             Total <br> <span class="person">/ person</span>
           </div>
-          <div class="calculator__output-digits">
+          <div id="total-per-person" class="calculator__output-digits">
             $0.00
           </div>
         </div>
         <div class="calculator__output__button--wrapper">
-          <button class="calculator__output__button">
+          <button class="calculator__output__reset-button">
             RESET
           </button>
         </div>
@@ -82,6 +82,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script defer src="./scripts/index.js"></script>
 </body>
 
 </html>
