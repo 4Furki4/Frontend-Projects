@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700&family=Roboto:wght@500&display=swap');
+
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --ligth-royal-blue-bg: hsl(241, 81%, 54%);
+    --violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --persian-blue-circle: hsla(241, 72%, 46%, 0);
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+    font-size: 18px;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 2px white;
+}
+
+
+.result {
+    margin-inline: auto;
+    border-radius: 0;
+    padding: 1rem;
+    color: var(--white);
+    background: linear-gradient(to bottom, var(--light-slate-blue), var(--ligth-royal-blue-bg));
+    text-align: center;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+#circle {
+    margin-inline: auto;
+    max-width: 40%;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: linear-gradient(to bottom, var(--violet-blue-circle), hsla(234, 85%, 45%, 0));
+    border-radius: 100%;
+}
+
+#circle>h1 {
+    font-size: 20vw;
+}
+
+
+.text-opacity {
+    opacity: .5;
+}
+
+.total-score-description {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.total-score-description p {
+    margin-top: .25rem;
+}
+
+summary {
+    padding: 1rem;
+    border-radius: 10%;
+    margin-inline: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 500;
+
+}
+
+summary h3 {
+    opacity: .75;
+}
+
+.summary-image-config {
+    background-repeat: no-repeat;
+    background-position: left 5% center;
+}
+
+.skill-card {
+    padding: 1rem;
+    padding-left: 3rem;
+    border-radius: .5rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.skill-score {
+    display: inline;
+    float: right;
+    color: var(--dark-gray-blue);
+}
+
+.skill-100 {
+    opacity: .5;
+}
+
+#reaction {
+    background-color: hsla(0, 100%, 67%, .1);
+    color: var(--light-red);
+    background-image: url(./assets/images/icon-reaction.svg);
+}
+
+#memory {
+    color: var(--orangey-yellow);
+    background-color: hsla(39, 100%, 56%, .1);
+    background-image: url(./assets/images/icon-memory.svg);
+}
+
+#verbal {
+    color: var(--green-teal);
+    background-color: hsla(166, 100%, 37%, .1);
+    background-image: url(./assets/images/icon-verbal.svg);
+}
+
+#visual {
+    color: var(--cobalt-blue);
+    background-color: hsla(234, 85%, 45%, .1);
+    background-image: url(./assets/images/icon-visual.svg);
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.btn {
+    border: 0;
+    width: 100%;
+    text-align: center;
+    padding: .75rem;
+    padding-inline: 3rem;
+    color: var(--white);
+    font-size: 1.4rem;
+    margin: auto;
+    border-radius: 2rem;
+
+}
+
+.btn.btn-dark-blue {
+    background-color: var(--dark-gray-blue);
+}
+
+.btn.btn-dark-blue:hover {
+    background: linear-gradient(to bottom, var(--light-slate-blue), var(--ligth-royal-blue-bg));
+}
+
+@media screen and (min-width: 700px) {
+    main {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        box-shadow: 2px 2px 1px black;
+    }
+
+
+    .result {
+
+        border-radius: 25px;
+        height: 420px;
+        width: 305px;
+        margin-inline: 0;
+        box-shadow: -5px -5px 5px var(--light-lavender);
+    }
+
+    summary {
+        box-shadow: 10px -4px 10px var(--light-lavender);
+        position: relative;
+        padding-left: 4rem;
+        z-index: 0;
+        left: -3rem;
+        margin-inline: 0;
+        height: 420px;
+        width: 305px;
+        border-radius: 0px 25px 25px 0px;
+    }
+
+    .skill-card {
+        padding: 1rem;
+        padding-left: 3rem;
+        border-radius: .5rem;
+        margin: .5rem 0 .5rem 0;
+    }
+
+    .total-score-description {
+        width: 80%;
+        margin-inline: auto;
+        margin-top: 4rem;
+        margin-bottom: .1rem;
+    }
+
+    #circle>h1 {
+        font-size: 4rem;
+    }
+}
