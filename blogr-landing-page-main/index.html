@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | [Blogr]</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="pattern-image landing-bg-primary">
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container p-4">
+        <a class="navbar-brand text-white fs-1 me-5" href="#">Blogr</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex" id="navbarNavAltMarkup">
+          <div class="navbar-nav container">
+            <li class="nav-item dropdown mx-auto mx-lg-0">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Product
+              </a>
+              <ul class="dropdown-menu landing-bg-primary bg-gradient">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown mx-auto mx-lg-0">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Company
+              </a>
+              <ul class="dropdown-menu landing-bg-primary bg-gradient">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown mx-auto mx-lg-0">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Connect
+              </a>
+              <ul class="dropdown-menu landing-bg-primary bg-gradient">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <a class="nav-link btn rounded-pill ms-lg-auto px-4 me-2" aria-current="page" href="#">Login</a>
+            <a class="nav-link btn rounded-pill bg-white px-4" href="#">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--End Nav-->
+    <div id="top" class="text-white">
+      <div class="rounded-top-0">
+        <h2 class="p-5 text-center fs-1 fw-bold mb-4">
+          A modern publishing platform
+        </h2>
+        <p class="text-center" id="æudience">
+          Grow your audience and build your online brand
+        </p>
+      </div>
+      <div class="container">
+        <div class="col-md-12 text-center">
+          <button type="button" class="btn btn-primary btn-1 navbar-btn rounded-pill">
+            Start for Free
+          </button>
+          <button type="button" class="btn btn-primary btn-1 navbar-btn rounded-pill">
+            Learn More
+          </button>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <h2 class="text-center font-weight-bold fs-1 fw-bold mb-4 p-4" style="color: hsl(208, 49%, 24%);">
+    Designed for the future
+  </h2>
+  <br>
+  <div class="container mb-5 flex-column flex-lg-row">
+    <div class="row">
+      <div class="col-lg-6">
+        <h3 class="font-weight-bold mb-2 mt-2 mb-4 fs-1" style="color: hsl(208, 49%, 24%);">
+          Introducing an extensible editor
+        </h3>
+        <p class="mb-2">
+          Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+          change the looks of a blog.
+        </p>
+        <br>
+        <h3 class="font-weight-bold mb-2 mt-2 mb-4 fs-1" style="color: hsl(208, 49%, 24%);">
+          Robust content management
+        </h3>
+        <p class="mb-2">
+          Flexible content management enables users to easily move through posts. Increase the usability of your blog
+          by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+        </p>
+      </div>
+      <div class="col-lg-6 align-self-start">
+        <img src="images/illustration-editor-desktop.svg" class="img-fluid" alt="logo">
+      </div>
+    </div>
+  </div>
+  <div class="state-of-art-container d-flex flex-column flex-lg-row text-white mt-5">
+    <div class="container position-relative">
+      <div class="row">
+        <div class="state-of-art-container__image col-10 ms-auto me-auto col-lg-5">
+          <img id="mobile-phones" src="./images/illustration-phones.svg" class="img-fluid position-relative"
+            alt="2 mobile phones">
+        </div>
+        <div
+          class="ms-auto me-auto text-center text-lg-start col-10 col-lg-7 align-self-center pb-5 mb-5  pb-lg-0 mb-lg-0">
+          <h2 class="fs-1 fw-bold mb-4">
+            State of the Art Infrastructure
+          </h2>
+          <p>
+            With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+            This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="laptop-section d-flex flex-column my-5 flex-lg-row align-items-center">
+    <aside>
+      <img src="./images/illustration-laptop-mobile.svg" class="img-fluid d-lg-none" alt="">
+      <img id="laptop-desktop" src="./images/illustration-laptop-desktop.svg" class="d-none d-lg-block" alt="">
+    </aside>
+    <article class="text-center text-lg-start mt-5 mt-lg-0 px-4 px-sm-5 px-lg-0 offset-xl-1 col-xl-4 col-xxl-5">
+      <div>
+        <h3 class="mb-4 fs-1 laptop-section__title">
+          Free, open, simple
+        </h3>
+        <p class="fs-5">
+          Blogr is a free and open source application backed by a large community of helpful developers.
+          It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party
+          commenting tools,
+          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+        </p>
+      </div>
+      <div class="mt-5">
+        <h3 class="mb-4 fs-1 laptop-section__title">
+          Powerful tooling
+        </h3>
+        <p class="fs-5">
+          Batteries included. We built a simple and straight forward CLI tool that makes customization and deployment a
+          breeze, but capable of producing even the most complicated sites.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <footer class="footer text-center pt-5 pb-2">
+    <div
+      class="d-flex flex-column flex-lg-row col-lg-10 justify-content-around gap-5 align-items-center align-items-lg-start ">
+      <h2 class="footer__title fw-bold text-white">Blogr</h2>
+      <div class="">
+        <h3 class="fs-2 text-white fw-semibold">Product</h3>
+        <ul class="footer__list">
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="fs-2 text-white fw-semibold">Company</h3>
+        <ul class="footer__list">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="fs-2 text-white fw-semibold">Connect</h3>
+        <ul class="footer__list">
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a target="_blank" href="https://github.com/narkuszuyka">Şükran Akyüz</a> & <a target="_blank"
+      href="https://github.com/4Furki4">Furkan
+      Cengiz</>.
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

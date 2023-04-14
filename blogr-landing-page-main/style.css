@@ -1,0 +1,122 @@
+:root {
+    --primary-color: hsl(356, 100%, 66%);
+}
+
+body {
+    font-family: 'Overpass', sans-serif !important;
+}
+
+.landing-bg-primary {
+    background-color: var(--primary-color);
+}
+
+#top {
+    padding-top: 6rem;
+    border-bottom-left-radius: 100px;
+}
+
+.pattern-image {
+    background-image: url(./images/bg-pattern-intro-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -1vw -30vw;
+}
+
+.btn {
+    background-color: hsl(356, 100%, 66%);
+    border: 0px;
+}
+
+.btn:hover {
+    background-color: whitesmoke;
+    color: hsl(355, 91%, 52%);
+    transform: scale(1.05);
+}
+
+.state-of-art-container {
+    background-color: #3a3d5cf3;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.state-of-art-container__image {
+    background-image: url(./images/bg-pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -10rem;
+}
+
+.laptop-section__title {
+    color: hsl(208, 49%, 24%);
+    font-weight: 600;
+}
+
+#mobile-phones {
+    margin-top: -3rem;
+}
+
+.footer {
+    border-top-right-radius: 100px;
+    background-color: hsl(240, 10%, 16%);
+}
+
+.footer__title {
+    font-size: 3rem;
+}
+
+.footer__title--white {
+    color: white;
+}
+
+.footer__list {
+    padding: 1rem;
+}
+
+.footer__list li {
+    list-style: none;
+    padding-top: .75rem;
+}
+
+.footer__list li>a {
+    text-decoration: none;
+    color: hsl(240, 2%, 79%);
+    transition: color .25s ease-in;
+}
+
+.footer__list li>a:hover {
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+
+    #mobile-phones {
+        margin-top: -5rem;
+    }
+
+    #laptop-desktop {
+        margin-left: -17.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #mobile-phones {
+        margin-top: -7.5rem;
+    }
+
+    .pattern-image {
+        background-position: -10vw 0vw;
+    }
+}
+
+.attribution {
+    font-size: .75rem;
+    text-align: center;
+    color: hsl(240, 2%, 79%);
+    padding-bottom: 1rem;
+    background-color: hsl(240, 10%, 16%);
+}
+
+.attribution a {
+    color: white;
+}
