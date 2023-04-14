@@ -36,7 +36,7 @@
 
 - toFixed method to add 2 decimals at the end of results.
 ### Live Link and Preview
-- __[Live Link](http://localhost:5500/tip-calculator-app-main/tip-calculator-app-main/?)__ \
+- __[Live Link](https://tip-calculator-4furki4.netlify.app)__ \
 **Preview of the challenge**
 ![Snapshot of product preview challenge](./snapshots/tip-calculator-challenge.png)
 
