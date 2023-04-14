@@ -10,7 +10,7 @@
   - I used scss in a project for the first time. It made project progress way much easier bc of nesting with & symbol.
 
 ### Live Link and Preview
-- __[Live Link](https://4furki4-product-preview-card.netlify.app/)__
+- __[Live Link](https://4furki4-product-preview-card.netlify.app/)__ \
 **Preview of the challenge**
 ![Snapshot of product preview challenge](./snapshots/product-preview-ss.png)
 
@@ -21,7 +21,7 @@
 ### What I Tried New:
   - I hadn't written client-side validation by myself before.
   - I learned that ``::placeholder`` exists xD
-- __[Live Link](https://4furki4-signup-form-challange.netlify.app/)__
+- __[Live Link](https://4furki4-signup-form-challange.netlify.app/)__ \
 **Preview of the challenge**
 ![Snapshot of signup form challenge](./snapshots/signup-form-challenge.png)
 
@@ -36,7 +36,7 @@
 
 - toFixed method to add 2 decimals at the end of results.
 ### Live Link and Preview
-- __[Live Link](http://localhost:5500/tip-calculator-app-main/tip-calculator-app-main/?)__
+- __[Live Link](http://localhost:5500/tip-calculator-app-main/tip-calculator-app-main/?)__ \
 **Preview of the challenge**
 ![Snapshot of product preview challenge](./snapshots/tip-calculator-challenge.png)
 
