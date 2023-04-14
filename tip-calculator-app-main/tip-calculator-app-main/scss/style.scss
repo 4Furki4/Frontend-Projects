@@ -200,6 +200,15 @@ label[for="bill"] {
             border-radius: 1.5rem;
         }
 
+        &__tip-select {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(3, minmax(50px, 1fr));
+            grid-template-areas:
+                "h2 h2 h2"
+                "opt-1 opt-2 opt-3"
+                "opt-4 opt-5 custom";
+        }
+
         &__output {
             display: flex;
             flex-direction: column;
