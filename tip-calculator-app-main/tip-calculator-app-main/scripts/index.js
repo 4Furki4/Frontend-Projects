@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tipCustomPercentageEl = document.querySelector('.calculator__tip-select__options--custom');
     const numberOfPeopleEl = document.querySelector('.calculator__people-count__input')
     const numberOfPeopleInpuValidationEl = document.querySelector('.calculator__people-count__validation')
+    const resetButtonEl = document.querySelector('.calculator__output__reset-button')
     let tipAmount = 0;
     let billValue = 0;
     let totalBill = 0;
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             inputEl.target.value = value
         }
     }
+    resetButtonEl.addEventListener('click', reset);
     function calculateTipAmount(bill, percentage) {
         tipAmount = parseFloat(bill * (percentage / 100))
     }
@@ -62,6 +64,24 @@ document.addEventListener('DOMContentLoaded', () => {
         setTotalPerPersonText(totalPerPerson)
         setTipAmountText(tipAmount)
     }
+    function reset() {
+        resetTipButtonStyle()
+        tipAmount = 0;
+        billValue = 0;
+        totalBill = 0;
+        tipPercentage = 0;
+        numberOfPeople = 0;
+        totalPerPerson = 0;
+        billEl.value = 0
+        numberOfPeopleEl.value = 0
+        tipCustomPercentageEl.value = 0
+        setValidationOfPeopleCount()
+        setCalculatedValues()
+    }
+    function resetTipButtonStyle() {
+        let selectedBtn = document.querySelector(`button[data-tip-value="${tipPercentage}"]`)
+        selectedBtn?.classList.remove('selected-btn')
+    }
     billEl.addEventListener('input', inputEl => {
         inputTextAvoid(inputEl)
         billValue = parseFloat(inputEl.target.value)
@@ -70,28 +90,26 @@ document.addEventListener('DOMContentLoaded', () => {
     numberOfPeopleEl.addEventListener('blur', inputEl => {
         inputTextAvoid(inputEl)
         numberOfPeople = parseInt(inputEl.target.value)
+        setValidationOfPeopleCount()
+        setCalculatedValues()
+    })
+    function setValidationOfPeopleCount() {
         if (!numberOfPeople) {
             numberOfPeopleInpuValidationEl.style.display = 'block'
         }
         else {
             numberOfPeopleInpuValidationEl.style.display = 'none'
         }
-        setCalculatedValues()
-    })
+    }
     numberOfPeopleEl.addEventListener('input', inputEl => {
         inputTextAvoid(inputEl)
         numberOfPeople = parseInt(inputEl.target.value)
-        if (!numberOfPeople) {
-            numberOfPeopleInpuValidationEl.style.display = 'block'
-        } else {
-            numberOfPeopleInpuValidationEl.style.display = 'none'
-        }
+        setValidationOfPeopleCount()
         setCalculatedValues()
     })
     tipPredefinedOptions.forEach(el => {
         el.addEventListener('click', () => {
-            let selectedBtn = document.querySelector(`button[data-tip-value="${tipPercentage}"]`)
-            selectedBtn?.classList.remove('selected-btn')
+            resetTipButtonStyle()
             tipPercentage = parseFloat(el.attributes.getNamedItem('data-tip-value').value)
             el.classList.add('selected-btn')
             tipCustomPercentageEl.value = ''
@@ -99,8 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
     tipCustomPercentageEl.addEventListener('input', inputEl => {
-        let selectedBtn = document.querySelector(`button[data-tip-value="${tipPercentage}"]`)
-        selectedBtn?.classList.remove('selected-btn')
+        resetTipButtonStyle()
         tipPercentage = parseInt(inputEl.target.value)
         setCalculatedValues()
     })
