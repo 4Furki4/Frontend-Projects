@@ -2,7 +2,7 @@
 
 > Here you can find my projects to enhance my front-end skills with their live links.
 > I will also add more information like what I learnt, what the difficulties I had and so on.
-
+--------------
 ## Testimonial Grid Section
 
 ### Solved At 19.03.2023
@@ -14,18 +14,18 @@
 - __[Live Link](https://cheerful-moonbeam-d9cbdb.netlify.app/)__
 **Preview of the challenge**
 ![Snapshot of product preview challenge](./snapshots/testimonial-grid.png)
-
-## Product Preview Card Component
-### Solved at 20.03.2023
-### Difficulties:
-- Font sizes and spacing between text had me have hard times :D I tried to make it as closer to the design as possible.
-### What I Tried New:
-- I used scss in a project for the first time. It made project progress way much easier bc of nesting with & symbol.
-
+--------------
+## Result Summary Challenge
+### Solved at 23.03.2023
+### Difficulties
+- Drawing a decent circle for 76 of 100 was difficult.
+### What I Tried New
+- CSS Variables
 ### Live Link and Preview
-- __[Live Link](https://4furki4-product-preview-card.netlify.app/)__ \
+- __[Live Link](https://4furki4.github.io/ResultSummeryComponentChallenge/)__
 **Preview of the challenge**
-![Snapshot of product preview challenge](./snapshots/product-preview-ss.png)
+![](./snapshots/result-summary.png)
+--------------
 ## Clipboard Landing Challenge
 ### Solved at 29.03.2023
 ### Difficulties:
@@ -36,9 +36,19 @@
 - __[Live Link](https://clipboard-landing-page-challenge-4-furki4.vercel.app/)__
 **Preview of the challenge**
 ![clipboard landing challenge preview](./snapshots/clipboard-landing.png)
+--------------
+## Product Preview Card Component
+### Solved at 09.04.2023
+### Difficulties:
+- Font sizes and spacing between text had me have hard times :D I tried to make it as closer to the design as possible.
+### What I Tried New:
+- I used scss in a project for the first time. It made project progress way much easier bc of nesting with & symbol.
 
-
-
+### Live Link and Preview
+- __[Live Link](https://4furki4-product-preview-card.netlify.app/)__ \
+**Preview of the challenge**
+![Snapshot of product preview challenge](./snapshots/product-preview-ss.png)
+--------------
 ## Signup Form Challenge
 ### Solved at 14.04.2023
 ### Difficulties:
@@ -50,7 +60,7 @@
 **Preview of the challenge**
 ![Snapshot of signup form challenge](./snapshots/signup-form-challenge.png)
 
-
+--------------
 ## Tip Calculator Challenge
 ### Solved at 14.04.2023
 
