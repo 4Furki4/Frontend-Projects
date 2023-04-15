@@ -19,8 +19,8 @@
 
     &__button {
         font-weight: 700;
+        padding: .85rem;
         width: 100%;
-        padding: .75rem;
         border: 0;
         color: $White;
         letter-spacing: .15rem;
@@ -53,6 +53,7 @@
 
     &__rating__points {
         transition: .25s;
+        cursor: pointer;
 
         &.selected {
             background-color: $Light-Grey;
@@ -82,8 +83,12 @@
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
     .card {
         border-radius: 1.75rem;
+
+        &__button {
+            padding: .75rem;
+        }
     }
 }
