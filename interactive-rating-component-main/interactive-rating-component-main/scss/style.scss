@@ -36,10 +36,18 @@ section {
 
 .dark-bg-circle {
     background-color: $circle-color;
-    width: 50px;
-    height: 50px;
-    line-height: 52px;
+    width: 45px;
+    height: 45px;
+    line-height: 48px;
     // padding-right: 1px;
     text-align: center;
     border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+    .dark-bg-circle {
+        width: 50px;
+        height: 50px;
+        line-height: 52px;
+    }
 }

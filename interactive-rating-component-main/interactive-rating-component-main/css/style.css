@@ -15,8 +15,8 @@
 }
 .card__button {
   font-weight: 700;
+  padding: 0.85rem;
   width: 100%;
-  padding: 0.75rem;
   border: 0;
   color: hsl(0, 0%, 100%);
   letter-spacing: 0.15rem;
@@ -45,6 +45,7 @@
 }
 .card__rating__points {
   transition: 0.25s;
+  cursor: pointer;
 }
 .card__rating__points.selected {
   background-color: hsl(217, 12%, 63%);
@@ -67,9 +68,12 @@
   color: hsl(217, 12%, 63%);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
   .card {
     border-radius: 1.75rem;
+  }
+  .card__button {
+    padding: 0.75rem;
   }
 }
 *,
@@ -106,9 +110,17 @@ section {
 
 .dark-bg-circle {
   background-color: hsl(210, 19%, 18%);
-  width: 50px;
-  height: 50px;
-  line-height: 52px;
+  width: 45px;
+  height: 45px;
+  line-height: 48px;
   text-align: center;
   border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .dark-bg-circle {
+    width: 50px;
+    height: 50px;
+    line-height: 52px;
+  }
 }/*# sourceMappingURL=style.css.map */
