@@ -1,15 +1,23 @@
 @use '../abstracts/' as *;
 
-.card{
+.card {
+    h1 {
+        font-size: 1.7rem;
+        margin: 1rem auto;
+    }
+
     background-color: $card-bg-color;
     max-width: 375px;
     border-radius: 1.75rem;
     padding: 1rem 0rem;
-    & > * {
+
+    &>* {
         margin: 1rem auto;
-        width: 80%;
+        width: 85%;
     }
-    &__button{
+
+    &__button {
+        font-weight: 700;
         width: 100%;
         padding: .75rem;
         border: 0;
@@ -18,38 +26,46 @@
         border-radius: 50px;
         cursor: pointer;
         background-color: $Orange;
-        &:hover, &:focus{
+
+        &:hover,
+        &:focus {
             background-color: $White;
             color: $Orange;
         }
-        &:active{
+
+        &:active {
             opacity: .75;
         }
     }
-    
-    &__ratings{
+
+    &__ratings {
         display: flex;
         justify-content: space-between;
         color: $Medium-Grey;
         user-select: none;
+        margin: 1.5rem auto;
     }
-    &__rating__points{
-        &:hover{
+
+    &__rating__points {
+        &:hover {
             background-color: $Orange;
             color: $White;
         }
-        &:active, &:focus{
+
+        &:active,
+        &:focus {
             background-color: $Light-Grey;
         }
     }
+
     &__header--image {
         max-width: 100%;
-        background-color: $Dark-Blue;   
+        background-color: $Dark-Blue;
         border-radius: 50%;
         padding: 1rem;
     }
-    &__header--paragraph{
+
+    &__header--paragraph {
         color: $Light-Grey;
-        font-size: 14px;
     }
 }

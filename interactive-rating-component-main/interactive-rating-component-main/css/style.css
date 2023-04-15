@@ -4,11 +4,16 @@
   border-radius: 1.75rem;
   padding: 1rem 0rem;
 }
+.card h1 {
+  font-size: 1.7rem;
+  margin: 1rem auto;
+}
 .card > * {
   margin: 1rem auto;
-  width: 80%;
+  width: 85%;
 }
 .card__button {
+  font-weight: 700;
   width: 100%;
   padding: 0.75rem;
   border: 0;
@@ -32,6 +37,7 @@
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  margin: 1.5rem auto;
 }
 .card__rating__points:hover {
   background-color: hsl(25, 97%, 53%);
@@ -48,10 +54,11 @@
 }
 .card__header--paragraph {
   color: hsl(217, 12%, 63%);
-  font-size: 14px;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
