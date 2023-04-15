@@ -11,7 +11,7 @@
 ### What I Tried New:
 - Grid Layout
 ### Live Link and Preview
-- __[Live Link](https://cheerful-moonbeam-d9cbdb.netlify.app/)__
+- __[Live Link](https://cheerful-moonbeam-d9cbdb.netlify.app/)__ \
 **Preview of the challenge**
 ![Snapshot of product preview challenge](./snapshots/testimonial-grid.png)
 --------------
@@ -22,9 +22,9 @@
 ### What I Tried New
 - CSS Variables
 ### Live Link and Preview
-- __[Live Link](https://4furki4.github.io/ResultSummeryComponentChallenge/)__
-**Preview of the challenge**
-![](./snapshots/result-summary.png)
+- __[Live Link](https://4furki4.github.io/ResultSummeryComponentChallenge/)__ \
+**Preview of the challenge** 
+![result summary component](./snapshots/result-summary.png)
 --------------
 ## Clipboard Landing Challenge
 ### Solved at 29.03.2023
@@ -33,7 +33,7 @@
 ### What I Tried New
 - BEM convention for class names
 ### Live Link and Preview
-- __[Live Link](https://clipboard-landing-page-challenge-4-furki4.vercel.app/)__
+- __[Live Link](https://clipboard-landing-page-challenge-4-furki4.vercel.app/)__ \
 **Preview of the challenge**
 ![clipboard landing challenge preview](./snapshots/clipboard-landing.png)
 --------------
