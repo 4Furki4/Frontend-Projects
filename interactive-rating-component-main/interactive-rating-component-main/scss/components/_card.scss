@@ -7,8 +7,9 @@
     }
 
     background-color: $card-bg-color;
-    max-width: 375px;
-    border-radius: 1.75rem;
+    width: min(90%, 375px);
+    margin-inline: auto;
+    border-radius: 1rem;
     padding: 1rem 0rem;
 
     &>* {
@@ -22,10 +23,11 @@
         padding: .75rem;
         border: 0;
         color: $White;
-        letter-spacing: .1rem;
+        letter-spacing: .15rem;
         border-radius: 50px;
         cursor: pointer;
         background-color: $Orange;
+        font-size: .85rem;
 
         &:hover,
         &:focus {
@@ -36,9 +38,11 @@
         &:active {
             opacity: .75;
         }
+
     }
 
     &__ratings {
+        font-weight: 700;
         display: flex;
         justify-content: space-between;
         color: $Medium-Grey;
@@ -47,6 +51,12 @@
     }
 
     &__rating__points {
+
+        &.selected {
+            background-color: $Light-Grey;
+            color: $White;
+        }
+
         &:hover {
             background-color: $Orange;
             color: $White;
@@ -67,5 +77,11 @@
 
     &__header--paragraph {
         color: $Light-Grey;
+    }
+}
+
+@media (min-width: 1440px) {
+    .card {
+        border-radius: 1.75rem;
     }
 }
