@@ -2,31 +2,67 @@
 
 > Here you can find my projects to enhance my front-end skills with their live links.
 > I will also add more information like what I learnt, what the difficulties I had and so on.
-## Product Preview Card Component
-### **Solved at 20.03.2023**
+--------------
+## Testimonial Grid Section
+
+### Solved At 19.03.2023
 ### Difficulties:
-  - Font sizes and spacing between text had me have hard times :D I tried to make it as closer to the design as possible.
+- I implemented my newly acruired grid knowledge with a friend in recoded bootcamp. It was hard to remember all grid properties xD
 ### What I Tried New:
-  - I used scss in a project for the first time. It made project progress way much easier bc of nesting with & symbol.
+- Grid Layout
+### Live Link and Preview
+- __[Live Link](https://cheerful-moonbeam-d9cbdb.netlify.app/)__
+**Preview of the challenge**
+![Snapshot of product preview challenge](./snapshots/testimonial-grid.png)
+--------------
+## Result Summary Challenge
+### Solved at 23.03.2023
+### Difficulties
+- Drawing a decent circle for 76 of 100 was difficult.
+### What I Tried New
+- CSS Variables
+### Live Link and Preview
+- __[Live Link](https://4furki4.github.io/ResultSummeryComponentChallenge/)__
+**Preview of the challenge**
+![](./snapshots/result-summary.png)
+--------------
+## Clipboard Landing Challenge
+### Solved at 29.03.2023
+### Difficulties:
+-
+### What I Tried New
+- BEM convention for class names
+### Live Link and Preview
+- __[Live Link](https://clipboard-landing-page-challenge-4-furki4.vercel.app/)__
+**Preview of the challenge**
+![clipboard landing challenge preview](./snapshots/clipboard-landing.png)
+--------------
+## Product Preview Card Component
+### Solved at 09.04.2023
+### Difficulties:
+- Font sizes and spacing between text had me have hard times :D I tried to make it as closer to the design as possible.
+### What I Tried New:
+- I used scss in a project for the first time. It made project progress way much easier bc of nesting with & symbol.
 
 ### Live Link and Preview
 - __[Live Link](https://4furki4-product-preview-card.netlify.app/)__ \
 **Preview of the challenge**
 ![Snapshot of product preview challenge](./snapshots/product-preview-ss.png)
-
+--------------
 ## Signup Form Challenge
-### **Solved at 14.04.2023**
+### Solved at 14.04.2023
 ### Difficulties:
   - I think that it wasn't hard much, good practice though.
 ### What I Tried New:
-  - I hadn't written client-side validation by myself before.
+  - I hadn't written client-side form input validation by myself before.
   - I learned that ``::placeholder`` exists xD
 - __[Live Link](https://4furki4-signup-form-challange.netlify.app/)__ \
 **Preview of the challenge**
 ![Snapshot of signup form challenge](./snapshots/signup-form-challenge.png)
 
+--------------
 ## Tip Calculator Challenge
-### **Solved at 14.04.2023**
+### Solved at 14.04.2023
 
 ### Difficulties
 - I powered through not to repeat my code again and again, creating functions helped me a lot
