@@ -24,6 +24,7 @@
   cursor: pointer;
   background-color: hsl(25, 97%, 53%);
   font-size: 0.85rem;
+  transition: 0.25s;
 }
 .card__button:hover, .card__button:focus {
   background-color: hsl(0, 0%, 100%);
@@ -41,6 +42,9 @@
      -moz-user-select: none;
           user-select: none;
   margin: 1.5rem auto;
+}
+.card__rating__points {
+  transition: 0.25s;
 }
 .card__rating__points.selected {
   background-color: hsl(217, 12%, 63%);

@@ -28,6 +28,7 @@
         cursor: pointer;
         background-color: $Orange;
         font-size: .85rem;
+        transition: .25s;
 
         &:hover,
         &:focus {
@@ -51,6 +52,7 @@
     }
 
     &__rating__points {
+        transition: .25s;
 
         &.selected {
             background-color: $Light-Grey;
