@@ -77,3 +77,18 @@
 ![Snapshot of product preview challenge](./snapshots/tip-calculator-challenge.png)
 
 
+## Interactive Rating Component
+
+### Solved at 16.04.2023
+### Difficulties:
+- I didn't know how to restore the point in order to show it in thanks page. I tried using exports and imports which didn't do the trick. It took some time to use localStorage xD
+
+### What I Tried New
+
+- Tried using imports and export
+- Used localStorage to store the rating point
+- used window.location to navigate to the thanks page
+### Live Link and Preview
+- __[Live Link](https://zippy-yeot-4dbd04.netlify.app/)__ \
+**Preview of the challenge**
+![Snapshot of interactive component challenge](./snapshots/interactive-rating-component.png)
