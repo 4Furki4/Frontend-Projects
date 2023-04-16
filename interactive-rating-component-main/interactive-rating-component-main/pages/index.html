@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Rating state start -->
+  <section>
+    <div class="card">
+      <div class="card__header">
+        <img class="card__header--image" src="../images/icon-star.svg" alt="">
+        <h1>
+          How did we do?
+        </h1>
+        <p class="card__header--paragraph">
+          Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!
+        </p>
+      </div>
+      <div class="card__ratings">
+        <div data-point="1" class="card__rating__points dark-bg-circle">
+          1
+        </div>
+        <div data-point="2" class="card__rating__points dark-bg-circle">
+          2
+        </div>
+        <div data-point="3" class="card__rating__points dark-bg-circle">
+          3
+        </div>
+        <div data-point="4" class="card__rating__points dark-bg-circle">
+          4
+        </div>
+        <div data-point="5" class="card__rating__points dark-bg-circle">
+          5
+        </div>
+      </div>
+      <div>
+        <button class="card__button">
+          SUBMIT
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- Rating state end -->
+
+
+  <!-- You selected  out of 5
+
+  Thank you!
+
+  We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch! -->
+
+  <!-- Thank you state end -->
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script type="module" defer src="../scripts/index.js"></script>
+</body>
+
+</html>
