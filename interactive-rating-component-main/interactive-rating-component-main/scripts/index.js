@@ -15,6 +15,6 @@ ratingPoints.forEach(el => {
 })
 btnEl?.addEventListener('click', () => {
     if (point) {
-        window.location.pathname = "/interactive-rating-component-main/interactive-rating-component-main/pages/thanks.html";
+        window.location.pathname = 'pages/thanks.html'
     }
 })
