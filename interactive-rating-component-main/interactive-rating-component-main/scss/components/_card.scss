@@ -1,8 +1,9 @@
 @use '../abstracts/' as *;
 
-.card {
-    &--thanks {
+.card{
+    &--thanks{
         text-align: center;
+        padding: 1.5rem 0rem;
     }
 
     h1 {
@@ -19,6 +20,15 @@
     &>* {
         margin: 1rem auto;
         width: 85%;
+    }
+
+    &__header__result-message {
+        margin: 2rem auto;
+        width: 65%;
+        padding: .45rem .5rem;
+        border-radius: 25px;
+        color: $Orange;
+        background-color: $circle-color;
     }
 
     &__button {

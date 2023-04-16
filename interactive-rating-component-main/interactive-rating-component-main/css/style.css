@@ -7,6 +7,7 @@
 }
 .card--thanks {
   text-align: center;
+  padding: 1.5rem 0rem;
 }
 .card h1 {
   font-size: 1.7rem;
@@ -15,6 +16,14 @@
 .card > * {
   margin: 1rem auto;
   width: 85%;
+}
+.card__header__result-message {
+  margin: 2rem auto;
+  width: 65%;
+  padding: 0.45rem 0.5rem;
+  border-radius: 25px;
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(210, 19%, 18%);
 }
 .card__button {
   font-weight: 700;
