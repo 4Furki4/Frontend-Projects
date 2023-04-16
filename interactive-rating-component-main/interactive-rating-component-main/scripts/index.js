@@ -9,11 +9,12 @@ ratingPoints.forEach(el => {
         }
         selectedPoint = el;
         point = el.attributes.getNamedItem('data-point').value
+        localStorage.setItem('point', point)
         el.classList.add('selected')
     })
 })
-btnEl.addEventListener('click', () => {
+btnEl?.addEventListener('click', () => {
     if (point) {
-        window.location.pathname = "interactive-rating-component-main/interactive-rating-component-main/index.html";
+        window.location.pathname = "/interactive-rating-component-main/interactive-rating-component-main/pages/thanks.html";
     }
 })

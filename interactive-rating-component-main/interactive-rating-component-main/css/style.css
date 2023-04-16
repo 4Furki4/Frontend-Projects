@@ -5,6 +5,9 @@
   border-radius: 1rem;
   padding: 1rem 0rem;
 }
+.card--thanks {
+  text-align: center;
+}
 .card h1 {
   font-size: 1.7rem;
   margin: 1rem auto;
