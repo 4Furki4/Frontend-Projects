@@ -20,3 +20,16 @@ h1, h2, h3 {
 img{
     max-width: 100%;
 }
+.nav{
+    display: flex;
+    align-items: center;
+    margin: 1rem 2rem;
+    &__brand{
+        margin-right: auto;
+        margin-left: .25rem;
+    }
+    &__icon{
+        width: auto;
+        height: 15px;
+    }
+}

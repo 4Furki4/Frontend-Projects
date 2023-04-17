@@ -7,16 +7,18 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Huddle landing page with curved sections</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">  <title>Frontend Mentor | Huddle landing page with curved sections</title>
 </head>
 <body>
-  <nav>
-    <h2>
+  <nav class="nav">
+    <img class="nav__icon" src="./images/icon-messages.svg" alt="">
+    <h3 class="nav__brand">
       Huddle
-    </h2>
-    <button>
-      Try it free
+    </h3>
+    <button class="btn btn--nav">
+      Try it Free
     </button>
   </nav>
   <main>
@@ -29,7 +31,7 @@
           Huddle re-imagines the way we build communities. You have a voice, but so does 
           your audience. Create connections with your users as you engage in genuine discussion. 
         </p>
-        <button>
+        <button class="btn btn--get-started">
           Get Started For Free
         </button>
       </div>
@@ -94,7 +96,7 @@
         <h2>
           Ready To Build Your Community?
         </h2>
-        <button>
+        <button class="btn btn--get-started">
           Get Started For Free
         </button>
       </div>
@@ -132,7 +134,9 @@
       </p>
       <form action="">
         <input type="text">
-        <button>Subscribe</button>
+        <button class="btn btn--newsteller">
+          Subscribe
+        </button>
       </form>
     </div>
   </footer>
