@@ -1,6 +1,19 @@
+@use './abstracts' as *;
+
 .attribution {
     font-size: 11px; text-align: center;
     a {
-        color: hsl(228, 45%, 44%); 
+        color: hsl(228, 45%, 44%);
     }
+}
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
 }
