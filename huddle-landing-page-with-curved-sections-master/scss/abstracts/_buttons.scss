@@ -13,16 +13,22 @@
     &--nav{
         background-color: transparent;
         border: 0;
-        font-size: .75rem;
+        font-size: .85em;
         border: 2px solid $primary-light-pink;
         font-weight: 600;
-        padding: .2rem 1rem;
+        padding: .25em 1em;
         color: $primary-light-pink;
         &:hover{
             &::before{
                 opacity: 1;
                 transform: scaleX(1);
-                // background-color: transparent;
+            }
+        }
+        &:active{
+            transform: none;
+            &::before{
+                transition: transform .1s ease-in-out;
+                transform: scaleX(0);
             }
         }
         &::before{
@@ -30,7 +36,9 @@
         }
     }
     &--get-started{
-        transition: background-position 1s ease-out;
+        margin: 2rem auto;
+        transition: background-position 1s ease-out,
+                    transform .1s ease-out;
         font-weight: 400;
         padding: .75rem 2.5rem;
         color: white;

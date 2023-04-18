@@ -21,6 +21,7 @@ img{
     max-width: 100%;
 }
 .nav{
+    font-size: clamp(.75rem, 5vw, 1.5rem);
     display: flex;
     align-items: center;
     margin: 1rem 2rem;
@@ -31,5 +32,23 @@ img{
     &__icon{
         width: auto;
         height: 15px;
+    }
+}
+main{
+    padding: 5em 0;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+p{
+    font-size: clamp(.65rem, 2vw, 1rem);
+}
+.intro{
+    h1{
+        font-size: clamp(1rem, 4vw, 2.25rem);
+    }
+    &__paragraph{
+        margin: 1rem auto;
+        width: min(90%, 500px);
     }
 }
