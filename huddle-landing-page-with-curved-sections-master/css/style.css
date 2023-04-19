@@ -12,10 +12,10 @@
 .btn--nav {
   background-color: transparent;
   border: 0;
-  font-size: 0.85em;
+  font-size: 0.75em;
   border: 2px solid hsl(321, 100%, 78%);
   font-weight: 600;
-  padding: 0.25em 1em;
+  padding: 0.3em 1em;
   color: hsl(321, 100%, 78%);
 }
 .btn--nav:hover::before {
@@ -45,10 +45,10 @@
   opacity: 0.05;
 }
 .btn--get-started {
-  margin: 2rem auto;
+  margin: 1rem auto;
   transition: background-position 1s ease-out, transform 0.1s ease-out;
-  font-weight: 400;
-  padding: 0.75rem 2.5rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
   color: white;
   border: 0;
   background-image: linear-gradient(45deg, hsl(323, 94%, 20%), hsl(323, 83%, 32%), hsl(322, 100%, 66%), hsl(321, 100%, 78%));
@@ -117,10 +117,10 @@ img {
 }
 
 .nav {
-  font-size: clamp(0.75rem, 5vw, 1.5rem);
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
   display: flex;
   align-items: center;
-  margin: 1rem 2rem;
+  margin: 1rem 1em;
 }
 .nav__brand {
   margin-right: auto;
@@ -128,7 +128,7 @@ img {
 }
 .nav__icon {
   width: auto;
-  height: 15px;
+  height: 1em;
 }
 
 main {
@@ -139,13 +139,66 @@ main {
 }
 
 p {
-  font-size: clamp(0.65rem, 2vw, 1rem);
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-weight: 500;
 }
 
 .intro h1 {
-  font-size: clamp(1rem, 4vw, 2.25rem);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
 }
 .intro__paragraph {
   margin: 1rem auto;
   width: min(90%, 500px);
+}
+.intro__img {
+  margin: 6rem auto;
+}
+.intro__card {
+  position: relative;
+}
+.intro__card img {
+  width: 2em;
+  position: absolute;
+  inset: 1;
+  top: -25%;
+}
+.intro__card--wrapper {
+  padding: 4rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.intro__card--wrapper h2 {
+  font-size: 3rem;
+  display: inline;
+}
+.intro__card--wrapper p {
+  color: grey;
+}
+.intro__card--wrapper p#message-sent {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.body {
+  padding: 4rem 0;
+}
+.body h2 {
+  margin-bottom: 1rem;
+}
+.body__info {
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+.body__info--blue-bg {
+  background-image: url("../images/bg-section-top-mobile-2.svg");
+  background-repeat: no-repeat;
+}
+.body__info__content {
+  margin-top: 2rem;
+  order: 2;
+}
+.body__call-to-action {
+  margin-top: 10rem;
 }/*# sourceMappingURL=style.css.map */

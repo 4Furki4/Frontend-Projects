@@ -13,10 +13,10 @@
     &--nav{
         background-color: transparent;
         border: 0;
-        font-size: .85em;
+        font-size: .75em;
         border: 2px solid $primary-light-pink;
         font-weight: 600;
-        padding: .25em 1em;
+        padding: .3em 1em;
         color: $primary-light-pink;
         &:hover{
             &::before{
@@ -36,11 +36,11 @@
         }
     }
     &--get-started{
-        margin: 2rem auto;
+        margin: 1rem auto;
         transition: background-position 1s ease-out,
                     transform .1s ease-out;
-        font-weight: 400;
-        padding: .75rem 2.5rem;
+        font-weight: 600;
+        padding: .8rem 2rem;
         color: white;
         border:0;
         background-image: $gradient-button;
