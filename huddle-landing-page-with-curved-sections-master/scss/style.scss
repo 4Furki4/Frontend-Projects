@@ -1,0 +1,107 @@
+@use './abstracts' as *;
+
+.attribution {
+    font-size: 11px; text-align: center;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+.nav{
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    display: flex;
+    align-items: center;
+    margin: 1rem 1em;
+    &__brand{
+        margin-right: auto;
+        margin-left: .25rem;
+    }
+    &__icon{
+        width: auto;
+        height: 1em;
+    }
+}
+main{
+    padding: 5em 0;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+p{
+    font-size: clamp(.8rem, 2vw, 1rem);
+    font-weight: 500;
+}
+.intro{
+    h1{
+        font-size: clamp(1.5rem, 4vw, 2.25rem);
+    }
+    &__paragraph{
+        margin: 1rem auto;
+        width: min(90%, 500px);
+    }
+    &__img{
+        margin: 6rem auto;
+    }
+    &__card{
+        position: relative;
+        img{
+            width: 2em;
+            position: absolute;
+            inset: 1;
+            top: -25%;
+        }
+        &--wrapper{
+            padding: 4rem 0rem;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            h2{
+                font-size: 3rem;
+                display: inline;
+            }
+            p{
+                color: grey;
+                &#message-sent{
+                    width: 30%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+.body{
+    padding: 4rem 0;
+    h2{
+        margin-bottom: 1rem;
+    }
+    &__info{
+        margin-bottom: 5rem;
+        &--blue-bg{
+            background-image: url('../images/bg-section-top-mobile-2.svg');
+            background-repeat: no-repeat;
+        }
+        display: flex;
+        flex-direction: column;
+        &__content{
+            margin-top: 2rem;
+            order: 2;
+        }
+    }
+    &__call-to-action{
+        margin-top: 10rem;
+    }
+}
