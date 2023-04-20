@@ -8,7 +8,8 @@
     box-shadow: 0px 3px 5px #d6dfeb;
     position: relative;
     &:active{
-        transform: translate(-1px, -1px);
+        transition: all .05s;
+        transform: translate(-2px, -2px);
     }
     &--nav{
         background-color: transparent;
@@ -18,7 +19,7 @@
         font-weight: 600;
         padding: .3em 1em;
         color: $primary-light-pink;
-        &:hover{
+        &:hover, &:focus{
             &::before{
                 opacity: 1;
                 transform: scaleX(1);
@@ -32,13 +33,13 @@
             }
         }
         &::before{
-            @include button-bg-slide(5px, calc(100% - 10px), 2px, 0px, center);
+            @include button-bg-slide(5px, calc(100% - 10px), 2px, 0px, center, $primary-light-pink);
         }
     }
     &--get-started{
         margin: 1rem auto;
         transition: background-position 1s ease-out,
-                    transform .1s ease-out;
+                    transform .25s ease-out;
         font-weight: 600;
         padding: .8rem 2rem;
         color: white;
@@ -46,17 +47,20 @@
         background-image: $gradient-button;
         background-size: 200%;
         background-position: left;
-        &:hover{
+        &:hover, &:focus{
+            transition: background-position 1s ease-out;
             background-position: right;
         }
     }
     &--newsteller{
         margin-left: auto;
+        width: 50%;
         transition: all .5s cubic-bezier(0.68, 0.55, 0.265, 1);
         font-weight: 700;
-        padding: .5rem 1.5rem;
+        // padding: .5rem 1.5rem;
+        padding: .7rem 0rem;
         border: 0;
-        color: $primary-light-pink;
+        color: $primary-pink;
         border-radius: 5px;
         background-color: white;
         box-shadow: none;
@@ -69,7 +73,7 @@
             }
         }
         &::before{
-            @include button-bg-slide(0px, 100%, 100%, 5px, left)
+            @include button-bg-slide(0px, 100%, 100%, 5px, left, $primary-pink)
         }
     }
 }

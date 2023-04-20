@@ -1,7 +1,10 @@
 @use './variables' as *;
-@mixin button-bg-slide($left, $width, $height, $radius, $transform-origin){
+@mixin button-bg-slide(
+    $left, $width,
+    $height, $radius,
+    $transform-origin, $bg-color){
             transition: all .5s cubic-bezier(0.68, 0.55, 0.265, 1);
-            background-color: $primary-light-pink;
+            background-color: $bg-color;
             border-radius: $radius;
             content: '';
             left: $left;
@@ -13,4 +16,41 @@
             transform-origin: $transform-origin;
             z-index: -1;
             opacity: 0.05;
+}
+
+@mixin bg-section-before(
+    $height, $left,
+    $top, $url){
+    &::before{
+        content: '';
+        width: 100%;
+        height: $height;
+        display: block;
+        position: absolute;
+        left: $left;
+        top: $top;
+        background-image: url($url);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@mixin bg-section-after(
+    $height, $left,
+    $bottom, $url){
+    &::after{
+        content: '';
+        width: 100%;
+        height: $height;
+        display: block;
+        position: absolute;
+        fill: #f5faff;
+        left: $left;
+        bottom: $bottom;
+        background-image: url($url);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 }
