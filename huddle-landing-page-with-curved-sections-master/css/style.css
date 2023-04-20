@@ -59,13 +59,16 @@
   background-position: right;
 }
 .btn--newsteller {
+  margin-left: auto;
   transition: all 0.5s cubic-bezier(0.68, 0.55, 0.265, 1);
   font-weight: 700;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   border: 0;
   color: hsl(321, 100%, 78%);
   border-radius: 5px;
-  background-color: transparent;
+  background-color: white;
+  box-shadow: none;
+  z-index: 99;
 }
 .btn--newsteller:hover {
   color: white;
@@ -98,6 +101,16 @@
   color: hsl(228, 45%, 44%);
 }
 
+.container {
+  width: 80%;
+  margin: auto auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
 *, *::after, *::before {
   box-sizing: border-box;
   margin: 0;
@@ -124,17 +137,17 @@ img {
 }
 .nav__brand {
   margin-right: auto;
-  margin-left: 0.25rem;
 }
-.nav__icon {
+
+.icon {
   width: auto;
   height: 1em;
+  margin-right: 0.25rem;
 }
 
 main {
   padding: 5em 0;
   text-align: center;
-  width: 80%;
   margin: 0 auto;
 }
 
@@ -181,24 +194,87 @@ p {
 }
 
 .body {
+  margin-top: 10rem;
   padding: 4rem 0;
 }
 .body h2 {
   margin-bottom: 1rem;
 }
 .body__info {
+  fill: #f5faff;
   margin-bottom: 5rem;
+  position: relative;
+  padding: 5rem 0rem;
   display: flex;
   flex-direction: column;
 }
 .body__info--blue-bg {
+  background-color: #f5faff;
+}
+.body__info--blue-bg::before {
+  content: "";
+  width: 100%;
+  height: 10rem;
+  display: block;
+  position: absolute;
+  fill: #f5faff;
+  left: 0;
+  top: -10rem;
   background-image: url("../images/bg-section-top-mobile-2.svg");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .body__info__content {
-  margin-top: 2rem;
+  margin-top: 4rem;
   order: 2;
 }
 .body__call-to-action {
   margin-top: 10rem;
+}
+
+.footer {
+  background-color: hsl(192, 100%, 9%);
+  color: hsl(207, 100%, 98%);
+  padding: 4rem 0rem;
+}
+.footer--flex {
+  display: flex;
+  flex-direction: column;
+}
+.footer__contact {
+  margin-top: 6rem;
+  order: 2;
+}
+.footer__contact__title {
+  font-size: 2rem;
+}
+.footer__contact__title img {
+  height: 0.75em;
+}
+.footer__contact__text {
+  margin-bottom: 3rem;
+}
+.footer__contact__phone, .footer__contact__mail {
+  gap: 1rem;
+}
+.footer__contact__phone {
+  margin-bottom: 1rem;
+}
+.footer__newsteller {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer__newsteller__form {
+  display: flex;
+  flex-direction: column;
+}
+.footer__newsteller__input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 3px;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=style.css.map */

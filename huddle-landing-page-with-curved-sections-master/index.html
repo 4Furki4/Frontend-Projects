@@ -14,7 +14,7 @@
 </head>
 <body>
   <nav class="nav">
-    <img class="nav__icon" src="./images/icon-messages.svg" alt="">
+    <img class="icon" src="./images/icon-messages.svg" alt="">
     <h3 class="nav__brand">
       Huddle
     </h3>
@@ -23,7 +23,7 @@
     </button>
   </nav>
   <main>
-    <section class="intro">
+    <section class="intro container">
       <div class="intro__header">
         <h1>
           Build The Community Your Fans Will Love
@@ -59,90 +59,111 @@
       </div>
     </section>
     <section class="body">
-      <div class="body__info body__info--blue-bg">
-        <div class="body__info__content">
-          <h2>
-            Grow Together
-          </h2>
-          <p>
-            Generate meaningful discussions with your audience and build a strong, loyal community.
-            Think of the insightful conversations you miss out on with a feedback form.
-          </p>
+      <div class="body--wrapper">
+        <div class="body__info body__info--blue-bg">
+          <div class="container">
+            <div class="body__info__content">
+            <h2>
+              Grow Together
+            </h2>
+            <p>
+              Generate meaningful discussions with your audience and build a strong, loyal community.
+              Think of the insightful conversations you miss out on with a feedback form.
+            </p>
+            </div>
+            <img class="body__info__img" src="./images/illustration-grow-together.svg" alt="">
+          </div>
         </div>
-        <img class="body__info__img" src="./images/illustration-grow-together.svg" alt="">
-      </div>
-      <div class="body__info">
-        <img class="body__info__img" src="./images/illustration-flowing-conversation.svg" alt="">
-        <div class="body__info__content">
-          <h2>
-            Flowing Conversations
-          </h2>
-          <p>
-            You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
-            just-in-time loading for a more natural flow.
-          </p>
+        <div class="body__info">
+          <div class="container">
+            <img class="body__info__img" src="./images/illustration-flowing-conversation.svg" alt="">
+            <div class="body__info__content">
+              <h2>
+                Flowing Conversations
+              </h2>
+              <p>
+                You wouldn't paginate a conversation in real life, so why do it online? Our threads have
+                just-in-time loading for a more natural flow.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="body__info body__info--blue-bg">
-        <div class="body__info__content">
-          <h2>
-            Your Users
-          </h2>
-          <p>
-            It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
-            once signed in to your app, your users can start chatting immediately.
-          </p>
+        <div class="body__info body__info--blue-bg">
+          <div class="container">
+            <div class="body__info__content">
+              <h2>
+                Your Users
+              </h2>
+              <p>
+                It takes no time at all to integrate Huddle with your app's authentication solution. This means,
+                once signed in to your app, your users can start chatting immediately.
+              </p>
+            </div>
+            <img class="body__info__img" src="./images/illustration-your-users.svg" alt="">
+          </div>
         </div>
-        <img class="body__info__img" src="./images/illustration-your-users.svg" alt="">
-      </div>
-      <div class="body__call-to-action">
-        <h2>
-          Ready To Build Your Community?
-        </h2>
-        <button class="btn btn--get-started">
-          Get Started For Free
-        </button>
+        <div class="body__call-to-action">
+          <h2>
+            Ready To Build Your Community?
+          </h2>
+          <button class="btn btn--get-started">
+            Get Started For Free
+          </button>
+        </div>
       </div>
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__contact">
-      <h2 class="footer__contact__title">
-        Huddle
-      </h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
-        vestibulum a, ultrices quis sem.
-      </p>
-      <div class="footer__contact__phone">
-          Phone: +1-543-123-4567
+    <div class="container footer--flex">
+      <div class="footer__contact">
+        <div class="footer__contact__title row">
+          <img class="icon" src="./images/icon-messages-white.svg" alt="">
+          <h2 class="footer__contact__title">
+            Huddle
+          </h2>
+        </div>
+        <div class="footer__contact__text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
+            vestibulum a, ultrices quis sem.
+          </p>
+        </div>
+        <div class="footer_contact__communications">
+          <div class="footer__contact__phone row">
+            <img class="" src="./images/icon-phone.svg" alt="">
+              Phone: +1-543-123-4567
+          </div>
+          <div class="footer__contact__mail row">
+            <img class="" src="./images/icon-email.svg" alt="">
+            <div>
+              example@huddle.com
+            </div>
+          </div>
+        </div>
+        <div class="footer__contact__social-media-icons">
+          <!-- facebook, instagram and twitter icons -->
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+        </div>
       </div>
-      <div class="footer__contact__mail">
-        example@huddle.com
+      <div class="footer__newsteller">
+        <h2>
+          Newsletter
+        </h2>
+        <p>
+          To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never 
+          send you spam or pass on your email address
+        </p>
+        <form class="footer__newsteller__form" action="">
+          <input class="footer__newsteller__input" type="email">
+          <button class="btn btn--newsteller">
+            Subscribe
+          </button>
+        </form>
       </div>
-      <div class="footer__contact__social-media-icons">
-        <!-- facebook, instagram and twitter icons -->
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-      </div>
+    </footer>
     </div>
-    <div class="footer__newsteller">
-      <h2>
-        Newsletter
-      </h2>
-      <p>
-        To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never 
-        send you spam or pass on your email address
-      </p>
-      <form action="">
-        <input type="text">
-        <button class="btn btn--newsteller">
-          Subscribe
-        </button>
-      </form>
-    </div>
-  </footer>
   <div>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

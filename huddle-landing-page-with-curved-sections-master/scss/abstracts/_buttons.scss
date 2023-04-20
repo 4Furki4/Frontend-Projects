@@ -51,13 +51,16 @@
         }
     }
     &--newsteller{
+        margin-left: auto;
         transition: all .5s cubic-bezier(0.68, 0.55, 0.265, 1);
         font-weight: 700;
-        padding: .5rem 1rem;
+        padding: .5rem 1.5rem;
         border: 0;
         color: $primary-light-pink;
         border-radius: 5px;
-        background-color: transparent;
+        background-color: white;
+        box-shadow: none;
+        z-index: 99;
         &:hover{
             color: white;
             &::before{
