@@ -195,3 +195,30 @@ p{
         }
     }
 }
+@media (min-width: 40rem) {
+    .btn{
+        &--get-started{
+            font-size: 1rem;
+            padding-inline: 3em;
+            padding-block: 1em;
+        }
+    }
+    .nav{
+        margin: 1.5em 3em;
+    }
+    .intro {
+        &__card{
+            img{
+                top: -10%;
+            }
+            &--wrapper{
+                flex-direction: row;
+                justify-content: center;
+                gap: 10rem;
+                h2{
+                    font-size: 5rem;
+                }
+            }
+        }
+    }
+}
