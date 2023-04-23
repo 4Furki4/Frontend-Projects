@@ -31,7 +31,7 @@
             }
         }
         &::before{
-            @include button-bg-slide(5px, calc(100% - 10px), 2px, 0px, center, $primary-light-pink);
+            @include button-bg-slide(10px, calc(100% - 20px), 2px, 0px, center, $primary-light-pink);
         }
     }
     &--get-started{

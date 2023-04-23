@@ -1,5 +1,6 @@
 @use './abstracts' as *;
 
+$animation-timing-func: cubic-bezier(.77,0,.18,1);
 .attribution {
     font-size: 11px; text-align: center;
     a {
@@ -19,6 +20,24 @@
     margin:0;
     padding: 0;
 }
+@keyframes flip{
+    0%{
+        transform: rotate(0deg);
+        scale: 0;
+    }
+    100%{
+        transform: rotate(-360deg);
+        scale: 1;
+    }
+}
+@keyframes slide{
+    0%{
+        transform: translateX(-110%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
 body{
     font-family: 'Open Sans', sans-serif;
 
@@ -30,6 +49,7 @@ img{
     max-width: 100%;
 }
 .nav{
+    animation: slide 1s $animation-timing-func;
     font-size: clamp(1.25rem, 4vw, 1.5rem);
     display: flex;
     align-items: center;
@@ -54,7 +74,9 @@ p{
     font-size: clamp(.8rem, 2vw, 1rem);
     font-weight: 500;
 }
+
 .intro{
+    animation: flip 1s $animation-timing-func;
     h1{
         font-size: clamp(1.5rem, 4vw, 2.25rem);
     }
@@ -147,7 +169,7 @@ p{
     position: relative;
     background-color: $neutral-very-dark-cyan;
     color: $neutral-very-pale-blue;
-    padding: 4rem 0rem;
+    padding: 2rem 0rem;
     @include bg-section-before(
             4rem,
             0,
@@ -224,9 +246,8 @@ p{
         }
     }
     .body{
-        
         &__info{
-            margin-bottom: 30rem;
+            margin-bottom: 10rem;
             &--blue-bg{
                 padding: 5rem 0rem;
             }
@@ -277,7 +298,37 @@ p{
                     '../images/bg-section-bottom-desktop-2.svg'
                 );
             }
-            
+        }
+    }
+
+    .footer{
+        padding: 1rem 0;
+        @include bg-section-before(
+            12rem,
+            0,
+            -12rem,
+            '../images/bg-footer-top-desktop.svg');
+        &--flex{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__contact{
+            margin: 0;
+            width: 40%;
+        }
+        &__newsteller{
+            margin: 0;
+            order: 2;
+            width: 40%;
+            &__form{
+                flex-direction: row;
+                align-items: center;
+                gap: 10%;
+            }
+            &__input{
+                margin-bottom: 0;
+                margin-right: auto;
+            }
         }
     }
 }
