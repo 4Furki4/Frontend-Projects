@@ -94,14 +94,13 @@ p{
 }
 
 .body{
-    margin-top: 10rem;
+    margin-top: 15rem;
     padding: 4rem 0;
     h2{
         margin-bottom: 1rem;
     }
     &__info{
-        fill: #f5faff;
-        margin-bottom: 10rem;
+        margin-bottom: 15rem;
         position: relative;
         padding: 5rem 0rem;
         &--blue-bg{
@@ -196,6 +195,9 @@ p{
     }
 }
 @media (min-width: 40rem) {
+    :root{
+        font-size: 20px;
+    }
     .btn{
         &--get-started{
             font-size: 1rem;
@@ -219,6 +221,63 @@ p{
                     font-size: 5rem;
                 }
             }
+        }
+    }
+    .body{
+        
+        &__info{
+            margin-bottom: 30rem;
+            &--blue-bg{
+                padding: 5rem 0rem;
+            }
+            .container{
+                display: flex;
+                align-items: center;
+            }
+            &__content{
+                text-align: left;
+                order: 0;
+                & > * {
+                    width: 70%;
+                }
+            }
+            &__img{
+                width: 60%;
+            }
+            &--1{
+                @include bg-section-before(
+                    20rem,
+                    0,
+                    -20rem,
+                    '../images/bg-section-top-desktop-1.svg'
+                );
+                @include bg-section-after(
+                    10rem,
+                    0,
+                    -10rem,
+                    '../images/bg-section-bottom-desktop-1.svg'
+                );
+            }
+            &--2 &__content{
+                & > * {
+                    margin-left: auto;
+                }
+            }
+            &--3{
+                @include bg-section-before(
+                    15rem,
+                    0,
+                    -15rem,
+                    '../images/bg-section-top-desktop-2.svg'
+                );
+                @include bg-section-after(
+                    10rem,
+                    0,
+                    -10rem,
+                    '../images/bg-section-bottom-desktop-2.svg'
+                );
+            }
+            
         }
     }
 }
