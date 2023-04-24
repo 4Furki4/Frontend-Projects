@@ -1,16 +1,24 @@
 @use './components/card';
 @use './abstracts/' as *;
 
-*,*::after,*::before{
+*,
+*::after,
+*::before {
     box-sizing: border-box;
+
 }
-.attribution { 
-    font-size: 11px; 
+
+.attribution {
+    font-size: 11px;
     text-align: center;
-    margin-top: auto; 
-    & a { color: hsl(228, 45%, 44%); }
+    margin-top: auto;
+
+    & a {
+        color: hsl(228, 45%, 44%);
+    }
 }
-body{
+
+body {
     font-family: 'Overpass', sans-serif;
     height: 100dvh;
     margin: 0;
@@ -22,15 +30,25 @@ body{
     background-color: $Very-Dark-Blue;
     color: $White;
 }
-section{
+
+section {
     margin-top: auto;
 }
 
-.dark-bg-circle{
+.dark-bg-circle {
     background-color: $circle-color;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 45px;
+    height: 45px;
+    line-height: 48px;
+    // padding-right: 1px;
     text-align: center;
     border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+    .dark-bg-circle {
+        width: 50px;
+        height: 50px;
+        line-height: 52px;
+    }
 }

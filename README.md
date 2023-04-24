@@ -18,13 +18,10 @@
 - Grid Layout
 
 ### Live Link and Preview
-
-- **[Live Link](https://cheerful-moonbeam-d9cbdb.netlify.app/)**
-  **Preview of the challenge**
-  ![Snapshot of product preview challenge](./snapshots/testimonial-grid.png)
-
----
-
+- __[Live Link](https://cheerful-moonbeam-d9cbdb.netlify.app/)__ \
+**Preview of the challenge**
+![Snapshot of product preview challenge](./snapshots/testimonial-grid.png)
+--------------
 ## Result Summary Challenge
 
 ### Solved at 23.03.2023
@@ -38,13 +35,10 @@
 - CSS Variables
 
 ### Live Link and Preview
-
-- **[Live Link](https://4furki4.github.io/ResultSummeryComponentChallenge/)**
-  **Preview of the challenge**
-  ![](./snapshots/result-summary.png)
-
----
-
+- __[Live Link](https://4furki4.github.io/ResultSummeryComponentChallenge/)__ \
+**Preview of the challenge** 
+![result summary component](./snapshots/result-summary.png)
+--------------
 ## Clipboard Landing Challenge
 
 ### Solved at 29.03.2023
@@ -58,13 +52,10 @@
 - BEM convention for class names
 
 ### Live Link and Preview
-
-- **[Live Link](https://clipboard-landing-page-challenge-4-furki4.vercel.app/)**
-  **Preview of the challenge**
-  ![clipboard landing challenge preview](./snapshots/clipboard-landing.png)
-
----
-
+- __[Live Link](https://clipboard-landing-page-challenge-4-furki4.vercel.app/)__ \
+**Preview of the challenge**
+![clipboard landing challenge preview](./snapshots/clipboard-landing.png)
+--------------
 ## Product Preview Card Component
 
 ### Solved at 09.04.2023
@@ -142,7 +133,7 @@
 - **[Live Link](https://zippy-yeot-4dbd04.netlify.app/)** \
   **Preview of the challenge**
   ![Snapshot of interactive component challenge](./snapshots/interactive-rating-component.png)
-
+---------------------
 ## Huddle Landing Page
 
 ### Solved at 24.04.2023

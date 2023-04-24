@@ -1,55 +1,108 @@
 @use '../abstracts/' as *;
 
 .card{
-    background-color: $card-bg-color;
-    max-width: 375px;
-    border-radius: 1.75rem;
-    padding: 1rem 0rem;
-    & > * {
-        margin: 1rem auto;
-        width: 80%;
+    &--thanks{
+        text-align: center;
+        padding: 1.5rem 0rem;
     }
-    &__button{
+
+    h1 {
+        font-size: 1.7rem;
+        margin: 1rem auto;
+    }
+
+    background-color: $card-bg-color;
+    width: min(90%, 375px);
+    margin-inline: auto;
+    border-radius: 1rem;
+    padding: 1rem 0rem;
+
+    &>* {
+        margin: 1rem auto;
+        width: 85%;
+    }
+
+    &__header__result-message {
+        margin: 2rem auto;
+        width: 65%;
+        padding: .45rem .5rem;
+        border-radius: 25px;
+        color: $Orange;
+        background-color: $circle-color;
+    }
+
+    &__button {
+        font-weight: 700;
+        padding: .85rem;
         width: 100%;
-        padding: .75rem;
         border: 0;
         color: $White;
-        letter-spacing: .1rem;
+        letter-spacing: .15rem;
         border-radius: 50px;
         cursor: pointer;
         background-color: $Orange;
-        &:hover, &:focus{
+        font-size: .85rem;
+        transition: .25s;
+
+        &:hover,
+        &:focus {
             background-color: $White;
             color: $Orange;
         }
-        &:active{
+
+        &:active {
             opacity: .75;
         }
+
     }
-    
-    &__ratings{
+
+    &__ratings {
+        font-weight: 700;
         display: flex;
         justify-content: space-between;
         color: $Medium-Grey;
         user-select: none;
+        margin: 1.5rem auto;
     }
-    &__rating__points{
-        &:hover{
+
+    &__rating__points {
+        transition: .25s;
+        cursor: pointer;
+
+        &.selected {
+            background-color: $Light-Grey;
+            color: $White;
+        }
+
+        &:hover {
             background-color: $Orange;
             color: $White;
         }
-        &:active, &:focus{
+
+        &:active,
+        &:focus {
             background-color: $Light-Grey;
         }
     }
+
     &__header--image {
         max-width: 100%;
-        background-color: $Dark-Blue;   
+        background-color: $Dark-Blue;
         border-radius: 50%;
         padding: 1rem;
     }
-    &__header--paragraph{
+
+    &__header--paragraph {
         color: $Light-Grey;
-        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        border-radius: 1.75rem;
+
+        &__button {
+            padding: .75rem;
+        }
     }
 }

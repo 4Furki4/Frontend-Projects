@@ -1,22 +1,42 @@
 .card {
   background-color: hsl(215, 27%, 12%);
-  max-width: 375px;
-  border-radius: 1.75rem;
+  width: min(90%, 375px);
+  margin-inline: auto;
+  border-radius: 1rem;
   padding: 1rem 0rem;
+}
+.card--thanks {
+  text-align: center;
+  padding: 1.5rem 0rem;
+}
+.card h1 {
+  font-size: 1.7rem;
+  margin: 1rem auto;
 }
 .card > * {
   margin: 1rem auto;
-  width: 80%;
+  width: 85%;
+}
+.card__header__result-message {
+  margin: 2rem auto;
+  width: 65%;
+  padding: 0.45rem 0.5rem;
+  border-radius: 25px;
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(210, 19%, 18%);
 }
 .card__button {
+  font-weight: 700;
+  padding: 0.85rem;
   width: 100%;
-  padding: 0.75rem;
   border: 0;
   color: hsl(0, 0%, 100%);
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.15rem;
   border-radius: 50px;
   cursor: pointer;
   background-color: hsl(25, 97%, 53%);
+  font-size: 0.85rem;
+  transition: 0.25s;
 }
 .card__button:hover, .card__button:focus {
   background-color: hsl(0, 0%, 100%);
@@ -26,12 +46,22 @@
   opacity: 0.75;
 }
 .card__ratings {
+  font-weight: 700;
   display: flex;
   justify-content: space-between;
   color: hsl(216, 12%, 54%);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  margin: 1.5rem auto;
+}
+.card__rating__points {
+  transition: 0.25s;
+  cursor: pointer;
+}
+.card__rating__points.selected {
+  background-color: hsl(217, 12%, 63%);
+  color: hsl(0, 0%, 100%);
 }
 .card__rating__points:hover {
   background-color: hsl(25, 97%, 53%);
@@ -48,10 +78,19 @@
 }
 .card__header--paragraph {
   color: hsl(217, 12%, 63%);
-  font-size: 14px;
 }
 
-*, *::after, *::before {
+@media (min-width: 768px) {
+  .card {
+    border-radius: 1.75rem;
+  }
+  .card__button {
+    padding: 0.75rem;
+  }
+}
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -83,9 +122,17 @@ section {
 
 .dark-bg-circle {
   background-color: hsl(210, 19%, 18%);
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 45px;
+  height: 45px;
+  line-height: 48px;
   text-align: center;
   border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .dark-bg-circle {
+    width: 50px;
+    height: 50px;
+    line-height: 52px;
+  }
 }/*# sourceMappingURL=style.css.map */
