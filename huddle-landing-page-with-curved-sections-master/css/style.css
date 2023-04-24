@@ -225,7 +225,6 @@ p {
 .body__info {
   margin-bottom: 15rem;
   position: relative;
-  padding: 5rem 0rem;
 }
 .body__info--blue-bg {
   background-color: #f5faff;
@@ -289,7 +288,7 @@ p {
   order: 2;
 }
 .body__call-to-action {
-  margin: 7.5rem auto;
+  margin-bottom: auto;
 }
 
 .footer {
@@ -375,9 +374,6 @@ p {
   .intro__card--wrapper h2 {
     font-size: 5rem;
   }
-  .body__info {
-    margin-bottom: 10rem;
-  }
   .body__info--blue-bg {
     padding: 5rem 0rem;
   }
@@ -390,10 +386,10 @@ p {
     order: 0;
   }
   .body__info__content > * {
-    width: 70%;
+    width: 60%;
   }
   .body__info__img {
-    width: 60%;
+    width: 40%;
   }
   .body__info--1::before {
     content: "";
@@ -425,6 +421,9 @@ p {
   .body__info--2 .body__info__content > * {
     margin-left: auto;
   }
+  .body__info--2 {
+    margin-bottom: 20rem;
+  }
   .body__info--3::before {
     content: "";
     width: 100%;
@@ -451,6 +450,9 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+  .body__call-to-action {
+    margin-bottom: 10rem;
   }
   .footer {
     padding: 1rem 0;

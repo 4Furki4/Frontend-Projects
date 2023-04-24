@@ -124,7 +124,6 @@ p{
     &__info{
         margin-bottom: 15rem;
         position: relative;
-        padding: 5rem 0rem;
         &--blue-bg{
             background-color: #f5faff;
         }
@@ -162,7 +161,7 @@ p{
         }
     }
     &__call-to-action{
-        margin: 7.5rem auto;
+        margin-bottom: auto;
     }
 }
 .footer{
@@ -247,7 +246,6 @@ p{
     }
     .body{
         &__info{
-            margin-bottom: 10rem;
             &--blue-bg{
                 padding: 5rem 0rem;
             }
@@ -259,11 +257,11 @@ p{
                 text-align: left;
                 order: 0;
                 & > * {
-                    width: 70%;
+                    width: 60%;
                 }
             }
             &__img{
-                width: 60%;
+                width: 40%;
             }
             &--1{
                 @include bg-section-before(
@@ -284,6 +282,9 @@ p{
                     margin-left: auto;
                 }
             }
+            &--2{
+                margin-bottom: 20rem;
+            }
             &--3{
                 @include bg-section-before(
                     15rem,
@@ -298,6 +299,9 @@ p{
                     '../images/bg-section-bottom-desktop-2.svg'
                 );
             }
+        }
+        &__call-to-action{
+            margin-bottom: 10rem;
         }
     }
 
