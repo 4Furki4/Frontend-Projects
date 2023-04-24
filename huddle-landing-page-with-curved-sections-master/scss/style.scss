@@ -1,6 +1,8 @@
 @use './abstracts' as *;
 
-$animation-timing-func: cubic-bezier(.77,0,.18,1);
+// $animation-timing-func: cubic-bezier(.77,0,.18,1);
+$animation-timing-func: cubic-bezier(.68,0,.27,1.25);
+// $animation-timing-func: cubic-bezier(.6,-0.28,.74,.05);
 .attribution {
     font-size: 11px; text-align: center;
     a {
