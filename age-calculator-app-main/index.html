@@ -15,23 +15,33 @@
   </style>
 </head>
 <body>
-
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
+  <section class="age-card">
+    <form action="">
+      <label for="day">Day</label>
+      <input placeholder="DD" type="number" name="day" id="day" min="1" max="31" value="1">
+      <label for="month">Month</label>
+      <input placeholder="MM" type="number" name="month" id="month" min="1" max="12" value="1">
+      <label for="year">Year</label>
+      <input placeholder="YYYY" type="number" name="year" id="year" min="1900" max="2021" value="2021">
+      <button type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+      </button>
+    </form>
+    <div class="result">
+      <div class="result__year">
+        -- years
+      </div>
+      <div class="result__months">
+        -- months
+      </div>
+      <div class="result__days">
+        -- days
+      </div>
+    </div>
+  </section>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/4furki4">Furkan Cengiz</a>.
   </div>
 </body>
 </html>
