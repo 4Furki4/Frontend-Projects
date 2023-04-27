@@ -1,4 +1,5 @@
 .attribution {
+  margin-top: auto;
   font-size: 11px;
   text-align: center;
 }
@@ -8,4 +9,65 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 86%);
+  margin: 0%;
+  padding: 0;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.text-purple {
+  color: hsl(259, 100%, 65%);
+}
+
+.age-card {
+  width: min(90%, 720px);
+  margin: 0 auto;
+  margin-top: auto;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 25px;
+  border-bottom-right-radius: 100px;
+  padding: 3rem 1.5rem;
+}
+.age-card form .input-fields {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-right: auto;
+}
+.age-card form .input-field {
+  display: flex;
+  flex-direction: column;
+}
+.age-card form label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: hsl(0, 1%, 44%);
+}
+.age-card form input {
+  width: 100%;
+  font-weight: 800;
+  font-size: 1.25rem;
+  padding: 0.75rem 0.75rem;
+  outline: none;
+  border: 2px solid hsl(0, 0%, 86%);
+  border-radius: 10px;
+}
+.age-card form button {
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  padding: 10px;
+  border: 0;
+}
+
+.result {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 800;
 }/*# sourceMappingURL=style.css.map */
