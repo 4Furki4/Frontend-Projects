@@ -1,0 +1,85 @@
+@use './abstracts' as *;
+.attribution {
+    margin-top: auto;
+    font-size: 11px; text-align: center;
+    a { color: hsl(228, 45%, 44%); }
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $light-grey;
+    margin: 0%;
+    padding: 0;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+.text-purple{
+    color: $purple;
+}
+.age-card{
+    width: min(90%, 720px);
+    margin: 0 auto;
+    margin-top: auto;
+    background-color: $white;
+    border-radius: 20px;
+    border-bottom-right-radius: 100px;
+    padding: 2.5rem 1.5rem;
+    form{
+        .input-fields{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            margin-right: auto;
+        }
+        .input-field{
+            display: flex;
+            flex-direction: column;
+        }
+        label{
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: $smokey-grey;
+        }
+        input{
+            width: 100%;
+            font-weight: 800;
+            font-size: 1.25rem;
+            padding: .85rem .75rem;
+            outline: none;
+            border: 2px solid $light-grey;
+            border-radius: 10px;
+        }
+        .button{
+            background-color: $purple;
+            border-radius: 50%;
+            padding: 1rem 1rem;
+            border: 0;
+            margin: 2rem auto;
+            position: relative;
+            &-wrapper{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+        }
+        
+    }
+}
+.result{
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 800;
+}
+.hr{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    opacity: .25;
+}
