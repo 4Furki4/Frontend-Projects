@@ -61,15 +61,22 @@ body{
             border: 0;
             margin: 2rem auto;
             position: relative;
+            cursor: pointer;
+            transition: all .15s ease-in-out;
+            &:hover{
+                transform: scale(1.1);
+            }
+            &:active{
+                transform: scale(.9);
+                opacity: .8;
+            }
             &-wrapper{
                 position: relative;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
             }
-            
         }
-        
     }
 }
 .result{

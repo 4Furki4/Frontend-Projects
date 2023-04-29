@@ -66,6 +66,15 @@ body {
   border: 0;
   margin: 2rem auto;
   position: relative;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+.age-card form .button:hover {
+  transform: scale(1.1);
+}
+.age-card form .button:active {
+  transform: scale(0.9);
+  opacity: 0.8;
 }
 .age-card form .button-wrapper {
   position: relative;
