@@ -17,15 +17,18 @@
       <div class="input-fields">
         <div class="input-field">
           <label for="day">Day</label>
-        <input placeholder="DD" name="day" id="day" min="1" max="31" value="24">
+          <input placeholder="DD" name="day" id="day" min="1" max="31" value="24" required>
+          <span class="dayValidation"></span>
         </div>
         <div class="input-field">
           <label for="month">Month</label>
-          <input placeholder="MM" name="month" id="month" min="1" max="12" value="09">
+          <input placeholder="MM" name="month" id="month" min="1" max="12" value="09" required>
+          <span class="monthValidation"></span>
         </div>
         <div class="input-field">
           <label for="year">Year</label>
-          <input placeholder="YYYY" name="year" id="year" min="1900" max="2021" value="1984">
+          <input placeholder="YYYY" name="year" id="year" min="1900" max="2022" value="1984" required>
+          <span class="yearValidation"></span>
         </div>
       </div>
       <div class="button-wrapper">
