@@ -57,7 +57,7 @@ body{
         .button{
             background-color: $purple;
             border-radius: 50%;
-            padding: 1rem 1rem;
+            padding: 1rem;
             border: 0;
             margin: 2rem auto;
             position: relative;
@@ -95,4 +95,23 @@ body{
 }
 .invalid-input{
     border-color: $light-red !important;
+}
+span.validation{
+    font-style: italic;
+    font-size: clamp(.75rem, 2vw, .85rem);
+}
+@media(min-width:1024px) {
+    .age-card{
+        form{
+            .button{
+                margin-left: auto;
+                margin-right: 0;
+                padding: 1.5rem;
+                &-wrapper{
+                    
+                }
+            }
+        }
+    }
+    
 }

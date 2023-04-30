@@ -62,7 +62,7 @@ body {
 .age-card form .button {
   background-color: hsl(259, 100%, 65%);
   border-radius: 50%;
-  padding: 1rem 1rem;
+  padding: 1rem;
   border: 0;
   margin: 2rem auto;
   position: relative;
@@ -102,4 +102,17 @@ body {
 
 .invalid-input {
   border-color: hsl(0, 100%, 67%) !important;
+}
+
+span.validation {
+  font-style: italic;
+  font-size: clamp(0.75rem, 2vw, 0.85rem);
+}
+
+@media (min-width: 1024px) {
+  .age-card form .button {
+    margin-left: auto;
+    margin-right: 0;
+    padding: 1.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

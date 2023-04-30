@@ -34,9 +34,19 @@ formEl.addEventListener('submit', (e) => {
         labelDay.classList.add('invalid-text');
     }
     else setValidationError(dayValidationEl, '')
-    if(!month) setValidationError(monthValidationEl, 'The field is required');
+    if(!month) {
+        setValidationError(monthValidationEl, 'The field is required')
+        monthValidationEl.classList.add('invalid-text');
+        monthInputEl.classList.add('invalid-input');
+        labelMonth.classList.add('invalid-text');
+    }
     else setValidationError(monthValidationEl, '')
-    if(!year) setValidationError(yearValidationEl, 'The field is required');
+    if(!year) {
+        setValidationError(yearValidationEl, 'The field is required')
+        yearValidationEl.classList.add('invalid-text');
+        yearInputEl.classList.add('invalid-input');
+        labelYear.classList.add('invalid-text');
+    }
     else setValidationError(yearValidationEl, '')
     if(!day || !month || !year) return
 
@@ -73,6 +83,7 @@ function setValidation(inputEl, min, max, label, span){
             inputEl.classList.remove('invalid-input');
             label.classList.remove('invalid-text');
             span.classList.remove('invalid-text');
+            setValidationError(span, '')
         }
     })
 }
@@ -99,8 +110,10 @@ function validateDate(day, month, year) {
         if(!isYearElapsed && day > 28){
             return false;
         }
+        return true;
     }
 }
 function setValidationError(spanEl, message) {
     spanEl.textContent = message;
+    spanEl.classList.add('invalid-text');
 }
