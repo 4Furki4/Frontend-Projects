@@ -90,3 +90,9 @@ body{
     height: 1px;
     opacity: .25;
 }
+.invalid-text{
+    color: $light-red !important;
+}
+.invalid-input{
+    border-color: $light-red !important;
+}

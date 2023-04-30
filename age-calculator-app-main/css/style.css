@@ -94,4 +94,12 @@ body {
   width: 100%;
   height: 1px;
   opacity: 0.25;
+}
+
+.invalid-text {
+  color: hsl(0, 100%, 67%) !important;
+}
+
+.invalid-input {
+  border-color: hsl(0, 100%, 67%) !important;
 }/*# sourceMappingURL=style.css.map */
