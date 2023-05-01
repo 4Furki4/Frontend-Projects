@@ -152,3 +152,21 @@
 - **[Live Link](https://huddle-landing-page-4furki4.netlify.app/)** \
   **Preview of the challenge**
   ![Snapshot of interactive component challenge](./snapshots/huddle-landing-page.png)
+
+## Age Calculator
+
+### Solved at 01.05.2023
+
+### Difficulties
+
+- Elapsed years :/
+- Button position was kinda hard but I found a easy way to do it.
+
+### What I Tried New
+
+- Clamp for responsive text
+
+### Live Link and Preview
+- **[Live Link](https://age-calculator-4furki4.netlify.app/)** \
+  **Preview of the challenge**
+  ![Snapshot of interactive component challenge](./snapshots/age-calculator.png)
