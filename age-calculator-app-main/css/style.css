@@ -27,7 +27,7 @@ body {
 }
 
 .age-card {
-  width: min(90%, 720px);
+  width: min(90%, 650px);
   margin: 0 auto;
   margin-top: auto;
   background-color: hsl(0, 0%, 100%);
@@ -84,7 +84,7 @@ body {
 }
 
 .result {
-  font-size: 3rem;
+  font-size: clamp(3rem, 10vw, 5rem);
   font-style: italic;
   font-weight: 800;
 }
@@ -114,5 +114,13 @@ span.validation {
     margin-left: auto;
     margin-right: 0;
     padding: 1.5rem;
+  }
+  .age-card form .input-field {
+    display: flex;
+    flex-direction: column;
+  }
+  .age-card form .input-fields {
+    width: 70%;
+    margin-right: auto;
   }
 }/*# sourceMappingURL=style.css.map */
