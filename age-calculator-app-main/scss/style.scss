@@ -22,7 +22,7 @@ body{
     color: $purple;
 }
 .age-card{
-    width: min(90%, 650px);
+    width: min(90%, 820px);
     margin: 0 auto;
     margin-top: auto;
     background-color: $white;
@@ -59,7 +59,7 @@ body{
             border-radius: 50%;
             padding: 1rem;
             border: 0;
-            margin: 2rem auto;
+            margin: 1rem auto;
             position: relative;
             cursor: pointer;
             transition: all .15s ease-in-out;
@@ -102,9 +102,13 @@ span.validation{
 }
 @media(min-width:1024px) {
     .age-card{
+        border-bottom-right-radius: 200px;
+        padding: 3rem 3rem;
         form{
             .button{
                 margin-left: auto;
+                margin-top: 0;
+                margin-bottom: 0;
                 margin-right: 0;
                 padding: 1.5rem;
                 &-wrapper{
