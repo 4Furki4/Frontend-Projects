@@ -8,9 +8,12 @@ const resultDay = document.querySelector('#elapsedDays');
 const dayValidationEl = document.querySelector('.dayValidation');
 const monthValidationEl = document.querySelector('.monthValidation');
 const yearValidationEl = document.querySelector('.yearValidation');
-setValidation(dayInputEl, 1, 31);
-setValidation(monthInputEl, 1, 12);
-setValidation(yearInputEl, 0, 2022);
+const labelDay = document.querySelector('[for="day"]');
+const labelMonth = document.querySelector('[for="month"]');
+const labelYear = document.querySelector('[for="year"]');
+setValidation(dayInputEl, 1, 31, labelDay, dayValidationEl);
+setValidation(monthInputEl, 1, 12, labelMonth, monthValidationEl);
+setValidation(yearInputEl, 0, 2022,  labelYear, yearValidationEl);
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
     const day = dayInputEl.value;
@@ -23,9 +26,34 @@ formEl.addEventListener('submit', (e) => {
     let elapsedYears = currentYear - year;
     let elapsedMonths = currentMonth - month;
     let elapsedDays = currentDay - day;
+
+    if(!day) {
+        setValidationError(dayValidationEl, 'The field is required');
+        dayValidationEl.classList.add('invalid-text');
+        dayInputEl.classList.add('invalid-input');
+        labelDay.classList.add('invalid-text');
+    }
+    else setValidationError(dayValidationEl, '')
+    if(!month) {
+        setValidationError(monthValidationEl, 'The field is required')
+        monthValidationEl.classList.add('invalid-text');
+        monthInputEl.classList.add('invalid-input');
+        labelMonth.classList.add('invalid-text');
+    }
+    else setValidationError(monthValidationEl, '')
+    if(!year) {
+        setValidationError(yearValidationEl, 'The field is required')
+        yearValidationEl.classList.add('invalid-text');
+        yearInputEl.classList.add('invalid-input');
+        labelYear.classList.add('invalid-text');
+    }
+    else setValidationError(yearValidationEl, '')
+    if(!day || !month || !year) return
+
+
     let message = validateDate(day, month, year) ? undefined : 'Must be a valid date';
     if(message){
-        setValidationError(dayValidationEl, message);
+        setValidationError(dayValidationEl, message,);
         return
     }else{
         setValidationError(dayValidationEl, '');
@@ -42,7 +70,7 @@ formEl.addEventListener('submit', (e) => {
     resultMonth.textContent = elapsedMonths;
     resultDay.textContent = elapsedDays;
 })
-function setValidation(inputEl, min, max){
+function setValidation(inputEl, min, max, label, span){
     inputEl.addEventListener('input', e => {
         e.target.value = e.target.value.replace(/[^0-9][^s]/g, '');
         if(e.target.value < min) {
@@ -50,6 +78,12 @@ function setValidation(inputEl, min, max){
         }
         if(e.target.value > max) {
             e.target.value = max
+        }
+        if(!isNaN(e.target.value)) {
+            inputEl.classList.remove('invalid-input');
+            label.classList.remove('invalid-text');
+            span.classList.remove('invalid-text');
+            setValidationError(span, '')
         }
     })
 }
@@ -76,8 +110,10 @@ function validateDate(day, month, year) {
         if(!isYearElapsed && day > 28){
             return false;
         }
+        return true;
     }
 }
 function setValidationError(spanEl, message) {
     spanEl.textContent = message;
+    spanEl.classList.add('invalid-text');
 }
