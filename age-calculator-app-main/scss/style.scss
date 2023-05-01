@@ -22,7 +22,7 @@ body{
     color: $purple;
 }
 .age-card{
-    width: min(90%, 720px);
+    width: min(90%, 650px);
     margin: 0 auto;
     margin-top: auto;
     background-color: $white;
@@ -80,7 +80,7 @@ body{
     }
 }
 .result{
-    font-size: 3rem;
+    font-size: clamp(3rem, 10vw, 5rem);
     font-style: italic;
     font-weight: 800;
 }
@@ -112,6 +112,19 @@ span.validation{
                 }
             }
         }
+        form{
+        .input-field{
+            display: flex;
+            flex-direction: column;
+            &s{
+                width: 70%;
+                margin-right: auto;
+            }
+        }
+        input{
+
+        }
+    }
     }
     
 }
