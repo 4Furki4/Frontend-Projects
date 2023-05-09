@@ -1,1 +1,9 @@
-/*# sourceMappingURL=style.css.map */
+:root {
+  --background-color: white;
+  --primary-color: rgb(103, 58, 183);
+  --accent: rgb(245, 207, 61);
+}
+
+.dark-mode {
+  --background-color: rgb(35, 39, 46);
+}/*# sourceMappingURL=style.css.map */
