@@ -65,10 +65,12 @@
   0% {
     transform: rotate(0);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 /* .switch:hover */
 .moon svg {
   animation: tilt 5s linear infinite;
@@ -78,16 +80,20 @@
   0% {
     transform: rotate(0deg);
   }
+
   25% {
     transform: rotate(-10deg);
   }
+
   75% {
     transform: rotate(10deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
 }
+
 .input:checked + .slider {
   background-color: #183153;
 }
@@ -99,21 +105,3 @@
 .input:checked + .slider:before {
   transform: translateX(30px);
 }
-
-:root {
-  --background-color: white;
-  --primary-color: rgb(103, 58, 183);
-  --accent: rgb(245, 207, 61);
-  --text-color: black;
-  color-scheme: dark;
-}
-
-.dark-mode {
-  --background-color: rgb(28, 27, 34) me;
-  --text-color: white;
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}/*# sourceMappingURL=style.css.map */
