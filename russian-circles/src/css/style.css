@@ -119,6 +119,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   color-scheme: var(--color-scheme);
+  transition: all 0.25s;
 }
 
 .nav {
@@ -129,6 +130,10 @@ body {
 }
 .nav__home {
   margin-right: auto;
+}
+.nav__home__img {
+  -webkit-clip-path: circle(50%);
+          clip-path: circle(50%);
 }
 .nav__pages {
   display: flex;

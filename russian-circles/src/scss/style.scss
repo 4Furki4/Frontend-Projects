@@ -19,6 +19,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   color-scheme: var(--color-scheme);
+  transition: all .25s;
 }
 
 .nav {
@@ -28,6 +29,9 @@ body {
   gap: 2rem;
   &__home {
     margin-right: auto;
+    &__img{
+      clip-path: circle(50%);
+    }
   }
   &__pages {
     display: flex;
