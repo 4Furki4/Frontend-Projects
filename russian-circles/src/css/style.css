@@ -101,9 +101,10 @@
 }
 
 :root {
-  --background-color: white;
+  --background-color: #F1F6F9;
+  --secondary-background-color: #EDEDED;
   --primary-color: rgb(43, 43, 43);
-  --text-color: black;
+  --text-color: #212A3E;
   --color-scheme: light;
 }
 
@@ -112,9 +113,10 @@
 }
 
 .dark-mode {
-  --background-color: rgb(28, 27, 34);
-  --text-color: white;
+  --background-color: #2C3333;
+  --text-color: #F1F6F9;
   --color-scheme: dark;
+  --secondary-background-color: #1B262C;
 }
 
 body {
@@ -128,12 +130,18 @@ body {
 
 h1 {
   text-align: center;
+  font-size: 5rem;
 }
 
 .nav {
-  padding: 1rem;
+  padding: 0.5rem;
+  padding-inline: 2rem;
   display: flex;
   align-items: center;
+  position: sticky;
+  background-color: var(--secondary-background-color);
+  z-index: 99;
+  top: 0;
   gap: 2rem;
 }
 .nav__home {
@@ -331,4 +339,46 @@ h1 {
        -moz-user-select: none;
             user-select: none;
   }
+}
+.message {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.message textarea {
+  max-width: 80%;
+  margin-inline: auto;
+  border-radius: 10px;
+  padding: 1rem;
+  filter: drop-shadow(0px 0px 5px var(--text-color));
+  transition: filter 0.5s, outline 0.25s;
+}
+.message textarea:focus {
+  filter: drop-shadow(0px 0px 10px var(--text-color));
+  outline: 4px solid var(--text-color);
+}
+.message__button {
+  background-color: var(--secondary-background-color);
+  font-size: 1.25rem;
+  padding: 0.5rem 2rem;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 250ms;
+}
+.message__button:hover {
+  transform: scale(1.1);
+}
+.message__button:active {
+  transform: scale(1);
+}
+.message__list {
+  min-width: 80%;
+  margin-inline: auto;
+  border-radius: 10px;
+  min-height: 200px;
+  background-color: var(--secondary-background-color);
 }/*# sourceMappingURL=style.css.map */
