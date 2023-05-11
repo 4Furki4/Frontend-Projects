@@ -1,0 +1,384 @@
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73c0fc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: 0.4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73c0fc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */
+.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* .switch:hover */
+.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+:root {
+  --background-color: #F1F6F9;
+  --secondary-background-color: #EDEDED;
+  --primary-color: rgb(43, 43, 43);
+  --text-color: #212A3E;
+  --color-scheme: light;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.dark-mode {
+  --background-color: #2C3333;
+  --text-color: #F1F6F9;
+  --color-scheme: dark;
+  --secondary-background-color: #1B262C;
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  color-scheme: var(--color-scheme);
+  transition: background-color 0.25s, color 0.25s;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5rem;
+}
+
+.nav {
+  padding: 0.5rem;
+  padding-inline: 2rem;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  background-color: var(--secondary-background-color);
+  z-index: 99;
+  top: 0;
+  gap: 2rem;
+}
+.nav__home {
+  margin-right: auto;
+}
+.nav__home__img {
+  -webkit-clip-path: circle(50%);
+          clip-path: circle(50%);
+}
+.nav__pages {
+  display: none;
+  gap: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.nav__button {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 0;
+  border-radius: 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.nav__button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.carousel {
+  width: 90%;
+  height: 90dvh;
+  margin-inline: auto;
+  position: relative;
+}
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.carousel__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+  transition-delay: 0.1s;
+}
+.carousel__slide[data-active] {
+  opacity: 1;
+  transition-delay: 0s;
+  z-index: 1s;
+}
+.carousel__slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 25px;
+}
+.carousel__button {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: none;
+  font-size: clamp(2rem, 10vw, 4rem);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 10px;
+  transition: all 1s;
+}
+.carousel__button:focus, .carousel__button:hover {
+  color: white;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+.carousel__button--prev {
+  left: 1rem;
+}
+.carousel__button--next {
+  right: 1rem;
+}
+
+.albums {
+  margin-top: 5rem;
+  width: 80%;
+  margin-inline: auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  background-image: url("../../images/band-albums/album-blood-year.webp");
+  background-position: center;
+  background-size: cover;
+  filter: drop-shadow(4px 4px 10px var(--primary-color));
+}
+.card h2 {
+  font-size: 4rem;
+}
+.card h3 {
+  font-size: 2.5rem;
+}
+.card a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.card > img {
+  width: 100%;
+}
+.card__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms, -webkit-backdrop-filter 500ms;
+  transition: opacity 250ms, backdrop-filter 500ms;
+  transition: opacity 250ms, backdrop-filter 500ms, -webkit-backdrop-filter 500ms;
+}
+.card:hover {
+  background-color: rgb(28, 27, 34);
+  background-blend-mode: difference;
+}
+.card:hover > .card__text {
+  z-index: 99;
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  transition: -webkit-backdrop-filter 200ms;
+  transition: backdrop-filter 200ms;
+  transition: backdrop-filter 200ms, -webkit-backdrop-filter 200ms;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.card:nth-child(2) {
+  background-image: url("../../images/band-albums/album-empros.webp");
+}
+
+.card:nth-child(3) {
+  background-image: url("../../images/band-albums/album-enter.webp");
+}
+
+.card:nth-child(4) {
+  background-image: url("../../images/band-albums/album-geneva.webp");
+}
+
+.card:nth-child(5) {
+  background-image: url("../../images/band-albums/album-gnosis.webp");
+}
+
+.card:nth-child(6) {
+  background-image: url("../../images/band-albums/album-guidance.webp");
+}
+
+.card:nth-child(7) {
+  background-image: url("../../images/band-albums/album-live-at-dunk-fest.webp");
+}
+
+.card:nth-child(8) {
+  background-image: url("../../images/band-albums/album-memorial.webp");
+}
+
+.card:last-child {
+  background-image: url("../../images/band-albums/album-station.webp");
+}
+
+@media (min-width: 900px) {
+  .albums {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .nav__pages {
+    display: block;
+    gap: 2rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+}
+.message {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.message textarea {
+  max-width: 80%;
+  margin-inline: auto;
+  border-radius: 10px;
+  padding: 1rem;
+  filter: drop-shadow(0px 0px 5px var(--text-color));
+  transition: filter 0.5s, outline 0.25s;
+}
+.message textarea:focus {
+  filter: drop-shadow(0px 0px 10px var(--text-color));
+  outline: 4px solid var(--text-color);
+}
+.message__button {
+  background-color: var(--secondary-background-color);
+  font-size: 1.25rem;
+  padding: 0.5rem 2rem;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 250ms;
+}
+.message__button:hover {
+  transform: scale(1.1);
+}
+.message__button:active {
+  transform: scale(1);
+}
+.message__list {
+  min-width: 80%;
+  margin-inline: auto;
+  border-radius: 10px;
+  min-height: 200px;
+  background-color: var(--secondary-background-color);
+}/*# sourceMappingURL=style.css.map */
