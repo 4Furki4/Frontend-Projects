@@ -222,4 +222,113 @@ h1 {
 }
 .carousel__button--next {
   right: 1rem;
+}
+
+.albums {
+  margin-top: 5rem;
+  width: 80%;
+  margin-inline: auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  background-image: url("../../images/band-albums/album-blood-year.webp");
+  background-position: center;
+  background-size: cover;
+  filter: drop-shadow(4px 4px 10px var(--primary-color));
+}
+.card h2 {
+  font-size: 4rem;
+}
+.card h3 {
+  font-size: 2.5rem;
+}
+.card a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.card > img {
+  width: 100%;
+}
+.card__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms, -webkit-backdrop-filter 500ms;
+  transition: opacity 250ms, backdrop-filter 500ms;
+  transition: opacity 250ms, backdrop-filter 500ms, -webkit-backdrop-filter 500ms;
+}
+.card:hover {
+  background-color: rgb(28, 27, 34);
+  background-blend-mode: difference;
+}
+.card:hover > .card__text {
+  z-index: 99;
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  transition: -webkit-backdrop-filter 200ms;
+  transition: backdrop-filter 200ms;
+  transition: backdrop-filter 200ms, -webkit-backdrop-filter 200ms;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.card:nth-child(2) {
+  background-image: url("../../images/band-albums/album-empros.webp");
+}
+
+.card:nth-child(3) {
+  background-image: url("../../images/band-albums/album-enter.webp");
+}
+
+.card:nth-child(4) {
+  background-image: url("../../images/band-albums/album-geneva.webp");
+}
+
+.card:nth-child(5) {
+  background-image: url("../../images/band-albums/album-gnosis.webp");
+}
+
+.card:nth-child(6) {
+  background-image: url("../../images/band-albums/album-guidance.webp");
+}
+
+.card:nth-child(7) {
+  background-image: url("../../images/band-albums/album-live-at-dunk-fest.webp");
+}
+
+.card:nth-child(8) {
+  background-image: url("../../images/band-albums/album-memorial.webp");
+}
+
+.card:last-child {
+  background-image: url("../../images/band-albums/album-station.webp");
+}
+
+@media (min-width: 900px) {
+  .albums {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .nav__pages {
+    display: block;
+    gap: 2rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
 }/*# sourceMappingURL=style.css.map */
