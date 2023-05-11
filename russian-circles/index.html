@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="./src/css/style.css">
     <title>Russian Circles</title>
   </head>
-  <body class="">
+  <body>
     <nav class="nav">
       <div class="nav__home">
         <a href="#">
-          <img class="nav__home__img" src="./images/band-albums/album-blood-year.webp" width="40px" alt="">
+          <img class="nav__home__img" src="./images/band-albums/album-blood-year.webp" width="40px" alt="blood year album photo">
         </a>
       </div>
       <div class="nav__pages">
-        <a href="#"><button class="nav__button">About</button></a>
-        <a href="#"><button class="nav__button">Albums</button></a>
-        <a href="#"><button class="nav__button">Leave Some Love</button></a>
-        <a href="#"><button class="nav__button">Sign Up</button></a>
+        <a tabindex="-1" href="#"><button class="nav__button">About</button></a>
+        <a tabindex="-1" href="#"><button class="nav__button">Albums</button></a>
+        <a tabindex="-1" href="#"><button class="nav__button">Leave Some Love</button></a>
+        <a tabindex="-1" href="#"><button class="nav__button">Sign Up</button></a>
       </div>
       <label class="switch">
         <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
@@ -28,14 +28,33 @@
       </label>
     </nav>
     <main>
-      <section class="carousel">
-
+      <section aria-label="photos of brand members">
+        <h1>We are Russian Circles</h1>
+        <div class="carousel" data-carousel>
+          <button data-carousel-button="next" class="carousel__button carousel__button--prev">
+            &#8656;
+          </button>
+          <button data-carousel-button class="carousel__button carousel__button--next">
+            &#8658;
+          </button>
+          <ul data-slides>
+            <li class="carousel__slide" data-active>
+              <img src="./images/band-photos/band-photo.webp" alt="band members photo #1">
+            </li>
+            <li class="carousel__slide">
+              <img src="./images/band-photos/band-photo-2.webp" alt="band members photo #2">
+            </li>
+            <li class="carousel__slide">
+              <img src="./images/band-photos/band-photo-3.webp" alt="band members photo #3">
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="albums">
 
       </section>
       <section class="message">
-        <textarea name="message" id="message" cols="100" rows="10"></textarea>
+        <!-- <textarea name="message" id="message" cols="100" rows="10"></textarea> -->
         <button class="message__button">Submit</button>
         <div class="message__list">
 
