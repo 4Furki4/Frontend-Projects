@@ -1,0 +1,18 @@
+@mixin button-bg-slide(
+    $left, $width,
+    $height, $radius,
+    $transform-origin, $bg-color){
+            transition: all .5s cubic-bezier(0.68, 0.55, 0.265, 1);
+            background-color: $bg-color;
+            border-radius: $radius;
+            content: '';
+            left: $left;
+            bottom: 0;
+            width: $width;
+            height: $height;
+            position: absolute;
+            transform: scaleX(0);
+            transform-origin: $transform-origin;
+            z-index: -1;
+            opacity: 0.05;
+}
