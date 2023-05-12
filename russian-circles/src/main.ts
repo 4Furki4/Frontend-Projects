@@ -33,8 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if(newIndex >= slides.children.length) newIndex = 0
             slides.children[newIndex].dataset.active = true
             delete activeSlide.dataset.active
-        })
-    
-    }
+        })}
     )
+    const menuIcon = document.querySelector('.nav__menu-icon')
+    const menu = document.querySelector('.nav__pages')
+    menuIcon?.addEventListener('click', () => {
+        menu?.classList.toggle('nav__pages--dropdown')
+    })
 })

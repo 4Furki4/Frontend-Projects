@@ -144,6 +144,9 @@ h1 {
   top: 0;
   gap: 2rem;
 }
+.nav__page {
+  list-style: none;
+}
 .nav__home {
   margin-right: auto;
 }
@@ -151,12 +154,11 @@ h1 {
   -webkit-clip-path: circle(50%);
           clip-path: circle(50%);
 }
+.nav__menu-icon {
+  cursor: pointer;
+}
 .nav__pages {
   display: none;
-  gap: 2rem;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 .nav__button {
   padding: 0.5rem 1rem;
@@ -325,21 +327,6 @@ h1 {
   background-image: url("../../images/band-albums/album-station.webp");
 }
 
-@media (min-width: 900px) {
-  .albums {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1rem;
-  }
-  .nav__pages {
-    display: block;
-    gap: 2rem;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-  }
-}
 .message {
   margin-top: 2rem;
   display: flex;
@@ -381,4 +368,41 @@ h1 {
   border-radius: 10px;
   min-height: 200px;
   background-color: var(--secondary-background-color);
+}
+
+@media (min-width: 900px) {
+  .albums {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .nav__pages {
+    display: flex;
+    gap: 2rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  .nav__menu-icon {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .nav__page {
+    width: 100%;
+  }
+  .nav__page a, .nav__page button {
+    width: 100%;
+  }
+  .nav__pages--dropdown {
+    display: grid;
+    gap: 0.2rem;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: var(--secondary-background-color);
+    padding: 0.1rem;
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
