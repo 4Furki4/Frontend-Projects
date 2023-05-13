@@ -379,7 +379,7 @@ h1 {
   transform: scale(1);
 }
 .message__container {
-  max-width: 80%;
+  width: 80%;
   margin-inline: auto;
   border-radius: 10px;
   min-height: 200px;
