@@ -3,19 +3,27 @@
   --background-color: #F1F6F9;
   // E4DCCF
   --secondary-background-color: #EDEDED;
-  --primary-color: rgb(43, 43, 43);
+  --primary-color: #183153;
   --text-color: #212A3E;
   --color-scheme: light;
+  --secondary-button-color:#E8C4C4;
 }
 *, *::after, *::before{
   box-sizing: border-box;
 }
-
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
 .dark-mode {
   --background-color: #2C3333;
   --text-color: #F1F6F9;
   --color-scheme: dark;
   --secondary-background-color: #1B262C;
+  --secondary-button-color:#453C67;
 }
 
 body {
@@ -46,13 +54,11 @@ h1{
       clip-path: circle(50%);
     }
   }
+  &__menu-icon{
+    cursor: pointer;
+  }
   &__pages {
     display: none;
-    gap: 2rem;
-    user-select: none;
-    & > a {
-      
-    }
   }
   &__button {
     padding: 0.5rem 1rem;
@@ -146,7 +152,7 @@ h1{
     font-weight: bold;
   }
   position: relative;
-  background-image: url('../../images/band-albums/album-blood-year.webp');
+  background-image: url('../../images/band-albums/album-enter.webp');
   background-position: center;
   background-size: cover;
   filter: drop-shadow(4px 4px 10px var(--primary-color));
@@ -183,16 +189,16 @@ h1{
   }
 }
 .card:nth-child(2){
-  background-image: url('../../images/band-albums/album-empros.webp');
+  background-image: url('../../images/band-albums/album-station.webp');
 }
 .card:nth-child(3){
-  background-image: url('../../images/band-albums/album-enter.webp');
-}
-.card:nth-child(4){
   background-image: url('../../images/band-albums/album-geneva.webp');
 }
+.card:nth-child(4){
+  background-image: url('../../images/band-albums/album-empros.webp');
+}
 .card:nth-child(5){
-  background-image: url('../../images/band-albums/album-gnosis.webp');
+  background-image: url('../../images/band-albums/album-memorial.webp');
 }
 .card:nth-child(6){
   background-image: url('../../images/band-albums/album-guidance.webp');
@@ -201,29 +207,10 @@ h1{
   background-image: url('../../images/band-albums/album-live-at-dunk-fest.webp');
 }
 .card:nth-child(8){
-  background-image: url('../../images/band-albums/album-memorial.webp');
+  background-image: url('../../images/band-albums/album-blood-year.webp');
 }
 .card:last-child{
-  background-image: url('../../images/band-albums/album-station.webp');
-}
-@media (min-width:900px){
-
-  .albums{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1rem;
-  }
-  .nav {
-    &__pages {
-      display: block;
-      gap: 2rem;
-      user-select: none;
-      & > a {
-        
-      }
-    }
-  }
+  background-image: url('../../images/band-albums/album-gnosis.webp');
 }
 .message{
   margin-top: 2rem;
@@ -232,16 +219,24 @@ h1{
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  textarea{
+  &__form{
     max-width: 80%;
-    margin-inline: auto;
-    border-radius: 10px;
-    padding: 1rem;
-    filter: drop-shadow(0px 0px 5px var(--text-color));
-    transition: filter .5s, outline .25s;
-    &:focus{
-      filter: drop-shadow(0px 0px 10px var(--text-color));
-      outline: 4px solid var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    textarea{
+      max-width: 100%;
+      margin-inline: auto;
+      border-radius: 10px;
+      padding: 1rem;
+      filter: drop-shadow(0px 0px 5px var(--text-color));
+      transition: filter .5s, outline .25s;
+      &:focus{
+        filter: drop-shadow(0px 0px 10px var(--text-color));
+        outline: 4px solid var(--text-color);
+      }
     }
   }
   &__button{
@@ -259,11 +254,134 @@ h1{
       transform: scale(1);
     }
   }
-  &__list{
-    min-width: 80%;
+  &__container{
+    width: 80%;
     margin-inline: auto;
     border-radius: 10px;
     min-height: 200px;
     background-color: var(--secondary-background-color);
+  }
+  &__list{
+    padding: 2rem;
+    line-height: 1.5rem;
+  }
+}
+.donation{
+  width: 80%;
+  margin-inline: auto;
+  padding: 5rem;
+  text-align: center;
+  h2{
+    font-size: 2rem;
+  }
+  &__input{
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid var(--secondary-button-color);
+    transition: all .25s;
+    &:hover, &:focus{
+      box-shadow: 0px 0px 10px var(--text-color);
+    }
+  }
+  &__inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    gap: .25rem;
+    & > * {
+      padding: 1rem;
+      flex-basis: 100%;
+    }
+  }
+  &__button{
+        position: relative;
+        cursor: pointer;
+        transition: all .5s cubic-bezier(0.68, 0.55, 0.265, 1), transform .1s;
+        font-weight: 700;
+        font-size: 1.25rem;
+        // padding: .5rem 1.5rem;
+        padding: .7rem 0rem;
+        border: 0;
+        border-radius: 5px;
+        background-color: var(--secondary-button-color);
+        z-index: 99;
+    &:hover{
+      &::before{
+          transform: scale(1);
+          opacity: 1;
+      }
+  }
+    padding: 1rem;
+    &::before{
+      @include button-bg-slide(0px, 100%, 100%, 5px, left, #F15A59)
+    }
+  }
+}
+footer{
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--secondary-background-color);
+  h2{
+    font-size: 2rem;
+  }
+  ul{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width:900px){
+
+  .albums{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .nav {
+    &__pages {
+      display: flex;
+      gap: 2rem;
+      user-select: none;
+      & > a {
+        
+      }
+    }
+    &__menu-icon{
+      display: none;
+    }
+  }
+  .donation{
+    &__inputs{
+      flex-direction: row;
+    }
+  }
+}
+@media (max-width: 900px){
+  .nav{
+    &__page{
+      width: 100%;
+      a, button{
+        width: 100% ;
+      }
+    }
+    &__menu-icon{
+
+    }
+    &__pages{
+
+      &--dropdown{
+        display: grid;
+        gap: .2rem;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: var(--secondary-background-color);
+        padding: .1rem;
+        width: 100%;
+      }
+    }
   }
 }
