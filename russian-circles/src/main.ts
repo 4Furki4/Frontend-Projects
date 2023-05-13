@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }
     //     alert(`Welcome ${name}`)
     // })
-    const checkbox = document.querySelector('input[type="checkbox"]')!
+    const checkbox : HTMLInputElement = document.querySelector('input[type="checkbox"]')!
     let darkmode = localStorage.getItem("darkMode")
     if(darkmode === "enabled"){ // check  if dark mode is enabled when page loaded
         setDarkMode()
@@ -32,14 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const carouselButtons = document.querySelectorAll('[data-carousel-button]')
     carouselButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const offset = button.dataset.carouselButton === 'next' ? 1 : -1
-            const slides = button.closest('[data-carousel]')!.querySelector('[data-slides]')!
-            const activeSlide = slides.querySelector('[data-active]')!
-            let newIndex = [...slides.children].indexOf(activeSlide) + offset
-            if(newIndex < 0) newIndex = slides.children.length - 1
-            if(newIndex >= slides.children.length) newIndex = 0
-            slides.children[newIndex].dataset.active = true
-            delete activeSlide.dataset.active
+            if(button instanceof HTMLElement){
+                const offset = button.dataset.carouselButton === 'next' ? 1 : -1
+                const slides = button.closest('[data-carousel]')!.querySelector('[data-slides]')!
+                const activeSlide = slides.querySelector('[data-active]')!
+                if(slides instanceof HTMLElement && activeSlide instanceof HTMLElement){
+                    let newIndex = [...slides.children].indexOf(activeSlide) + offset
+                    if(newIndex < 0) newIndex = slides.children.length - 1
+                    if(newIndex >= slides.children.length) newIndex = 0
+                    let nextSlide = slides.children[newIndex]
+                    if(nextSlide instanceof HTMLElement)
+                    nextSlide.dataset.active = "true"
+                    delete activeSlide.dataset.active
+                }
+            }
         })}
     )
     const menuIcon = document.querySelector('.nav__menu-icon')
@@ -54,17 +60,20 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     const messageForm = document.querySelector('.message__form')
     const submittedMessageContainer = document.querySelector('.message__list')
-    messageForm?.addEventListener('submit', (e) => {
-        e.preventDefault()
-        let message : string = e.target?.message.value
-        if(!message) return
-        else{
-            message = message.trim()
-            const messageListEl = document.createElement('li')
-            messageListEl.innerText = message
-            submittedMessageContainer?.appendChild(messageListEl)
-            messageForm?.reset()
-        }
-        
-    })
+    if(messageForm instanceof HTMLFormElement){
+        messageForm?.addEventListener('submit', (e) => {
+            e.preventDefault()
+            let message : string = e.target["message"].value
+            if(!message) return
+            else{
+                message = message.trim()
+                const messageListEl = document.createElement('li')
+                messageListEl.innerText = message
+                submittedMessageContainer?.appendChild(messageListEl)
+                messageForm?.reset()
+            }
+            
+        })
+    }
+    
 })
