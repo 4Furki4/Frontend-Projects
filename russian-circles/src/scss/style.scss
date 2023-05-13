@@ -136,19 +136,17 @@ h1{
   width: 80%;
   margin-inline: auto;
   display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  // grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
 }
 .card{
   h2{
-    font-size: 4rem;
+    font-size: clamp(2rem, 5vw, 4rem);
   }
   h3{
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
   }
   a{
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     font-weight: bold;
   }
   position: relative;
@@ -184,7 +182,6 @@ h1{
       width: 100%;
       transition: backdrop-filter 200ms;
       backdrop-filter: blur(5px);
-      // -webkit-backdrop-filter: blur(5px);
     }
   }
 }
@@ -267,14 +264,15 @@ h1{
   }
 }
 .donation{
-  width: 80%;
+  
   margin-inline: auto;
   padding: 5rem;
   text-align: center;
   h2{
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
   }
   &__input{
+    
     border-radius: 5px;
     outline: none;
     border: 2px solid var(--secondary-button-color);
@@ -345,9 +343,6 @@ footer{
       display: flex;
       gap: 2rem;
       user-select: none;
-      & > a {
-        
-      }
     }
     &__menu-icon{
       display: none;
