@@ -103,7 +103,7 @@
 :root {
   --background-color: #F1F6F9;
   --secondary-background-color: #EDEDED;
-  --primary-color: rgb(43, 43, 43);
+  --primary-color: #183153;
   --text-color: #212A3E;
   --color-scheme: light;
   --secondary-button-color:#E8C4C4;
@@ -111,6 +111,15 @@
 
 *, *::after, *::before {
   box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
 }
 
 .dark-mode {
@@ -145,9 +154,6 @@ h1 {
   z-index: 99;
   top: 0;
   gap: 2rem;
-}
-.nav__page {
-  list-style: none;
 }
 .nav__home {
   margin-right: auto;
@@ -375,7 +381,7 @@ h1 {
 .donation {
   width: 80%;
   margin-inline: auto;
-  padding: 1rem;
+  padding: 5rem;
   text-align: center;
 }
 .donation h2 {
@@ -405,6 +411,7 @@ h1 {
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.68, 0.55, 0.265, 1), transform 0.1s;
   font-weight: 700;
+  font-size: 1.25rem;
   padding: 0.7rem 0rem;
   border: 0;
   border-radius: 5px;
@@ -430,6 +437,21 @@ h1 {
   transform-origin: left;
   z-index: -1;
   opacity: 0.05;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--secondary-background-color);
+}
+footer h2 {
+  font-size: 2rem;
+}
+footer ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 900px) {

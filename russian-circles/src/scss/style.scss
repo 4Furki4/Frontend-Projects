@@ -3,7 +3,7 @@
   --background-color: #F1F6F9;
   // E4DCCF
   --secondary-background-color: #EDEDED;
-  --primary-color: rgb(43, 43, 43);
+  --primary-color: #183153;
   --text-color: #212A3E;
   --color-scheme: light;
   --secondary-button-color:#E8C4C4;
@@ -11,7 +11,13 @@
 *, *::after, *::before{
   box-sizing: border-box;
 }
-
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
 .dark-mode {
   --background-color: #2C3333;
   --text-color: #F1F6F9;
@@ -33,9 +39,6 @@ h1{
   font-size: 5rem;
 }
 .nav {
-  &__page {
-    list-style: none;
-  }
   padding: .5rem;
   padding-inline: 2rem;
   display: flex;
@@ -254,7 +257,7 @@ h1{
 .donation{
   width: 80%;
   margin-inline: auto;
-  padding: 1rem;
+  padding: 5rem;
   text-align: center;
   h2{
     font-size: 2rem;
@@ -284,6 +287,7 @@ h1{
         cursor: pointer;
         transition: all .5s cubic-bezier(0.68, 0.55, 0.265, 1), transform .1s;
         font-weight: 700;
+        font-size: 1.25rem;
         // padding: .5rem 1.5rem;
         padding: .7rem 0rem;
         border: 0;
@@ -300,6 +304,20 @@ h1{
     &::before{
       @include button-bg-slide(0px, 100%, 100%, 5px, left, #F15A59)
     }
+  }
+}
+footer{
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--secondary-background-color);
+  h2{
+    font-size: 2rem;
+  }
+  ul{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media (min-width:900px){
