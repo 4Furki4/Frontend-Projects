@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // window.addEventListener('load', () => {
+    //     let name = prompt("May I learn your name ?")
+    //     while(!name) {
+    //         name = prompt("Please enter your name")
+    //     }
+    //     alert(`Welcome ${name}`)
+    // })
     const checkbox = document.querySelector('input[type="checkbox"]')!
     let darkmode = localStorage.getItem("darkMode")
     if(darkmode === "enabled"){ // check  if dark mode is enabled when page loaded
@@ -40,16 +47,24 @@ document.addEventListener('DOMContentLoaded', () => {
     menuIcon?.addEventListener('click', () => {
         menu?.classList.toggle('nav__pages--dropdown')
     })
-    window.addEventListener('load', () => {
-        let name = prompt("May I learn your name ?")
-        while(!name) {
-            name = prompt("Please enter your name")
-        }
-        alert(`Welcome ${name}`)
-    })
     window.addEventListener('resize', () => {
         if(window.innerWidth > 900) {
             menu?.classList.remove('nav__pages--dropdown')
         }
+    })
+    const messageForm = document.querySelector('.message__form')
+    const submittedMessageContainer = document.querySelector('.message__list')
+    messageForm?.addEventListener('submit', (e) => {
+        e.preventDefault()
+        let message : string = e.target?.message.value
+        if(!message) return
+        else{
+            message = message.trim()
+            const messageListEl = document.createElement('li')
+            messageListEl.innerText = message
+            submittedMessageContainer?.appendChild(messageListEl)
+            messageForm?.reset()
+        }
+        
     })
 })

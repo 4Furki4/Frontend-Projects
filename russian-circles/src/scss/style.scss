@@ -219,16 +219,24 @@ h1{
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  textarea{
+  &__form{
     max-width: 80%;
-    margin-inline: auto;
-    border-radius: 10px;
-    padding: 1rem;
-    filter: drop-shadow(0px 0px 5px var(--text-color));
-    transition: filter .5s, outline .25s;
-    &:focus{
-      filter: drop-shadow(0px 0px 10px var(--text-color));
-      outline: 4px solid var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    textarea{
+      max-width: 100%;
+      margin-inline: auto;
+      border-radius: 10px;
+      padding: 1rem;
+      filter: drop-shadow(0px 0px 5px var(--text-color));
+      transition: filter .5s, outline .25s;
+      &:focus{
+        filter: drop-shadow(0px 0px 10px var(--text-color));
+        outline: 4px solid var(--text-color);
+      }
     }
   }
   &__button{
@@ -246,12 +254,16 @@ h1{
       transform: scale(1);
     }
   }
-  &__list{
-    min-width: 80%;
+  &__container{
+    max-width: 80%;
     margin-inline: auto;
     border-radius: 10px;
     min-height: 200px;
     background-color: var(--secondary-background-color);
+  }
+  &__list{
+    padding: 2rem;
+    line-height: 1.5rem;
   }
 }
 .donation{
