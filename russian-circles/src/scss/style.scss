@@ -152,7 +152,7 @@ h1{
     font-weight: bold;
   }
   position: relative;
-  background-image: url('../../images/band-albums/album-blood-year.webp');
+  background-image: url('../../images/band-albums/album-enter.webp');
   background-position: center;
   background-size: cover;
   filter: drop-shadow(4px 4px 10px var(--primary-color));
@@ -189,16 +189,16 @@ h1{
   }
 }
 .card:nth-child(2){
-  background-image: url('../../images/band-albums/album-empros.webp');
+  background-image: url('../../images/band-albums/album-station.webp');
 }
 .card:nth-child(3){
-  background-image: url('../../images/band-albums/album-enter.webp');
-}
-.card:nth-child(4){
   background-image: url('../../images/band-albums/album-geneva.webp');
 }
+.card:nth-child(4){
+  background-image: url('../../images/band-albums/album-empros.webp');
+}
 .card:nth-child(5){
-  background-image: url('../../images/band-albums/album-gnosis.webp');
+  background-image: url('../../images/band-albums/album-memorial.webp');
 }
 .card:nth-child(6){
   background-image: url('../../images/band-albums/album-guidance.webp');
@@ -207,10 +207,10 @@ h1{
   background-image: url('../../images/band-albums/album-live-at-dunk-fest.webp');
 }
 .card:nth-child(8){
-  background-image: url('../../images/band-albums/album-memorial.webp');
+  background-image: url('../../images/band-albums/album-blood-year.webp');
 }
 .card:last-child{
-  background-image: url('../../images/band-albums/album-station.webp');
+  background-image: url('../../images/band-albums/album-gnosis.webp');
 }
 .message{
   margin-top: 2rem;
