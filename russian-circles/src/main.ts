@@ -40,4 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
     menuIcon?.addEventListener('click', () => {
         menu?.classList.toggle('nav__pages--dropdown')
     })
+    window.addEventListener('load', () => {
+        let name = prompt("May I learn your name ?")
+        while(!name) {
+            name = prompt("Please enter your name")
+        }
+        alert(`Welcome ${name}`)
+    })
+    window.addEventListener('resize', () => {
+        if(window.innerWidth > 900) {
+            menu?.classList.remove('nav__pages--dropdown')
+        }
+    })
 })
