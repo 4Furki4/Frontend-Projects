@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('dark-mode')
         localStorage.setItem("darkMode", null)
     }
-
     const carouselButtons = document.querySelectorAll('[data-carousel-button]')
     carouselButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -72,8 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 submittedMessageContainer?.appendChild(messageListEl)
                 messageForm?.reset()
             }
-            
         })
     }
-    
 })
