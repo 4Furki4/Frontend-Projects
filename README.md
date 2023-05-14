@@ -170,3 +170,31 @@
 - **[Live Link](https://age-calculator-4furki4.netlify.app/)** \
   **Preview of the challenge**
   ![Snapshot of interactive component challenge](./snapshots/age-calculator.png)
+
+
+## Favorite Brand - Russian Circles
+### Solved at 13.05.2023
+
+### Difficulties
+
+- Blurry images that I newly tries is incompatible in Firefox browser, and I couldn't fix it :(
+- I used TypeScript and it kept throwing some weird errors which makes difficult production publish.
+
+- Arrows I used in carousel is incopatible in Firefox browser as well...
+
+### What I Tried New
+
+- Carousel
+
+- navbar hamburger menu
+
+- window.resize
+
+- blurry effect when hover images to display album names
+
+- dark-mode which LOOKS AMAZING AND EYE SAVER ! using color-scheme and css variables
+
+### Live Link and Preview
+- **[Live Link](https://russian-circles-4furki4.netlify.app/)** \
+  **Preview of the challenge**
+  ![Snapshot of interactive component challenge](./snapshots/russian-circles.png)
