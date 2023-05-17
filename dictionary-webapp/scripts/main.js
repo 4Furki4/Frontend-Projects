@@ -1,23 +1,15 @@
+import * as darkmode from "./dark-mode.js";
+
 document.addEventListener("DOMContentLoaded", () => {
-  const darkModeSwitch = document.querySelector(".switch");
-  const darkModeSwitchCheck = document.querySelector(".switch input");
-  darkModeSwitch.addEventListener("click", () => {
-    if (darkModeSwitchCheck.checked) {
-      setDarkMode();
+  darkmode.darkModeSwitch.addEventListener("click", () => {
+    if (darkmode.darkModeSwitchCheck.checked) {
+      darkmode.setDarkMode();
     } else {
-      disableDarkMode();
+      darkmode.disableDarkMode();
     }
   });
   if (localStorage.getItem("darkMode") === "enabled") {
-    setDarkMode();
-    darkModeSwitchCheck.checked = true;
-  }
-  function setDarkMode() {
-    document.body.classList.toggle("dark-mode");
-    localStorage.setItem("darkMode", "enabled");
-  }
-  function disableDarkMode() {
-    document.body.classList.remove("dark-mode");
-    localStorage.setItem("darkMode", "disabled");
+    darkmode.setDarkMode();
+    darkmode.darkModeSwitchCheck.checked = true;
   }
 });
