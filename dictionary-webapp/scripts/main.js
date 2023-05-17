@@ -8,11 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
       disableDarkMode();
     }
   });
-
+  if (localStorage.getItem("darkMode") === "enabled") {
+    setDarkMode();
+    darkModeSwitchCheck.checked = true;
+  }
   function setDarkMode() {
     document.body.classList.toggle("dark-mode");
+    localStorage.setItem("darkMode", "enabled");
   }
   function disableDarkMode() {
     document.body.classList.remove("dark-mode");
+    localStorage.setItem("darkMode", "disabled");
   }
 });

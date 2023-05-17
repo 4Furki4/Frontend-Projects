@@ -10,6 +10,15 @@
     align-items: center;
   }
   &__dropdown {
+    padding: 0.25rem 2rem;
+    border-right: 1px solid var(--main-color);
+    &__selected {
+      user-select: none;
+      cursor: pointer;
+      #selected__font {
+        margin-inline: 0.5rem;
+      }
+    }
   }
   &__dropdown__list {
     display: none;

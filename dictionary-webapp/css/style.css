@@ -10,6 +10,19 @@
   gap: 2rem;
   align-items: center;
 }
+.nav__dropdown {
+  padding: 0.25rem 2rem;
+  border-right: 1px solid var(--main-color);
+}
+.nav__dropdown__selected {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.nav__dropdown__selected #selected__font {
+  margin-inline: 0.5rem;
+}
 .nav__dropdown__list {
   display: none;
 }
@@ -58,6 +71,12 @@
   --main-bg-color: #fffffff1;
   --main-color: #050505;
   --color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .dark-mode {

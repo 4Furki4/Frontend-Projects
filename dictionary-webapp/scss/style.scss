@@ -4,7 +4,11 @@
   --main-color: #050505;
   --color-scheme: dark;
 }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 .dark-mode {
   --main-bg-color: #050505;
   --main-color: #fffffff1;
