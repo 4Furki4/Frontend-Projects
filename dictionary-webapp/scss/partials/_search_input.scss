@@ -8,18 +8,21 @@
     border: 0;
     // top: -12px;
     // padding: 11px;
-    padding: 13px;
+    // padding: 13px;
+    bottom: 7.5px;
+    transform: translateY(50%);
     background-color: var(--secondary-bg-color);
-    right: 10px;
+    right: 20px;
     border-radius: 10px;
     cursor: pointer;
     z-index: 0;
   }
   &__input {
+    font-size: clamp(1rem, 2vw, 1.25rem);
     width: 100%;
     border: 0;
     outline: none;
-    padding: 1rem;
+    padding: clamp(1rem, 2vw, 1.25rem);
     background-color: var(--secondary-bg-color);
     border-radius: 10px;
     position: relative;
