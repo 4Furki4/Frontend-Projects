@@ -2,12 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./design/assets/icons8-dictionary-64.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Dictionary</title>
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+  <body class="">
+    <nav class="nav container">
+      <div class="nav__logo">
+        <img src="./design/assets/logo.svg" height="25" alt="" />
+      </div>
+      <div class="nav__settings">
+        <div class="nav__dropdown">
+          <div class="nav__dropdown__selected">
+            Sans Serif
+            <img src="./design/assets/icon-arrow-down.svg" alt="" />
+          </div>
+          <ul class="nav__dropdown__list">
+            <li>Inconsolata-Bold</li>
+            <li>Inconsolata-Regular</li>
+            <li>Inter-Bold</li>
+            <li>Inter-Regular</li>
+            <li>Lora-Bold</li>
+            <li>Lora-BoldItalic</li>
+            <li>Lora-Regular</li>
+          </ul>
+        </div>
+        <div class="nav__dark-toggler">
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+          <img src="./design/assets/icon-moon.svg" height="25" alt="" />
+        </div>
+      </div>
+    </nav>
+    <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>

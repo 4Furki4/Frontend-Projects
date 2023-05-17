@@ -1,0 +1,81 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem;
+}
+.nav__settings {
+  margin-left: auto;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.nav__dropdown__list {
+  display: none;
+}
+.nav__dark-toggler {
+  display: flex;
+  gap: 1rem;
+}
+.nav .switch {
+  position: relative;
+  font-size: 17px;
+  display: inline-block;
+  width: 65px;
+  height: 26px;
+  border-radius: 100px;
+  background-color: #757575;
+  transition: background-color 0.5s;
+}
+.nav .switch:hover {
+  background-color: purple;
+}
+.nav .switch input[type=checkbox] {
+  display: none;
+}
+.nav .switch .slider {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+}
+.nav .switch .slider::after {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  inset: 0;
+  margin: auto 0;
+  transform: translateX(5px);
+  content: "";
+  background-color: var(--main-bg-color);
+  transition: transform 0.5s;
+}
+.nav .switch input:checked + .slider::after {
+  transform: translateX(40px);
+}
+
+:root {
+  --main-bg-color: #fffffff1;
+  --main-color: #050505;
+  --color-scheme: dark;
+}
+
+.dark-mode {
+  --main-bg-color: #050505;
+  --main-color: #fffffff1;
+  --color-scheme: light;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+  color-scheme: var(--color-scheme);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.container {
+  width: min(90%, 800px);
+  margin-inline: auto;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,24 @@
+@use "./partials" as *;
+:root {
+  --main-bg-color: #fffffff1;
+  --main-color: #050505;
+  --color-scheme: dark;
+}
+
+.dark-mode {
+  --main-bg-color: #050505;
+  --main-color: #fffffff1;
+  --color-scheme: light;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+  color-scheme: var(--color-scheme);
+  transition: background-color 0.5s, color 0.5s;
+}
+.container {
+  width: min(90%, 800px);
+  margin-inline: auto;
+}

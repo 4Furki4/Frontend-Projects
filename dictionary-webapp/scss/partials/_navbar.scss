@@ -1,0 +1,57 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem;
+  &__settings {
+    margin-left: auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  &__dropdown {
+  }
+  &__dropdown__list {
+    display: none;
+  }
+  &__dark-toggler {
+    display: flex;
+    gap: 1rem;
+  }
+  .switch {
+    position: relative;
+    font-size: 17px;
+    display: inline-block;
+    width: 65px;
+    height: 26px;
+    border-radius: 100px;
+    background-color: #757575;
+    transition: background-color 0.5s;
+    &:hover {
+      background-color: purple;
+    }
+    input[type="checkbox"] {
+      display: none;
+    }
+    .slider {
+      position: absolute;
+      inset: 0;
+      cursor: pointer;
+    }
+    .slider::after {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      inset: 0;
+      margin: auto 0;
+      transform: translateX(5px);
+      content: "";
+      background-color: var(--main-bg-color);
+      transition: transform 0.5s;
+    }
+    input:checked + .slider::after {
+      transform: translateX(40px);
+    }
+  }
+}
