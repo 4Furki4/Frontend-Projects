@@ -1,0 +1,30 @@
+.search {
+  margin-top: 4rem;
+  &__label {
+    position: relative;
+  }
+  &__button {
+    position: absolute;
+    border: 0;
+    // top: -12px;
+    // padding: 11px;
+    padding: 13px;
+    background-color: var(--secondary-bg-color);
+    right: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 0;
+  }
+  &__input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding: 1rem;
+    background-color: var(--secondary-bg-color);
+    border-radius: 10px;
+    position: relative;
+    &:focus {
+      outline: 2px solid var(--main-color);
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.switch,
+.search .search__input,
+.search .search__button {
+  transition: background-color 0.5s;
+}
+
+.slider::after {
+  transition: transform 0.5s;
+}
