@@ -1,4 +1,4 @@
-import { BASE_URL } from "./config";
+import { BASE_URL } from "./config.js";
 const definitionSection = document.querySelector(".definitions");
 export const searchForm = document.querySelector("form.search__form");
 searchForm.addEventListener("submit", async (event) => {
