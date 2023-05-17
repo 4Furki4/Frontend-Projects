@@ -1,0 +1,35 @@
+.definitions {
+  &__head {
+    .phonetic-and-audio {
+      display: flex;
+      align-items: center;
+      &__text {
+        color: var(--primary-purple);
+      }
+    }
+    .play-button {
+      position: absolute;
+      inset: 0;
+      left: 11px;
+      margin: auto;
+      cursor: pointer;
+      border: 0;
+      background: transparent;
+      box-sizing: border-box;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 10px 10px 10px 20px;
+      border-color: transparent transparent transparent rgb(165, 69, 239);
+      &--wrapper {
+        position: relative;
+        display: inline-block;
+        padding: 20px;
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+        background-color: rgb(233, 208, 250);
+        margin-left: auto;
+      }
+    }
+  }
+}
