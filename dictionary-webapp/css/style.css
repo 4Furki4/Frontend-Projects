@@ -131,7 +131,8 @@
 .switch,
 .search .search__input,
 .search .search__button,
-.part-of-speech::after {
+.part-of-speech::after,
+.definitions__body .sources::before {
   transition: background-color 0.5s;
 }
 
@@ -194,6 +195,21 @@
   background-color: var(--secondary-bg-color);
   width: 100%;
   margin-left: auto;
+}
+.definitions__body .sources {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.definitions__body .sources::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: var(--secondary-bg-color);
+}
+.definitions__body .sources .new-window-icon {
+  margin-left: 0.5rem;
 }
 .definitions__body .example {
   opacity: 0.5;

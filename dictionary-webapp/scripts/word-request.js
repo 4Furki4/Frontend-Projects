@@ -20,13 +20,13 @@ searchForm.addEventListener("submit", async (event) => {
     const { word, phonetics } = data[0];
     setWordHead(word, phonetics);
     for (const datum of data) {
-      const { meanings } = datum;
-      setWordBody(meanings);
+      const { meanings, sourceUrls } = datum;
+      setWordBody(meanings, sourceUrls);
     }
   } else {
-    const { word, meanings, phonetics } = data[0];
+    const { word, meanings, phonetics, sourceUrls } = data[0];
     setWordHead(word, phonetics);
-    setWordBody(meanings);
+    setWordBody(meanings, sourceUrls);
   }
   searchForm.reset();
 });
@@ -121,7 +121,7 @@ function removeSearchInputValidationMessages(input) {
   }
 }
 
-function setWordBody(meanings) {
+function setWordBody(meanings, sourceUrls) {
   const definitionsBody = definitionSection.querySelector(".definitions__body");
   for (const meaning of meanings) {
     const { partOfSpeech, definitions, synonyms } = meaning;
@@ -133,8 +133,26 @@ function setWordBody(meanings) {
     setDefinitions(definitions, definitionsBody);
     setSynonyms(synonyms, definitionsBody);
   }
+  setWordSource(sourceUrls, definitionsBody);
   definitionSection.appendChild(definitionsBody);
 }
+function setWordSource(sourceUrls, divToAppend) {
+  const sourceDiv = document.createElement("div");
+  sourceDiv.classList.add("sources");
+  for (const sourceUrl of sourceUrls) {
+    const sourceParagraph = document.createElement("p");
+    const sourceAnchor = document.createElement("a");
+    sourceAnchor.href = sourceUrl;
+    sourceAnchor.target = "_blank";
+    sourceAnchor.innerHTML = `<img class="new-window-icon" src="./design/assets/icon-new-window.svg" alt="new window icon">`;
+    sourceParagraph.innerText = `${sourceUrl}`;
+    sourceParagraph.classList.add("source");
+    sourceParagraph.appendChild(sourceAnchor);
+    sourceDiv.appendChild(sourceParagraph);
+  }
+  divToAppend.appendChild(sourceDiv);
+}
+
 function setPartOfSpeech(partOfSpeech, divToAppend) {
   const partOfSpeechHeader = document.createElement("h2");
   partOfSpeechHeader.innerText = partOfSpeech;

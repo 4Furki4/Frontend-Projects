@@ -1,7 +1,8 @@
 .switch,
 .search .search__input,
 .search .search__button,
-.part-of-speech::after {
+.part-of-speech::after,
+.definitions__body .sources::before {
   transition: background-color 0.5s;
 }
 
