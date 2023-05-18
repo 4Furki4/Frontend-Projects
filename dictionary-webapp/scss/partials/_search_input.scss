@@ -6,9 +6,6 @@
   &__button {
     position: absolute;
     border: 0;
-    // top: -12px;
-    // padding: 11px;
-    // padding: 13px;
     bottom: 7.5px;
     transform: translateY(50%);
     background-color: transparent;
@@ -28,6 +25,24 @@
     position: relative;
     &:focus {
       outline: 2px solid var(--main-color);
+    }
+    &--invalid {
+      outline: 2px solid red;
+    }
+    &__validation-message {
+      transition: opacity 0.25s;
+      position: absolute;
+      inset: 0;
+      color: red;
+      font-style: italic;
+      font-weight: 700;
+      margin-top: 3rem;
+      &--hidden {
+        opacity: 0;
+      }
+      &--visible {
+        opacity: 1;
+      }
     }
   }
 }

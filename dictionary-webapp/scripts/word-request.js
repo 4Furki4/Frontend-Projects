@@ -1,14 +1,25 @@
 import { BASE_URL } from "./config.js";
 const definitionSection = document.querySelector(".definitions");
 export const searchForm = document.querySelector("form.search__form");
+export const errorMessageSpan = document.querySelector(
+  ".search__input__validation-message"
+);
 searchForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const wordInput = event.target["word"].value;
-  const data = await getWordDefinitionAsync(wordInput);
+  const wordInput = event.target["word"];
+  wordInput.addEventListener("input", () => {
+    removeSearchInputValidation(wordInput);
+  });
+  const wordInputVal = wordInput.value;
+  if (!setSearchInputValidation(wordInput)) {
+    return;
+  }
+  const data = await getWordDefinitionAsync(wordInputVal);
   clearWordHead();
   const { word, meanings, phonetics } = data[0];
   setWordHead(word, phonetics);
 });
+
 async function getWordDefinitionAsync(word) {
   const response = await fetch(`${BASE_URL}${word}`);
   const wordData = await response.json();
@@ -60,4 +71,30 @@ function setPhoneticAndAudio(phonetic) {
   phoneticAndAudioDiv.appendChild(phoneticSpan);
   phoneticAndAudioDiv.appendChild(audioEl);
   return phoneticAndAudioDiv;
+}
+
+function setSearchInputValidation(input) {
+  if (input.value.length < 1) {
+    errorMessageSpan.innerText = "Please enter a word";
+    errorMessageSpan.classList.remove(
+      "search__input__validation-message--hidden"
+    );
+    errorMessageSpan.classList.add(
+      "search__input__validation-message--visible"
+    );
+    input.classList.add("search__input--invalid");
+    return false;
+  }
+}
+function removeSearchInputValidation(input) {
+  if (
+    input.classList.contains("search__input--invalid") &&
+    input.value.length > 0
+  ) {
+    errorMessageSpan.classList.remove(
+      "search__input__validation-message--visible"
+    );
+    errorMessageSpan.classList.add("search__input__validation-message--hidden");
+    input.classList.remove("search__input--invalid");
+  }
 }

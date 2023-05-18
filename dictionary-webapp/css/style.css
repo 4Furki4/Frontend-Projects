@@ -95,6 +95,24 @@
 .search__input:focus {
   outline: 2px solid var(--main-color);
 }
+.search__input--invalid {
+  outline: 2px solid red;
+}
+.search__input__validation-message {
+  transition: opacity 0.25s;
+  position: absolute;
+  inset: 0;
+  color: red;
+  font-style: italic;
+  font-weight: 700;
+  margin-top: 3rem;
+}
+.search__input__validation-message--hidden {
+  opacity: 0;
+}
+.search__input__validation-message--visible {
+  opacity: 1;
+}
 
 .switch,
 .search .search__input,
