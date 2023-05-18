@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./design/assets/icons8-dictionary-64.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Dictionary</title>
+  </head>
+  <body class="">
+    <nav class="nav container">
+      <div class="nav__logo">
+        <img src="./design/assets/logo.svg" alt="" />
+      </div>
+      <div class="nav__settings">
+        <div class="nav__dropdown">
+          <div class="nav__dropdown__selected">
+            <span id="selected__font">Sans Serif</span>
+            <img src="./design/assets/icon-arrow-down.svg" alt="" />
+          </div>
+          <ul class="nav__dropdown__list">
+            <li>Inconsolata-Bold</li>
+            <li>Inconsolata-Regular</li>
+            <li>Inter-Bold</li>
+            <li>Inter-Regular</li>
+            <li>Lora-Bold</li>
+            <li>Lora-BoldItalic</li>
+            <li>Lora-Regular</li>
+          </ul>
+        </div>
+        <div class="nav__dark-toggler">
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+          <img src="./design/assets/icon-moon.svg" height="25" alt="" />
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="search container">
+        <form class="search__form">
+          <label class="search__label" for="word">
+            <input
+              name="word"
+              id="input_word"
+              class="search__input"
+              type="text"
+              placeholder="Search for any word..."
+            />
+            <button class="search__button">
+              <img src="./design/assets/icon-search.svg" alt="" />
+            </button>
+            <span class="search__input__validation-message"></span>
+          </label>
+        </form>
+      </section>
+      <section class="container definitions">
+        <div class="definitions__head"></div>
+        <div class="definitions__body"></div>
+      </section>
+    </main>
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+</html>

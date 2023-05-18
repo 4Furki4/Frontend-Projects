@@ -1,0 +1,13 @@
+.switch,
+.search .search__input,
+.search .search__button,
+.part-of-speech::after {
+  transition: background-color 0.5s;
+}
+
+.slider::after {
+  transition: transform 0.5s;
+}
+.search__input__validation-message {
+  transition: opacity 0.5s;
+}

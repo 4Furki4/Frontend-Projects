@@ -1,0 +1,83 @@
+.definitions {
+  &__head {
+    h1 {
+      font-size: clamp(2.5rem, 10vw, 6rem);
+      margin: 1rem 0rem;
+    }
+    .phonetic-and-audio {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      &__text {
+        color: var(--primary-purple);
+      }
+    }
+    .play-button {
+      position: absolute;
+      inset: 0;
+      left: 11px;
+      margin: auto;
+      cursor: pointer;
+      border: 0;
+      background: transparent;
+      box-sizing: border-box;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 10px 10px 10px 20px;
+      border-color: transparent transparent transparent rgb(165, 69, 239);
+      &--wrapper {
+        position: relative;
+        display: inline-block;
+        padding: 20px;
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+        background-color: rgb(233, 208, 250);
+        margin-left: auto;
+      }
+    }
+  }
+  &__title {
+    opacity: 0.5;
+  }
+  &__body {
+    .part-of-speech {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      &::after {
+        content: "";
+        height: 2px;
+        background-color: var(--secondary-bg-color);
+        width: 100%;
+        margin-left: auto;
+      }
+    }
+    .example {
+      opacity: 0.5;
+      margin-top: 6px;
+    }
+    .definition-list {
+      padding-left: 20px;
+      display: grid;
+      gap: 1rem;
+      & li {
+        // line-height: 1rem;
+        &::marker {
+          color: var(--primary-purple);
+        }
+      }
+    }
+    .synonym {
+      position: relative;
+      color: var(--primary-purple);
+      &::before {
+        content: "Synonyms:";
+        position: relative;
+        margin-right: 2rem;
+        color: var(--main-color);
+      }
+    }
+  }
+}

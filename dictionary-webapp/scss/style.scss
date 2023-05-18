@@ -1,0 +1,32 @@
+@use "./partials" as *;
+:root {
+  --main-bg-color: #fffffff1;
+  --main-color: #050505;
+  --color-scheme: light;
+  --secondary-bg-color: #f5f5f5;
+  --primary-purple: rgb(165, 69, 239);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.dark-mode {
+  --main-bg-color: #050505;
+  --main-color: #fffffff1;
+  --secondary-bg-color: #1f1f1f;
+  --color-scheme: dark;
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+  color-scheme: var(--color-scheme);
+  transition: background-color 0.5s, color 0.5s;
+}
+.container {
+  width: min(90%, 820px);
+  margin-inline: auto;
+}
