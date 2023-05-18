@@ -19,6 +19,7 @@ searchForm.addEventListener("submit", async (event) => {
   const { word, meanings, phonetics } = data[0];
   setWordHead(word, phonetics);
   setWordBody(meanings);
+  searchForm.reset();
 });
 
 async function getWordDefinitionAsync(word) {
@@ -76,7 +77,7 @@ function setWordAudio(phoneticAudioLink) {
 }
 function setPhoneticAndAudio(phonetic) {
   const phoneticAndAudioDiv = document.createElement("div");
-  const phoneticSpan = setWordPhonetic(phonetic.text);
+  const phoneticSpan = setWordPhonetic(phonetic.text ?? "---");
   const audioEl = setWordAudio(phonetic.audio);
   phoneticAndAudioDiv.appendChild(phoneticSpan);
   phoneticAndAudioDiv.appendChild(audioEl);
@@ -115,6 +116,10 @@ function setWordBody(meanings) {
   for (const meaning of meanings) {
     const { partOfSpeech, definitions, synonyms } = meaning;
     setPartOfSpeech(partOfSpeech, definitionsBody);
+    const meaningsTitle = document.createElement("h3");
+    meaningsTitle.innerText = "Meaning";
+    meaningsTitle.classList.add("definitions__title");
+    definitionsBody.appendChild(meaningsTitle);
     setDefinitions(definitions, definitionsBody);
     setSynonyms(synonyms, definitionsBody);
   }
@@ -138,9 +143,11 @@ function setDefinitions(definitions, divToAppend) {
   divToAppend.appendChild(definitionList);
 }
 function setSynonyms(synonyms, divToAppend) {
-  for (const synonym of synonyms) {
-    const synonymParagraph = document.createElement("p");
-    synonymParagraph.innerText = synonym;
+  let synonymsString = synonyms.join(", ");
+  if (synonymsString !== "") {
+    const synonymParagraph = document.createElement("span");
+    synonymParagraph.innerText = synonymsString;
+    synonymParagraph.classList.add("synonym");
     divToAppend.appendChild(synonymParagraph);
   }
 }

@@ -1,6 +1,7 @@
 .switch,
 .search .search__input,
-.search .search__button {
+.search .search__button,
+.part-of-speech::after {
   transition: background-color 0.5s;
 }
 

@@ -94,11 +94,11 @@
 }
 .search__input:focus::-moz-placeholder {
   position: absolute;
-  transform: translateY(-20px);
+  transform: translateY(-17px);
 }
 .search__input:focus::placeholder {
   position: absolute;
-  transform: translateY(-20px);
+  transform: translateY(-17px);
 }
 .search__input::-moz-placeholder {
   -moz-transition: transform 0.5s;
@@ -130,7 +130,8 @@
 
 .switch,
 .search .search__input,
-.search .search__button {
+.search .search__button,
+.part-of-speech::after {
   transition: background-color 0.5s;
 }
 
@@ -142,9 +143,14 @@
   transition: opacity 0.5s;
 }
 
+.definitions__head h1 {
+  font-size: clamp(2.5rem, 10vw, 6rem);
+  margin: 1rem 0rem;
+}
 .definitions__head .phonetic-and-audio {
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
 }
 .definitions__head .phonetic-and-audio__text {
   color: var(--primary-purple);
@@ -173,6 +179,9 @@
   background-color: rgb(233, 208, 250);
   margin-left: auto;
 }
+.definitions__title {
+  opacity: 0.5;
+}
 .definitions__body .part-of-speech {
   position: relative;
   display: flex;
@@ -185,6 +194,26 @@
   background-color: var(--secondary-bg-color);
   width: 100%;
   margin-left: auto;
+}
+.definitions__body .definition-list {
+  display: grid;
+  gap: 1rem;
+}
+.definitions__body .definition-list li {
+  line-height: 1.25rem;
+}
+.definitions__body .definition-list li::marker {
+  color: var(--primary-purple);
+}
+.definitions__body .synonym {
+  position: relative;
+  color: var(--primary-purple);
+}
+.definitions__body .synonym::before {
+  content: "Synonyms:";
+  position: relative;
+  margin-right: 2rem;
+  color: var(--main-color);
 }
 
 :root {

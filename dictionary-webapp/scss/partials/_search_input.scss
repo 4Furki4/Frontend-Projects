@@ -25,7 +25,7 @@
     position: relative;
     &:focus::placeholder {
       position: absolute;
-      transform: translateY(-20px);
+      transform: translateY(-17px);
     }
     &::placeholder {
       transition: transform 0.5s;

@@ -1,8 +1,13 @@
 .definitions {
   &__head {
+    h1 {
+      font-size: clamp(2.5rem, 10vw, 6rem);
+      margin: 1rem 0rem;
+    }
     .phonetic-and-audio {
       display: flex;
       align-items: center;
+      margin-bottom: 1rem;
       &__text {
         color: var(--primary-purple);
       }
@@ -32,6 +37,9 @@
       }
     }
   }
+  &__title {
+    opacity: 0.5;
+  }
   &__body {
     .part-of-speech {
       position: relative;
@@ -44,6 +52,26 @@
         background-color: var(--secondary-bg-color);
         width: 100%;
         margin-left: auto;
+      }
+    }
+    .definition-list {
+      display: grid;
+      gap: 1rem;
+      & li {
+        line-height: 1.25rem;
+        &::marker {
+          color: var(--primary-purple);
+        }
+      }
+    }
+    .synonym {
+      position: relative;
+      color: var(--primary-purple);
+      &::before {
+        content: "Synonyms:";
+        position: relative;
+        margin-right: 2rem;
+        color: var(--main-color);
       }
     }
   }
