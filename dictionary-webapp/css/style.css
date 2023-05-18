@@ -195,12 +195,14 @@
   width: 100%;
   margin-left: auto;
 }
+.definitions__body .example {
+  opacity: 0.5;
+  margin-top: 6px;
+}
 .definitions__body .definition-list {
+  padding-left: 20px;
   display: grid;
   gap: 1rem;
-}
-.definitions__body .definition-list li {
-  line-height: 1.25rem;
 }
 .definitions__body .definition-list li::marker {
   color: var(--primary-purple);

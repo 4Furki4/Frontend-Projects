@@ -16,14 +16,24 @@ searchForm.addEventListener("submit", async (event) => {
   }
   const data = await getWordDefinitionAsync(wordInputVal);
   clearWordDefinitions();
-  const { word, meanings, phonetics } = data[0];
-  setWordHead(word, phonetics);
-  setWordBody(meanings);
+  if (data.length > 1) {
+    const { word, phonetics } = data[0];
+    setWordHead(word, phonetics);
+    for (const datum of data) {
+      const { meanings } = datum;
+      setWordBody(meanings);
+    }
+  } else {
+    const { word, meanings, phonetics } = data[0];
+    setWordHead(word, phonetics);
+    setWordBody(meanings);
+  }
   searchForm.reset();
 });
 
 async function getWordDefinitionAsync(word) {
-  const response = await fetch(`${BASE_URL}${word}`);
+  const URL = `${BASE_URL}${word}`;
+  const response = await fetch(URL);
   const wordData = await response.json();
   return wordData;
 }
@@ -138,6 +148,13 @@ function setDefinitions(definitions, divToAppend) {
   for (const definition of definitions) {
     const definitionElement = document.createElement("li");
     definitionElement.innerText = definition.definition;
+    const definitionHasExample = definition.example !== undefined;
+    if (definitionHasExample) {
+      const exampleParagraph = document.createElement("p");
+      exampleParagraph.innerHTML = `<q>${definition.example}</q>`;
+      exampleParagraph.classList.add("example");
+      definitionElement.appendChild(exampleParagraph);
+    }
     definitionList.appendChild(definitionElement);
   }
   divToAppend.appendChild(definitionList);

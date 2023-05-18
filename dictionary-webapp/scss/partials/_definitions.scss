@@ -54,11 +54,16 @@
         margin-left: auto;
       }
     }
+    .example {
+      opacity: 0.5;
+      margin-top: 6px;
+    }
     .definition-list {
+      padding-left: 20px;
       display: grid;
       gap: 1rem;
       & li {
-        line-height: 1.25rem;
+        // line-height: 1rem;
         &::marker {
           color: var(--primary-purple);
         }
