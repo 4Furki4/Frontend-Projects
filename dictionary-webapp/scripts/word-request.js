@@ -8,10 +8,10 @@ searchForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const wordInput = event.target["word"];
   wordInput.addEventListener("input", () => {
-    removeSearchInputValidation(wordInput);
+    removeSearchInputValidationMessages(wordInput);
   });
   const wordInputVal = wordInput.value;
-  if (!setSearchInputValidation(wordInput)) {
+  if (!setSearchInputValidationMessages(wordInput)) {
     return;
   }
   const data = await getWordDefinitionAsync(wordInputVal);
@@ -73,7 +73,7 @@ function setPhoneticAndAudio(phonetic) {
   return phoneticAndAudioDiv;
 }
 
-function setSearchInputValidation(input) {
+function setSearchInputValidationMessages(input) {
   if (input.value.length < 1) {
     errorMessageSpan.innerText = "Please enter a word";
     errorMessageSpan.classList.remove(
@@ -86,7 +86,7 @@ function setSearchInputValidation(input) {
     return false;
   }
 }
-function removeSearchInputValidation(input) {
+function removeSearchInputValidationMessages(input) {
   if (
     input.classList.contains("search__input--invalid") &&
     input.value.length > 0
