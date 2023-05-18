@@ -23,6 +23,13 @@
     background-color: var(--secondary-bg-color);
     border-radius: 10px;
     position: relative;
+    &:focus::placeholder {
+      position: absolute;
+      transform: translateY(-20px);
+    }
+    &::placeholder {
+      transition: transform 0.5s;
+    }
     &:focus {
       outline: 2px solid var(--main-color);
     }
