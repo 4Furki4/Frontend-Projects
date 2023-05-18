@@ -15,9 +15,10 @@ searchForm.addEventListener("submit", async (event) => {
     return;
   }
   const data = await getWordDefinitionAsync(wordInputVal);
-  clearWordHead();
+  clearWordDefinitions();
   const { word, meanings, phonetics } = data[0];
   setWordHead(word, phonetics);
+  setWordBody(meanings);
 });
 
 async function getWordDefinitionAsync(word) {
@@ -39,9 +40,18 @@ function setWordHead(word, phonetics) {
   }
 }
 
+function clearWordDefinitions() {
+  clearWordHead();
+  clearWordBody();
+}
+
 function clearWordHead() {
   const definitionHead = definitionSection.querySelector(".definitions__head");
   definitionHead.innerHTML = "";
+}
+function clearWordBody() {
+  const definitionBody = definitionSection.querySelector(".definitions__body");
+  definitionBody.innerHTML = "";
 }
 
 function setWordPhonetic(phoneticText) {
@@ -85,6 +95,7 @@ function setSearchInputValidationMessages(input) {
     input.classList.add("search__input--invalid");
     return false;
   }
+  return true;
 }
 function removeSearchInputValidationMessages(input) {
   if (
@@ -96,5 +107,40 @@ function removeSearchInputValidationMessages(input) {
     );
     errorMessageSpan.classList.add("search__input__validation-message--hidden");
     input.classList.remove("search__input--invalid");
+  }
+}
+
+function setWordBody(meanings) {
+  const definitionsBody = definitionSection.querySelector(".definitions__body");
+  for (const meaning of meanings) {
+    const { partOfSpeech, definitions, synonyms } = meaning;
+    setPartOfSpeech(partOfSpeech, definitionsBody);
+    setDefinitions(definitions, definitionsBody);
+    setSynonyms(synonyms, definitionsBody);
+  }
+  definitionSection.appendChild(definitionsBody);
+}
+function setPartOfSpeech(partOfSpeech, divToAppend) {
+  const partOfSpeechHeader = document.createElement("h2");
+  partOfSpeechHeader.innerText = partOfSpeech;
+  partOfSpeechHeader.classList.add("part-of-speech");
+  divToAppend.appendChild(partOfSpeechHeader);
+}
+
+function setDefinitions(definitions, divToAppend) {
+  const definitionList = document.createElement("ul");
+  definitionList.classList.add("definition-list");
+  for (const definition of definitions) {
+    const definitionElement = document.createElement("li");
+    definitionElement.innerText = definition.definition;
+    definitionList.appendChild(definitionElement);
+  }
+  divToAppend.appendChild(definitionList);
+}
+function setSynonyms(synonyms, divToAppend) {
+  for (const synonym of synonyms) {
+    const synonymParagraph = document.createElement("p");
+    synonymParagraph.innerText = synonym;
+    divToAppend.appendChild(synonymParagraph);
   }
 }

@@ -114,7 +114,6 @@
   outline: 2px solid red;
 }
 .search__input__validation-message {
-  transition: opacity 0.25s;
   position: absolute;
   inset: 0;
   color: red;
@@ -137,6 +136,10 @@
 
 .slider::after {
   transition: transform 0.5s;
+}
+
+.search__input__validation-message {
+  transition: opacity 0.5s;
 }
 
 .definitions__head .phonetic-and-audio {
@@ -168,6 +171,19 @@
   aspect-ratio: 1/1;
   border-radius: 100%;
   background-color: rgb(233, 208, 250);
+  margin-left: auto;
+}
+.definitions__body .part-of-speech {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.definitions__body .part-of-speech::after {
+  content: "";
+  height: 2px;
+  background-color: var(--secondary-bg-color);
+  width: 100%;
   margin-left: auto;
 }
 

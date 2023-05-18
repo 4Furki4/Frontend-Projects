@@ -7,3 +7,6 @@
 .slider::after {
   transition: transform 0.5s;
 }
+.search__input__validation-message {
+  transition: opacity 0.5s;
+}
