@@ -143,7 +143,7 @@ function setWordSource(sourceUrls, divToAppend) {
     const sourceParagraph = document.createElement("p");
     const sourceAnchor = document.createElement("a");
     const windowIconImg = document.createElement("img");
-    windowIconImg.src = "./design/assets/icon-new-window.svg";
+    windowIconImg.src = "./icon-new-window.svg";
     windowIconImg.alt = "new window icon";
     windowIconImg.classList.add("new-window-icon");
     sourceAnchor.href = sourceUrl;
