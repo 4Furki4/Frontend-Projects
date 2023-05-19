@@ -4,6 +4,7 @@ export const searchForm = document.querySelector("form.search__form");
 export const errorMessageSpan = document.querySelector(
   ".search__input__validation-message"
 );
+const spinner = document.querySelector(".lds-dual-ring");
 searchForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const wordInput = event.target["word"];
@@ -14,8 +15,10 @@ searchForm.addEventListener("submit", async (event) => {
   if (!setSearchInputValidationMessages(wordInput)) {
     return;
   }
+  spinner.classList.add("active");
   const data = await getWordDefinitionAsync(wordInputVal);
   clearWordDefinitions();
+  spinner.classList.remove("active");
   if (data.length > 1) {
     const { word, phonetics } = data[0];
     setWordHead(word, phonetics);
