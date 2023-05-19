@@ -14,8 +14,10 @@
   padding: 0.25rem 1rem;
   border-right: 1px solid rgb(117, 117, 117);
   position: relative;
+  min-width: 150px;
 }
 .nav__dropdown__selected {
+  text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;

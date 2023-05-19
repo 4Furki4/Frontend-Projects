@@ -13,7 +13,9 @@
     padding: 0.25rem 1rem;
     border-right: 1px solid rgba(117, 117, 117, 100%);
     position: relative;
+    min-width: 150px;
     &__selected {
+      text-align: center;
       user-select: none;
       cursor: pointer;
       #selected__font {
