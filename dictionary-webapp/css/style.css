@@ -13,8 +13,11 @@
 .nav__dropdown {
   padding: 0.25rem 1rem;
   border-right: 1px solid rgb(117, 117, 117);
+  position: relative;
+  min-width: 150px;
 }
 .nav__dropdown__selected {
+  text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -24,7 +27,32 @@
   margin-right: 0.5rem;
 }
 .nav__dropdown__list {
-  display: none;
+  list-style: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px var(--secondary-bg-color);
+  padding: 1rem 1.5rem;
+  right: 5px;
+  transform: scaleY(0);
+  opacity: 0;
+  transform-origin: top;
+  z-index: 99;
+  position: absolute;
+  background: var(--secondary-bg-color);
+  transition: transform 0.5s, opacity 0.5s;
+}
+.nav__dropdown__list__item {
+  margin-bottom: 0.5rem;
+  display: block;
+  cursor: pointer;
+}
+.nav__dropdown__list__item:hover {
+  color: var(--primary-purple);
+}
+.nav__dropdown__list.active {
+  display: grid;
+  transform: scaleY(1);
+  opacity: 1;
+  gap: 0.5rem;
 }
 .nav__dark-toggler {
   display: flex;
@@ -131,7 +159,8 @@
 .switch,
 .search .search__input,
 .search .search__button,
-.part-of-speech::after {
+.part-of-speech::after,
+.definitions__body .sources::before {
   transition: background-color 0.5s;
 }
 
@@ -141,6 +170,10 @@
 
 .search__input__validation-message {
   transition: opacity 0.5s;
+}
+
+.nav__dropdown__list__item {
+  transition: color 0.5s;
 }
 
 .definitions__head h1 {
@@ -195,6 +228,23 @@
   width: 100%;
   margin-left: auto;
 }
+.definitions__body .sources {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+}
+.definitions__body .sources::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: var(--secondary-bg-color);
+}
+.definitions__body .sources .new-window-icon {
+  margin-left: 0.5rem;
+}
 .definitions__body .example {
   opacity: 0.5;
   margin-top: 6px;
@@ -224,12 +274,63 @@
   --color-scheme: light;
   --secondary-bg-color: #f5f5f5;
   --primary-purple: rgb(165, 69, 239);
+  --font-family: sans-serif;
 }
 
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  src: local(Inter), url(../design/assets/fonts/Inter-Regular.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  src: local(Inter), url(../design/assets/fonts/Inter-Bold.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Inconsolata;
+  font-style: normal;
+  font-weight: 400;
+  src: local(Inter), url(../design/assets/fonts/Inconsolata-Regular.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Inconsolata;
+  font-style: normal;
+  font-weight: 700;
+  src: local(Inter), url(../design/assets/fonts/Inconsolata-Bold.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 400;
+  src: local(Inter), url(../design/assets/fonts/Lora-Regular.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 700;
+  src: local(Inter), url(../design/assets/fonts/Lora-Bold.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Lora;
+  font-style: italic;
+  font-weight: 700;
+  src: local(Inter), url(../design/assets/fonts/Lora-BoldItalic.ttf) format("truetype");
+  font-display: swap;
+}
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: var(--font-family);
 }
 
 .dark-mode {
@@ -240,7 +341,6 @@
 }
 
 body {
-  font-family: sans-serif;
   margin: 0;
   padding: 0;
   background-color: var(--main-bg-color);
