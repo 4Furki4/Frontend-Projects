@@ -142,9 +142,13 @@ function setWordSource(sourceUrls, divToAppend) {
   for (const sourceUrl of sourceUrls) {
     const sourceParagraph = document.createElement("p");
     const sourceAnchor = document.createElement("a");
+    const windowIconImg = document.createElement("img");
+    windowIconImg.src = "./design/assets/icon-new-window.svg";
+    windowIconImg.alt = "new window icon";
+    windowIconImg.classList.add("new-window-icon");
     sourceAnchor.href = sourceUrl;
     sourceAnchor.target = "_blank";
-    sourceAnchor.innerHTML = `<img class="new-window-icon" src="./design/assets/icon-new-window.svg" alt="new window icon">`;
+    sourceAnchor.appendChild(windowIconImg);
     sourceParagraph.innerText = `${sourceUrl}`;
     sourceParagraph.classList.add("source");
     sourceParagraph.appendChild(sourceAnchor);
