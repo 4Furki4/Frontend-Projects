@@ -1,5 +1,6 @@
 import * as darkmode from "./dark-mode.js";
 import { searchForm } from "./word-request.js";
+import { navDropdown, navDropdownList } from "./font-switcher.js";
 document.addEventListener("DOMContentLoaded", () => {
   darkmode.darkModeSwitch.addEventListener("click", () => {
     if (darkmode.darkModeSwitchCheck.checked) {
@@ -12,4 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     darkmode.setDarkMode();
     darkmode.darkModeSwitchCheck.checked = true;
   }
+  navDropdown.addEventListener("click", () => {
+    navDropdownList.classList.toggle("active");
+  });
 });
