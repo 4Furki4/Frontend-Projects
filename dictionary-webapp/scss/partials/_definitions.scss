@@ -59,6 +59,7 @@
       display: flex;
       flex-direction: column;
       margin-top: 1rem;
+      font-size: clamp(0.75rem, 2vw, 1rem);
       &::before {
         content: "";
         width: 100%;
