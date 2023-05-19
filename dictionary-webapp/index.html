@@ -17,19 +17,23 @@
         <img src="./design/assets/logo.svg" alt="" />
       </div>
       <div class="nav__settings">
-        <div class="nav__dropdown">
-          <div class="nav__dropdown__selected">
-            <span id="selected__font">Sans Serif</span>
-            <img src="./design/assets/icon-arrow-down.svg" alt="" />
+        <div class="nav__dropdown" tabindex="0" data-dropdown>
+          <div class="nav__dropdown__selected" data-dropdown-selected>
+            <span id="selected__font" data-dropdown-selected>Sans Serif</span>
+            <img
+              src="./design/assets/icon-arrow-down.svg"
+              alt=""
+              data-dropdown-selected
+            />
           </div>
           <ul class="nav__dropdown__list">
-            <li>Sans Serif</li>
-            <li>Sans</li>
-            <li>Mono</li>
+            <li class="nav__dropdown__list__item">Sans Serif</li>
+            <li class="nav__dropdown__list__item">Serif</li>
+            <li class="nav__dropdown__list__item">Mono</li>
           </ul>
         </div>
         <div class="nav__dark-toggler">
-          <label class="switch">
+          <label class="switch" tabindex="0">
             <input type="checkbox" />
             <span class="slider"></span>
           </label>

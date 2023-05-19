@@ -13,7 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
     darkmode.setDarkMode();
     darkmode.darkModeSwitchCheck.checked = true;
   }
-  navDropdown.addEventListener("click", () => {
-    navDropdownList.classList.toggle("active");
-  });
+});
+
+document.addEventListener("click", (e) => {
+  const isDropdown = e.target.matches("[data-dropdown-selected]");
+  if (!isDropdown && e.target.closest("[data-dropdown]") != null) {
+    return;
+  }
+  if (isDropdown) navDropdownList.classList.toggle("active");
+  if (!isDropdown) navDropdownList.classList.remove("active");
 });
