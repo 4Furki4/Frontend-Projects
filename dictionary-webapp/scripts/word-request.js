@@ -1,21 +1,40 @@
 import { BASE_URL } from "./config.js";
+import { handleLocation, route } from "./routing.js";
 const definitionSection = document.querySelector(".definitions");
 export const searchForm = document.querySelector("form.search__form");
+const definitionHead = definitionSection.querySelector(".definitions__head");
+const definitionBody = definitionSection.querySelector(".definitions__body");
 export const errorMessageSpan = document.querySelector(
   ".search__input__validation-message"
 );
+export const spinner = document.querySelector(".lds-dual-ring");
 searchForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const wordInput = event.target["word"];
+  const wordInputVal = wordInput.value;
+  route(wordInputVal);
   wordInput.addEventListener("input", () => {
     removeSearchInputValidationMessages(wordInput);
   });
-  const wordInputVal = wordInput.value;
+
   if (!setSearchInputValidationMessages(wordInput)) {
     return;
   }
-  const data = await getWordDefinitionAsync(wordInputVal);
+
+  handleWordRequest(wordInputVal);
+  searchForm.reset();
+});
+export async function handleWordRequest(input) {
+  spinner.classList.add("active");
+  const [data, error] = await getWordDefinitionAsync(input);
+  if (error) {
+    clearWordDefinitions();
+    wordNotFound(error, definitionHead);
+    spinner.classList.remove("active");
+    return;
+  }
   clearWordDefinitions();
+  spinner.classList.remove("active");
   if (data.length > 1) {
     const { word, phonetics } = data[0];
     setWordHead(word, phonetics);
@@ -28,18 +47,19 @@ searchForm.addEventListener("submit", async (event) => {
     setWordHead(word, phonetics);
     setWordBody(meanings, sourceUrls);
   }
-  searchForm.reset();
-});
-
-async function getWordDefinitionAsync(word) {
+}
+export async function getWordDefinitionAsync(word) {
   const URL = `${BASE_URL}${word}`;
   const response = await fetch(URL);
+  if (response.status === 404) {
+    const error = await response.json();
+    return [undefined, error];
+  }
   const wordData = await response.json();
-  return wordData;
+  return [wordData, undefined];
 }
 
-function setWordHead(word, phonetics) {
-  const definitionHead = definitionSection.querySelector(".definitions__head");
+export function setWordHead(word, phonetics) {
   const h1 = document.createElement("h1");
   phonetics = phonetics.filter((phonetic) => phonetic.audio !== "");
   h1.innerText = word;
@@ -51,28 +71,27 @@ function setWordHead(word, phonetics) {
   }
 }
 
-function clearWordDefinitions() {
+export function clearWordDefinitions() {
   clearWordHead();
   clearWordBody();
 }
 
-function clearWordHead() {
+export function clearWordHead() {
   const definitionHead = definitionSection.querySelector(".definitions__head");
   definitionHead.innerHTML = "";
 }
-function clearWordBody() {
-  const definitionBody = definitionSection.querySelector(".definitions__body");
+export function clearWordBody() {
   definitionBody.innerHTML = "";
 }
 
-function setWordPhonetic(phoneticText) {
+export function setWordPhonetic(phoneticText) {
   const phoneticSpan = document.createElement("span");
   phoneticSpan.innerText = phoneticText;
   phoneticSpan.classList.add("phonetic-and-audio__text");
   return phoneticSpan;
 }
 
-function setWordAudio(phoneticAudioLink) {
+export function setWordAudio(phoneticAudioLink) {
   const playButton = document.createElement("div");
   const playButtonWrapper = document.createElement("div");
   playButtonWrapper.appendChild(playButton);
@@ -85,7 +104,7 @@ function setWordAudio(phoneticAudioLink) {
   });
   return playButtonWrapper;
 }
-function setPhoneticAndAudio(phonetic) {
+export function setPhoneticAndAudio(phonetic) {
   const phoneticAndAudioDiv = document.createElement("div");
   const phoneticSpan = setWordPhonetic(phonetic.text ?? "---");
   const audioEl = setWordAudio(phonetic.audio);
@@ -94,7 +113,7 @@ function setPhoneticAndAudio(phonetic) {
   return phoneticAndAudioDiv;
 }
 
-function setSearchInputValidationMessages(input) {
+export function setSearchInputValidationMessages(input) {
   if (input.value.length < 1) {
     errorMessageSpan.innerText = "Please enter a word";
     errorMessageSpan.classList.remove(
@@ -108,7 +127,7 @@ function setSearchInputValidationMessages(input) {
   }
   return true;
 }
-function removeSearchInputValidationMessages(input) {
+export function removeSearchInputValidationMessages(input) {
   if (
     input.classList.contains("search__input--invalid") &&
     input.value.length > 0
@@ -121,7 +140,7 @@ function removeSearchInputValidationMessages(input) {
   }
 }
 
-function setWordBody(meanings, sourceUrls) {
+export function setWordBody(meanings, sourceUrls) {
   const definitionsBody = definitionSection.querySelector(".definitions__body");
   for (const meaning of meanings) {
     const { partOfSpeech, definitions, synonyms } = meaning;
@@ -136,7 +155,7 @@ function setWordBody(meanings, sourceUrls) {
   setWordSource(sourceUrls, definitionsBody);
   definitionSection.appendChild(definitionsBody);
 }
-function setWordSource(sourceUrls, divToAppend) {
+export function setWordSource(sourceUrls, divToAppend) {
   const sourceDiv = document.createElement("div");
   sourceDiv.classList.add("sources");
   for (const sourceUrl of sourceUrls) {
@@ -157,14 +176,14 @@ function setWordSource(sourceUrls, divToAppend) {
   divToAppend.appendChild(sourceDiv);
 }
 
-function setPartOfSpeech(partOfSpeech, divToAppend) {
+export function setPartOfSpeech(partOfSpeech, divToAppend) {
   const partOfSpeechHeader = document.createElement("h2");
   partOfSpeechHeader.innerText = partOfSpeech;
   partOfSpeechHeader.classList.add("part-of-speech");
   divToAppend.appendChild(partOfSpeechHeader);
 }
 
-function setDefinitions(definitions, divToAppend) {
+export function setDefinitions(definitions, divToAppend) {
   const definitionList = document.createElement("ul");
   definitionList.classList.add("definition-list");
   for (const definition of definitions) {
@@ -181,7 +200,7 @@ function setDefinitions(definitions, divToAppend) {
   }
   divToAppend.appendChild(definitionList);
 }
-function setSynonyms(synonyms, divToAppend) {
+export function setSynonyms(synonyms, divToAppend) {
   let synonymsString = synonyms.join(", ");
   if (synonymsString !== "") {
     const synonymParagraph = document.createElement("span");
@@ -189,4 +208,21 @@ function setSynonyms(synonyms, divToAppend) {
     synonymParagraph.classList.add("synonym");
     divToAppend.appendChild(synonymParagraph);
   }
+}
+
+export function wordNotFound(error, divToAppend) {
+  //message resolution title
+  const notFoundDiv = document.createElement("div");
+  notFoundDiv.classList.add("not-found");
+  const notFoundTitle = document.createElement("h1");
+  notFoundTitle.classList.add("not-found__title");
+  const notFoundMessage = document.createElement("h2");
+  notFoundMessage.classList.add("not-found__message");
+  const resolutionParagraph = document.createElement("p");
+  resolutionParagraph.classList.add("not-found__resolution");
+  notFoundMessage.innerText = error.message;
+  resolutionParagraph.innerText = error.resolution;
+  notFoundTitle.innerText = error.title;
+  notFoundDiv.append(notFoundTitle, notFoundMessage, resolutionParagraph);
+  divToAppend.appendChild(notFoundDiv);
 }

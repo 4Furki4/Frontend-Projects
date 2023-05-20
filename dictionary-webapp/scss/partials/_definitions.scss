@@ -98,3 +98,9 @@
     }
   }
 }
+.not-found {
+  text-align: center;
+  &__title {
+    color: tomato;
+  }
+}
