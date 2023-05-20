@@ -198,3 +198,32 @@
 - **[Live Link](https://russian-circles-4furki4.netlify.app/)** \
   **Preview of the challenge**
   ![Snapshot of interactive component challenge](./snapshots/russian-circles.png)
+
+## Dictionary Web App
+
+### Solved at 20.05.2023
+
+### Difficulties
+
+- Input field which contains search icon
+
+- Dropdown menu was kinda hard bc I've never done that one before.
+
+### What I Tried New
+
+- Quite basic URL routing based on the words searched by user.
+
+- Dropdown Menu
+
+- Font family changes by user desire
+
+- Play button
+
+- Voice player
+
+
+### Live Link and Preview
+- **[Live Link](https://dictionary-4furki4.netlify.app/)** \
+  **Preview of the challenge**
+  ![Snapshot of interactive component challenge](./snapshots/dictionary-webapp.png)
+
