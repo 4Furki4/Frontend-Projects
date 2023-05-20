@@ -1,6 +1,8 @@
 import { BASE_URL } from "./config.js";
 const definitionSection = document.querySelector(".definitions");
 export const searchForm = document.querySelector("form.search__form");
+const definitionHead = definitionSection.querySelector(".definitions__head");
+const definitionBody = definitionSection.querySelector(".definitions__body");
 export const errorMessageSpan = document.querySelector(
   ".search__input__validation-message"
 );
@@ -16,7 +18,13 @@ searchForm.addEventListener("submit", async (event) => {
     return;
   }
   spinner.classList.add("active");
-  const data = await getWordDefinitionAsync(wordInputVal);
+  const [data, error] = await getWordDefinitionAsync(wordInputVal);
+  if (error) {
+    clearWordDefinitions();
+    wordNotFound(error, definitionHead);
+    spinner.classList.remove("active");
+    return;
+  }
   clearWordDefinitions();
   spinner.classList.remove("active");
   if (data.length > 1) {
@@ -37,12 +45,15 @@ searchForm.addEventListener("submit", async (event) => {
 async function getWordDefinitionAsync(word) {
   const URL = `${BASE_URL}${word}`;
   const response = await fetch(URL);
+  if (response.status === 404) {
+    const error = await response.json();
+    return [undefined, error];
+  }
   const wordData = await response.json();
-  return wordData;
+  return [wordData, undefined];
 }
 
 function setWordHead(word, phonetics) {
-  const definitionHead = definitionSection.querySelector(".definitions__head");
   const h1 = document.createElement("h1");
   phonetics = phonetics.filter((phonetic) => phonetic.audio !== "");
   h1.innerText = word;
@@ -64,7 +75,6 @@ function clearWordHead() {
   definitionHead.innerHTML = "";
 }
 function clearWordBody() {
-  const definitionBody = definitionSection.querySelector(".definitions__body");
   definitionBody.innerHTML = "";
 }
 
@@ -192,4 +202,21 @@ function setSynonyms(synonyms, divToAppend) {
     synonymParagraph.classList.add("synonym");
     divToAppend.appendChild(synonymParagraph);
   }
+}
+
+function wordNotFound(error, divToAppend) {
+  //message resolution title
+  const notFoundDiv = document.createElement("div");
+  notFoundDiv.classList.add("not-found");
+  const notFoundTitle = document.createElement("h1");
+  notFoundTitle.classList.add("not-found__title");
+  const notFoundMessage = document.createElement("h2");
+  notFoundMessage.classList.add("not-found__message");
+  const resolutionParagraph = document.createElement("p");
+  resolutionParagraph.classList.add("not-found__resolution");
+  notFoundMessage.innerText = error.message;
+  resolutionParagraph.innerText = error.resolution;
+  notFoundTitle.innerText = error.title;
+  notFoundDiv.append(notFoundTitle, notFoundMessage, resolutionParagraph);
+  divToAppend.appendChild(notFoundDiv);
 }
