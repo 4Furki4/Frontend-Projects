@@ -20,7 +20,6 @@ searchForm.addEventListener("submit", async (event) => {
   if (!setSearchInputValidationMessages(wordInput)) {
     return;
   }
-
   handleWordRequest(wordInputVal);
   searchForm.reset();
 });

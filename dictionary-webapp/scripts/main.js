@@ -33,5 +33,9 @@ document.addEventListener("click", (e) => {
 window.addEventListener("popstate", async (event) => {
   const currentLocation = event.currentTarget.location.pathname;
   const word = handleLocation(currentLocation);
-  await request.handleWordRequest(word);
+  if (word) {
+    await request.handleWordRequest(word);
+  } else {
+    request.clearWordDefinitions();
+  }
 });
