@@ -113,7 +113,8 @@ export function setPhoneticAndAudio(phonetic) {
 }
 
 export function setSearchInputValidationMessages(input) {
-  if (input.value.length < 1) {
+  let value = String(input.value).trim();
+  if (value.length < 1) {
     errorMessageSpan.innerText = "Please enter a word";
     errorMessageSpan.classList.remove(
       "search__input__validation-message--hidden"
