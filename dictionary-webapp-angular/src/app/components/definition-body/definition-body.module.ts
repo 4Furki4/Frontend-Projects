@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DefinitionBodyComponent } from './definition-body.component';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { FilterPhoneticsPipe } from '../pipes/filter-phonetics.pipe';
+import { RouterModule } from '@angular/router';
+import { FilterPhoneticsPipe } from 'src/app/pipes/filter-phonetics.pipe';
 
 
 
@@ -14,11 +13,9 @@ import { FilterPhoneticsPipe } from '../pipes/filter-phonetics.pipe';
   ],
   imports: [
     CommonModule,
-    FormsModule,
-    HttpClientModule,
-  ],
-  exports: [
-    DefinitionBodyComponent
+    RouterModule.forChild([
+      { path: '', component: DefinitionBodyComponent, title: 'definitions word' }
+    ])
   ]
 })
 export class DefinitionBodyModule { }

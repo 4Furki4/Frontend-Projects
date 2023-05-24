@@ -10,6 +10,7 @@ export class NavbarComponent {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("Navbar");
     this.checkDarkMode()
     const selectedFontSpan = document.querySelector("#selected__font")!
     const navDropdownListItems = document.querySelectorAll(
