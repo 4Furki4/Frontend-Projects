@@ -2,7 +2,7 @@
     <section class="search container">
         <form (ngSubmit)="onSubmit()" #searchForm="ngForm" class="search__form">
             <label class="search__label" for="word">
-                <input #input="ngModel" required [(ngModel)]="word.word" name="word" id="input_word"
+                <input #input="ngModel" required [(ngModel)]="wordInput.word" name="word" id="input_word"
                     class="search__input" type="text" placeholder="Search for any word..." />
                 <button [disabled]="!isInputValid" type="submit" class="search__button">
                     <img src="../../assets/icon-search.svg" alt="" />
@@ -15,7 +15,32 @@
         </form>
     </section>
     <section #definitions class="container definitions">
-        <div #definitionHead class="definitions__head"></div>
-        <div #definitionBody class="definitions__body"></div>
+        <div #definitionHead class="definitions__head">
+            <h1>{{wordTitle}}</h1>
+            <div class="phonetic-and-audio--wrapper" *ngFor="let word of wordResponse">
+                <div class="phonetic-and-audio" *ngFor="let phonetic of word.phonetics | filterPhonetics">
+                    <span class="phonetic-and-audio__text">
+                        {{phonetic.text}}
+                    </span>
+                    <div (click)="playSound(phonetic.audio)">
+                        <img src="../../assets/icon-play.svg">
+                        <!-- {{phonetic.audio}} -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div #definitionBody class=" definitions__body">
+            <div *ngFor="let word of wordResponse">
+                <div *ngFor="let meaning of word.meanings">
+                    <h3>{{meaning.partOfSpeech}}</h3>
+                    <ul *ngFor="let definition of meaning.definitions">
+                        <li>
+                            {{definition.definition}}
+                            <p *ngIf="definition.example">{{definition.example}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
