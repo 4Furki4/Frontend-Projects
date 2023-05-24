@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @use "./partials" as *;
+
 :root {
   --main-bg-color: #fffffff1;
   --main-color: #050505;
@@ -8,6 +9,7 @@
   --primary-purple: rgb(165, 69, 239);
   --font-family: sans-serif;
 }
+
 // @font-face {
 //   font-family: Inter;
 //   font-style: normal;
@@ -76,12 +78,14 @@
   box-sizing: border-box;
   font-family: var(--font-family);
 }
+
 .dark-mode {
   --main-bg-color: #050505;
   --main-color: #fffffff1;
   --secondary-bg-color: #1f1f1f;
   --color-scheme: dark;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -90,6 +94,7 @@ body {
   color-scheme: var(--color-scheme);
   transition: background-color 0.5s, color 0.5s;
 }
+
 .container {
   width: min(90%, 820px);
   margin-inline: auto;
