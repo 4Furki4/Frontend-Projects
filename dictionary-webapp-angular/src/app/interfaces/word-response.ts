@@ -6,6 +6,7 @@ export interface WordResponse {
     phonetics: Array<phonetic>
     origin: string;
     meanings: Array<Meaning>
+    sourceUrls: string[];
 }
 
 export interface Meaning {

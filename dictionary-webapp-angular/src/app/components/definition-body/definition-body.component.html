@@ -29,7 +29,17 @@
                         {{meaning.synonyms.join(', ')}}
                     </div>
                 </div>
+                <div class="sources">
+                    <div *ngFor="let sourceUrl of word.sourceUrls">
+                        <p>
+                            {{sourceUrl}}
+                            <a [href]="sourceUrl" target="_blank"><img src="../../../assets/icon-new-window.svg" alt="">
+                            </a>
+                        </p>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 </main>
