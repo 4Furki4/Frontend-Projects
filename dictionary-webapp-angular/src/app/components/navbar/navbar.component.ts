@@ -10,25 +10,20 @@ export class NavbarComponent {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("Navbar");
-    this.checkDarkMode()
     const selectedFontSpan = document.querySelector("#selected__font")!
     const navDropdownListItems = document.querySelectorAll(
       ".nav__dropdown__list__item"
     )!;
+    this.checkDarkMode()
+    let fontFamilyLocalStorage = localStorage.getItem("selectedFontFamily")
+    if (fontFamilyLocalStorage) {
+      selectedFontSpan.textContent = fontFamilyLocalStorage
+      this.setSelectedFontFamily(fontFamilyLocalStorage, selectedFontSpan);
+    }
     navDropdownListItems.forEach((listItem) => {
       listItem.addEventListener("click", () => {
-        if (listItem.textContent === "Mono") {
-          this.setSelectedFontFamily("Inconsolata");
-          selectedFontSpan.textContent = "Mono";
-        } else if (listItem.textContent === "Sans Serif") {
-          this.setSelectedFontFamily("Inter");
-          selectedFontSpan.textContent = "Sans Serif";
-        } else {
-          this.setSelectedFontFamily("Lora");
-          selectedFontSpan.textContent = "Serif";
-        }
-      });
+        this.setSelectedFontFamily(listItem.textContent!, selectedFontSpan)
+      })
     })
   }
   setDarkmode() {
@@ -54,7 +49,21 @@ export class NavbarComponent {
       darkModeSwitchCheck.checked = true;
     }
   }
-  setSelectedFontFamily(fontFamily: string) {
-    document.documentElement.style.setProperty("--font-family", fontFamily);
+  setSelectedFontFamily(selectedFontFamily: string, fontSpan: Element) {
+    if (selectedFontFamily === "Mono") {
+      document.documentElement.style.setProperty("--font-family", "Inconsolata");
+      fontSpan.textContent = "Mono";
+      localStorage.setItem("selectedFontFamily", selectedFontFamily);
+    }
+    else if (selectedFontFamily === "Sans Serif") {
+      document.documentElement.style.setProperty("--font-family", "Inter");
+      fontSpan.textContent = "Sans Serif";
+      localStorage.setItem("selectedFontFamily", selectedFontFamily);
+    }
+    else {
+      document.documentElement.style.setProperty("--font-family", "Lora");
+      fontSpan.textContent = "Serif";
+      localStorage.setItem("selectedFontFamily", selectedFontFamily);
+    }
   }
 }
