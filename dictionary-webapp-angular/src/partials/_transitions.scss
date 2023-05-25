@@ -9,9 +9,12 @@
 .slider::after {
   transition: transform 0.5s;
 }
+
 .search__input__validation-message {
   transition: opacity 0.5s;
 }
-.nav__dropdown__list__item {
+
+.nav__dropdown__list__item,
+.definitions__body .synonym::before {
   transition: color 0.5s;
 }
