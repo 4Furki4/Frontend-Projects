@@ -79,6 +79,7 @@
             align-items: center;
             margin-bottom: 1rem;
 
+
             &__text {
                 color: var(--primary-purple);
             }
@@ -102,7 +103,7 @@
             &--wrapper {
                 position: relative;
                 display: inline-block;
-                padding: 20px;
+                padding: 35px;
                 aspect-ratio: 1/1;
                 border-radius: 100%;
                 background-color: rgb(233, 208, 250);
@@ -162,8 +163,6 @@
             gap: 1rem;
 
             & li {
-
-                // line-height: 1rem;
                 &::marker {
                     color: var(--primary-purple);
                 }
@@ -177,7 +176,7 @@
             &::before {
                 content: "Synonyms:";
                 position: relative;
-                margin-right: 2rem;
+                margin-right: .2rem;
                 color: var(--main-color);
             }
         }
