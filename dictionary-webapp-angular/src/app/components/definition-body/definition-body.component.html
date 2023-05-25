@@ -1,0 +1,55 @@
+<main>
+    <section class="not-found" *ngIf="wordErrorRespone && wordResponse!">
+        <h2 class="not-found__title">
+            {{wordErrorRespone.title}}
+        </h2>
+        <p>
+            {{wordErrorRespone.message}}
+        </p>
+    </section>
+    <section #definitions class="container definitions">
+        <div #definitionHead class="definitions__head">
+            <h1>{{wordTitle}}</h1>
+            <div class="phonetic-and-audio--wrapper" *ngFor="let word of wordResponse">
+                <div class="phonetic-and-audio" *ngFor="let phonetic of word.phonetics | filterPhonetics">
+                    <span class="phonetic-and-audio__text">
+                        {{phonetic.text}}
+                    </span>
+                    <div class="play-button--wrapper" (click)="playSound(phonetic.audio)">
+                        <div class="play-button">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div #definitionBody class="definitions__body">
+            <div *ngFor="let word of wordResponse">
+                <div *ngFor="let meaning of word.meanings">
+                    <h3 class="part-of-speech">{{meaning.partOfSpeech}}</h3>
+                    <ul class="definition-list" *ngFor="let definition of meaning.definitions">
+                        <li>
+                            <p>{{definition.definition}}</p>
+                            <p class="example" *ngIf="definition.example"><q>{{definition.example}}</q></p>
+                        </li>
+                    </ul>
+                    <div *ngIf="meaning.synonyms.length !== 0" class="synonym">
+                        {{meaning.synonyms.join(', ')}}
+                    </div>
+                </div>
+                <div class="sources">
+                    <div *ngFor="let sourceUrl of word.sourceUrls">
+                        <p>
+                            {{sourceUrl}}
+                            <a [href]="sourceUrl" target="_blank"><img src="../../../assets/icon-new-window.svg" alt="">
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="large" color="rgb(165, 69, 239)" type="ball-8bits"
+    name="myspinner"></ngx-spinner>
