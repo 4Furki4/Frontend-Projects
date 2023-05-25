@@ -1,9 +1,9 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { WordRequestService } from '../../services/word-request.service';
 import { WordResponse } from '../../interfaces/word-response';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { ErrorResponse } from 'src/app/interfaces/error-response';
 
 @Component({
   selector: 'app-definition-body',
@@ -15,14 +15,27 @@ export class DefinitionBodyComponent implements OnInit {
   wordResponse !: Array<WordResponse>;
   wordTitle !: string;
   wordFromParam !: string;
+  wordErrorRespone !: ErrorResponse | undefined;
   async ngOnInit(): Promise<void> {
+
     this.activatedRoute.paramMap.subscribe(async (param) => {
       this.wordFromParam = param.get("word") ?? ""
+      this.wordErrorRespone = undefined; // reset all properties before each request 
+      this.wordResponse = []
+      this.wordTitle = ""
       if (this.wordFromParam.length > 0) {
         this.spinner.show('myspinner')
-        this.wordResponse = await this.wordRequest.getWordMeaning(this.wordFromParam)
-        this.spinner.hide('myspinner')
-        this.wordTitle = this.wordResponse[0].word
+        console.log(this.wordResponse);
+        try {
+          this.wordResponse = await this.wordRequest.getWordMeaning(this.wordFromParam)
+          this.spinner.hide('myspinner')
+          this.wordTitle = this.wordResponse[0].word
+        } catch (error: any) {
+          this.wordErrorRespone = error.error
+          console.log(this.wordErrorRespone);
+        } finally {
+          this.spinner.hide('myspinner')
+        }
       }
     })
   }

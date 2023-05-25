@@ -1,4 +1,12 @@
 <main>
+    <section class="not-found" *ngIf="wordErrorRespone && wordResponse!">
+        <h2 class="not-found__title">
+            {{wordErrorRespone.title}}
+        </h2>
+        <p>
+            {{wordErrorRespone.message}}
+        </p>
+    </section>
     <section #definitions class="container definitions">
         <div #definitionHead class="definitions__head">
             <h1>{{wordTitle}}</h1>
