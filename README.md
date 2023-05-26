@@ -227,3 +227,7 @@
   **Preview of the challenge**
   ![Snapshot of interactive component challenge](./snapshots/dictionary-webapp.png)
 
+### Reviseted Web App
+- I rebuilt it using Angular 15 in order to add neat routing system
+  - It also stores the font family using localstorage like darkmode.
+- **[Live Link](https://4furki4-dictionary.netlify.app/)** \
